@@ -1,0 +1,92 @@
+\hypertarget{classabstract__coordinate__system}{\section{abstract\-\_\-coordinate\-\_\-system Class Reference}
+\label{classabstract__coordinate__system}\index{abstract\-\_\-coordinate\-\_\-system@{abstract\-\_\-coordinate\-\_\-system}}
+}
+
+
+{\ttfamily \#include $<$abstract\-\_\-coordinate\-\_\-system.\-h$>$}
+
+Inheritance diagram for abstract\-\_\-coordinate\-\_\-system\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classabstract__coordinate__system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classabstract__coordinate__system_ad6d5ae04c40f9c77a0aba70f4a7cb45e}{abstract\-\_\-coordinate\-\_\-system} ()
+\item 
+virtual void \hyperlink{classabstract__coordinate__system_a646c34b26579fa6f27ce00dcd8ab5951}{init} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t)=0
+\item 
+virtual float \hyperlink{classabstract__coordinate__system_a7df5507f5b2fddc0eb691e79514accab}{calc\-\_\-delta\-\_\-x} (long iw, long ih)=0
+\item 
+\hypertarget{classabstract__coordinate__system_a1129e984304df9036d3fcf548609ae08}{virtual float \hyperlink{classabstract__coordinate__system_a1129e984304df9036d3fcf548609ae08}{calc\-\_\-delta\-\_\-y} (long iw, long ih)=0}\label{classabstract__coordinate__system_a1129e984304df9036d3fcf548609ae08}
+
+\begin{DoxyCompactList}\small\item\em See calc\-\_\-delta\-\_\-x\-\_\-at. \end{DoxyCompactList}\item 
+\hypertarget{classabstract__coordinate__system_a09c21984f739869471dd2948b62b3191}{virtual float \hyperlink{classabstract__coordinate__system_a09c21984f739869471dd2948b62b3191}{calc\-\_\-x\-\_\-at} (long iw, long ih)=0}\label{classabstract__coordinate__system_a09c21984f739869471dd2948b62b3191}
+
+\begin{DoxyCompactList}\small\item\em Calculate x coordinate at given pixel. \end{DoxyCompactList}\item 
+\hypertarget{classabstract__coordinate__system_a2092dadc2aecf887bc8ca41d1fa65042}{virtual float \hyperlink{classabstract__coordinate__system_a2092dadc2aecf887bc8ca41d1fa65042}{calc\-\_\-y\-\_\-at} (long iw, long ih)=0}\label{classabstract__coordinate__system_a2092dadc2aecf887bc8ca41d1fa65042}
+
+\begin{DoxyCompactList}\small\item\em Calculate y coordinate at given pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is an abtstract class that calculates a coordinate (x,y) from an index (iw,ih) for a tile. Any derived class need not be cartesian but could also be polar.
+
+U\-S\-A\-G\-E\-: Before the calc\-\_\-... methods can be called, the coordinate system has to be initialized with the given tile using the init(...) method. So the object itself just lays the rules for how to calculate a coordinate (x,y) from a given index (iw,ih). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classabstract__coordinate__system_ad6d5ae04c40f9c77a0aba70f4a7cb45e}{\index{abstract\-\_\-coordinate\-\_\-system@{abstract\-\_\-coordinate\-\_\-system}!abstract\-\_\-coordinate\-\_\-system@{abstract\-\_\-coordinate\-\_\-system}}
+\index{abstract\-\_\-coordinate\-\_\-system@{abstract\-\_\-coordinate\-\_\-system}!abstract_coordinate_system@{abstract\-\_\-coordinate\-\_\-system}}
+\subsubsection[{abstract\-\_\-coordinate\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}abstract\-\_\-coordinate\-\_\-system\-::abstract\-\_\-coordinate\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract__coordinate__system_ad6d5ae04c40f9c77a0aba70f4a7cb45e}
+Constructor. Before the coordinate system can be used, it has to be initialized with the given tile. Only after the init(...) method is called will the calculations functions give useful results. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract__coordinate__system_a7df5507f5b2fddc0eb691e79514accab}{\index{abstract\-\_\-coordinate\-\_\-system@{abstract\-\_\-coordinate\-\_\-system}!calc\-\_\-delta\-\_\-x@{calc\-\_\-delta\-\_\-x}}
+\index{calc\-\_\-delta\-\_\-x@{calc\-\_\-delta\-\_\-x}!abstract_coordinate_system@{abstract\-\_\-coordinate\-\_\-system}}
+\subsubsection[{calc\-\_\-delta\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}virtual float abstract\-\_\-coordinate\-\_\-system\-::calc\-\_\-delta\-\_\-x (
+\begin{DoxyParamCaption}
+\item[{long}]{iw, }
+\item[{long}]{ih}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__coordinate__system_a7df5507f5b2fddc0eb691e79514accab}
+This is a method that returns the distance between neighboring points at point iw,ih. It was implemented to enable calculating the gradient in non equidistant coordinate systems (Jacobian). 
+\begin{DoxyParams}{Parameters}
+{\em iw} & \\
+\hline
+{\em ih} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+deltax 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classunit__cartesian__coordinate__system_a9093a6700e1a34f6dfb127358973c8c5}{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}.
+
+\hypertarget{classabstract__coordinate__system_a646c34b26579fa6f27ce00dcd8ab5951}{\index{abstract\-\_\-coordinate\-\_\-system@{abstract\-\_\-coordinate\-\_\-system}!init@{init}}
+\index{init@{init}!abstract_coordinate_system@{abstract\-\_\-coordinate\-\_\-system}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void abstract\-\_\-coordinate\-\_\-system\-::init (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__coordinate__system_a646c34b26579fa6f27ce00dcd8ab5951}
+This method initializes the coordinate system with the dimensions of the given tile. This method must be called before the calc\-\_\-... methods are called. 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classunit__cartesian__coordinate__system_a96d70a42cec4279c1320995e770c3fe5}{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/tiles/abstract\-\_\-coordinate\-\_\-system.\-h\end{DoxyCompactItemize}

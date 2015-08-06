@@ -1,0 +1,97 @@
+\hypertarget{classsimple1d__tile__merger}{\section{simple1d\-\_\-tile\-\_\-merger Class Reference}
+\label{classsimple1d__tile__merger}\index{simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}}
+}
+Inheritance diagram for simple1d\-\_\-tile\-\_\-merger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsimple1d__tile__merger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimple1d__tile__merger_a81b44df8dc122d9f7a5ab84f34aa5bed}{simple1d\-\_\-tile\-\_\-merger} ()
+\item 
+\hyperlink{classsimple1d__tile__merger_aaa0bc848ba9949cdf7d3b7a3021f00a9}{simple1d\-\_\-tile\-\_\-merger} (bool left2right, bool top2bottom, bool start\-\_\-horizontal)
+\item 
+virtual void \hyperlink{classsimple1d__tile__merger_ad73f710dd3ea0116859dcf2e5f6c5a14}{merge\-\_\-tiles} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti)
+\item 
+virtual std\-::string \hyperlink{classsimple1d__tile__merger_ac0810b20cdeb08613cb2a214267cf26a}{get\-\_\-name} ()
+\item 
+virtual void \hyperlink{classsimple1d__tile__merger_a4f18628ddf20f24efc13e705b469268c}{usage\-\_\-help} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsimple1d__tile__merger_a81b44df8dc122d9f7a5ab84f34aa5bed}{\index{simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}!simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}}
+\index{simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}!simple1d_tile_merger@{simple1d\-\_\-tile\-\_\-merger}}
+\subsubsection[{simple1d\-\_\-tile\-\_\-merger}]{\setlength{\rightskip}{0pt plus 5cm}simple1d\-\_\-tile\-\_\-merger\-::simple1d\-\_\-tile\-\_\-merger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsimple1d__tile__merger_a81b44df8dc122d9f7a5ab84f34aa5bed}
+Linear unwrapper based on 1d unwrapping of blocks. \hypertarget{classsimple1d__tile__merger_aaa0bc848ba9949cdf7d3b7a3021f00a9}{\index{simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}!simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}}
+\index{simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}!simple1d_tile_merger@{simple1d\-\_\-tile\-\_\-merger}}
+\subsubsection[{simple1d\-\_\-tile\-\_\-merger}]{\setlength{\rightskip}{0pt plus 5cm}simple1d\-\_\-tile\-\_\-merger\-::simple1d\-\_\-tile\-\_\-merger (
+\begin{DoxyParamCaption}
+\item[{bool}]{left2right, }
+\item[{bool}]{top2bottom, }
+\item[{bool}]{start\-\_\-horizontal}
+\end{DoxyParamCaption}
+)}}\label{classsimple1d__tile__merger_aaa0bc848ba9949cdf7d3b7a3021f00a9}
+Linear unwrapper based on 1d unwrapping of blocks.\-The booleans are useful if the image has discontinuties on the edges. 
+\begin{DoxyParams}{Parameters}
+{\em left2right} & Specify the horizontal direction of merging\-: true\-: Start left and head right. false\-: right to left. \\
+\hline
+{\em top2bottom} & Specify the vertical direction of merging\-: true\-: Start from the top to the bottom edge. false\-: bottom to top. \\
+\hline
+{\em start\-\_\-horizontal} & Specify order of merging\-: true\-: First merge horizontal, then vertical. false\-: First vertical, then horizontal \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsimple1d__tile__merger_ac0810b20cdeb08613cb2a214267cf26a}{\index{simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!simple1d_tile_merger@{simple1d\-\_\-tile\-\_\-merger}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string simple1d\-\_\-tile\-\_\-merger\-::get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsimple1d__tile__merger_ac0810b20cdeb08613cb2a214267cf26a}
+Return a name (with options) to set in the output file name 
+
+Implements \hyperlink{classabstract__tile__merger_a12ec9d118912b3c571d61ff9649042c6}{abstract\-\_\-tile\-\_\-merger}.
+
+\hypertarget{classsimple1d__tile__merger_ad73f710dd3ea0116859dcf2e5f6c5a14}{\index{simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}!merge\-\_\-tiles@{merge\-\_\-tiles}}
+\index{merge\-\_\-tiles@{merge\-\_\-tiles}!simple1d_tile_merger@{simple1d\-\_\-tile\-\_\-merger}}
+\subsubsection[{merge\-\_\-tiles}]{\setlength{\rightskip}{0pt plus 5cm}void simple1d\-\_\-tile\-\_\-merger\-::merge\-\_\-tiles (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tiled\-\_\-image} $>$}]{ti}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsimple1d__tile__merger_ad73f710dd3ea0116859dcf2e5f6c5a14}
+Merge tiles of a tiled image. The tiles have to be unwrapped inside themselves. This method unwraps the tiles with respect to each other. The phase discontinuity between each tile must be integer multiples of 2\-P\-I. 
+\begin{DoxyParams}{Parameters}
+{\em ti} & boost shared\-\_\-ptr to smart tiled image \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classabstract__tile__merger_a52ab494f77e495ab1a59b49e49c98db4}{abstract\-\_\-tile\-\_\-merger}.
+
+\hypertarget{classsimple1d__tile__merger_a4f18628ddf20f24efc13e705b469268c}{\index{simple1d\-\_\-tile\-\_\-merger@{simple1d\-\_\-tile\-\_\-merger}!usage\-\_\-help@{usage\-\_\-help}}
+\index{usage\-\_\-help@{usage\-\_\-help}!simple1d_tile_merger@{simple1d\-\_\-tile\-\_\-merger}}
+\subsubsection[{usage\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}void simple1d\-\_\-tile\-\_\-merger\-::usage\-\_\-help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsimple1d__tile__merger_a4f18628ddf20f24efc13e705b469268c}
+Display a help on how to use this merger, in particular usage of merger-\/settings 
+
+Implements \hyperlink{classabstract__tile__merger_a7922b65624d12ef2d6c115218d2378b4}{abstract\-\_\-tile\-\_\-merger}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/simple1d\-\_\-tile\-\_\-merger.\-h\item 
+src/algorithm/simple1d\-\_\-tile\-\_\-merger.\-cpp\end{DoxyCompactItemize}

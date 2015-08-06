@@ -1,0 +1,96 @@
+\hypertarget{classsrncp__tile__merger}{\section{srncp\-\_\-tile\-\_\-merger Class Reference}
+\label{classsrncp__tile__merger}\index{srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}}
+}
+Inheritance diagram for srncp\-\_\-tile\-\_\-merger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsrncp__tile__merger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsrncp__tile__merger_aad58c1e54debf4ea2822cf07f6aa98c7}{srncp\-\_\-tile\-\_\-merger} (std\-::vector$<$ std\-::string $>$ msettings)
+\item 
+\hyperlink{classsrncp__tile__merger_a5b7ffbc05d851f3862a477cf17b31c53}{srncp\-\_\-tile\-\_\-merger} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classabstract__reliability__calculator}{abstract\-\_\-reliability\-\_\-calculator} $>$ rc)
+\item 
+virtual void \hyperlink{classsrncp__tile__merger_ad8330c73633437c5f4860d837bf63345}{merge\-\_\-tiles} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti)
+\item 
+virtual std\-::string \hyperlink{classsrncp__tile__merger_a7e6fb5b07129a1354a8d997161b210c4}{get\-\_\-name} ()
+\item 
+virtual void \hyperlink{classsrncp__tile__merger_ae57137ab8a1df19b86c28d3ff4aa1d9e}{usage\-\_\-help} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsrncp__tile__merger_aad58c1e54debf4ea2822cf07f6aa98c7}{\index{srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}!srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}}
+\index{srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}!srncp_tile_merger@{srncp\-\_\-tile\-\_\-merger}}
+\subsubsection[{srncp\-\_\-tile\-\_\-merger}]{\setlength{\rightskip}{0pt plus 5cm}srncp\-\_\-tile\-\_\-merger\-::srncp\-\_\-tile\-\_\-merger (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$}]{msettings}
+\end{DoxyParamCaption}
+)}}\label{classsrncp__tile__merger_aad58c1e54debf4ea2822cf07f6aa98c7}
+Constructor used in the programm with settings as parameters 
+\begin{DoxyParams}{Parameters}
+{\em msettings} & settings for the merger \\
+\hline
+\end{DoxyParams}
+\hypertarget{classsrncp__tile__merger_a5b7ffbc05d851f3862a477cf17b31c53}{\index{srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}!srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}}
+\index{srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}!srncp_tile_merger@{srncp\-\_\-tile\-\_\-merger}}
+\subsubsection[{srncp\-\_\-tile\-\_\-merger}]{\setlength{\rightskip}{0pt plus 5cm}srncp\-\_\-tile\-\_\-merger\-::srncp\-\_\-tile\-\_\-merger (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf abstract\-\_\-reliability\-\_\-calculator} $>$}]{rc}
+\end{DoxyParamCaption}
+)}}\label{classsrncp__tile__merger_a5b7ffbc05d851f3862a477cf17b31c53}
+Explicit constructor with predefined reliability calculator 
+\begin{DoxyParams}{Parameters}
+{\em rc} & reliability calculator \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsrncp__tile__merger_a7e6fb5b07129a1354a8d997161b210c4}{\index{srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!srncp_tile_merger@{srncp\-\_\-tile\-\_\-merger}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string srncp\-\_\-tile\-\_\-merger\-::get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsrncp__tile__merger_a7e6fb5b07129a1354a8d997161b210c4}
+Return a name (with options) to set in the output file name 
+
+Implements \hyperlink{classabstract__tile__merger_a12ec9d118912b3c571d61ff9649042c6}{abstract\-\_\-tile\-\_\-merger}.
+
+\hypertarget{classsrncp__tile__merger_ad8330c73633437c5f4860d837bf63345}{\index{srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}!merge\-\_\-tiles@{merge\-\_\-tiles}}
+\index{merge\-\_\-tiles@{merge\-\_\-tiles}!srncp_tile_merger@{srncp\-\_\-tile\-\_\-merger}}
+\subsubsection[{merge\-\_\-tiles}]{\setlength{\rightskip}{0pt plus 5cm}void srncp\-\_\-tile\-\_\-merger\-::merge\-\_\-tiles (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tiled\-\_\-image} $>$}]{ti}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsrncp__tile__merger_ad8330c73633437c5f4860d837bf63345}
+Merge all given tiles inside the tiled image 
+\begin{DoxyParams}{Parameters}
+{\em ti} & boost shared\-\_\-ptr to tiled image \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classabstract__tile__merger_a52ab494f77e495ab1a59b49e49c98db4}{abstract\-\_\-tile\-\_\-merger}.
+
+\hypertarget{classsrncp__tile__merger_ae57137ab8a1df19b86c28d3ff4aa1d9e}{\index{srncp\-\_\-tile\-\_\-merger@{srncp\-\_\-tile\-\_\-merger}!usage\-\_\-help@{usage\-\_\-help}}
+\index{usage\-\_\-help@{usage\-\_\-help}!srncp_tile_merger@{srncp\-\_\-tile\-\_\-merger}}
+\subsubsection[{usage\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}void srncp\-\_\-tile\-\_\-merger\-::usage\-\_\-help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsrncp__tile__merger_ae57137ab8a1df19b86c28d3ff4aa1d9e}
+Display a help on how to use this merger, in particular usage of merger-\/settings 
+
+Implements \hyperlink{classabstract__tile__merger_a7922b65624d12ef2d6c115218d2378b4}{abstract\-\_\-tile\-\_\-merger}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/srncp\-\_\-tile\-\_\-merger.\-h\item 
+src/algorithm/srncp\-\_\-tile\-\_\-merger.\-cpp\end{DoxyCompactItemize}

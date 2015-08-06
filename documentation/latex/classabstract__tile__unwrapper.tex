@@ -1,0 +1,83 @@
+\hypertarget{classabstract__tile__unwrapper}{\section{abstract\-\_\-tile\-\_\-unwrapper Class Reference}
+\label{classabstract__tile__unwrapper}\index{abstract\-\_\-tile\-\_\-unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}}
+}
+
+
+{\ttfamily \#include $<$abstract\-\_\-tile\-\_\-unwrapper.\-h$>$}
+
+Inheritance diagram for abstract\-\_\-tile\-\_\-unwrapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.885522cm]{classabstract__tile__unwrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classabstract__tile__unwrapper_a31fc3a41d4adaab0ba7c2998e74ccedb}{abstract\-\_\-tile\-\_\-unwrapper} ()
+\item 
+virtual void \hyperlink{classabstract__tile__unwrapper_a74eedd36e55b9000b5986ff5980a563a}{unwrap} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t)=0
+\item 
+virtual std\-::string \hyperlink{classabstract__tile__unwrapper_ae70f69a703e622e5ab13eabcc91fca4d}{get\-\_\-name} ()=0
+\item 
+virtual void \hyperlink{classabstract__tile__unwrapper_a469b36a7f302d5a2655631bbdb6f8daf}{usage\-\_\-help} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This pure virtual class provides an abstract interface for an unwrapper that unwraps a single tile. It operates with boost smart pointers. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classabstract__tile__unwrapper_a31fc3a41d4adaab0ba7c2998e74ccedb}{\index{abstract\-\_\-tile\-\_\-unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}!abstract\-\_\-tile\-\_\-unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}}
+\index{abstract\-\_\-tile\-\_\-unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}!abstract_tile_unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{abstract\-\_\-tile\-\_\-unwrapper}]{\setlength{\rightskip}{0pt plus 5cm}abstract\-\_\-tile\-\_\-unwrapper\-::abstract\-\_\-tile\-\_\-unwrapper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract__tile__unwrapper_a31fc3a41d4adaab0ba7c2998e74ccedb}
+Konstruktor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract__tile__unwrapper_ae70f69a703e622e5ab13eabcc91fca4d}{\index{abstract\-\_\-tile\-\_\-unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!abstract_tile_unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string abstract\-\_\-tile\-\_\-unwrapper\-::get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__tile__unwrapper_ae70f69a703e622e5ab13eabcc91fca4d}
+Return a name (with options) to set in the output file name 
+
+Implemented in \hyperlink{classleast__squares__grad__unwrapper_af66d1a659d6cfbb82200d120f43dd939}{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}, \hyperlink{classstrand__tile__unwrapper_ae4ce9d7459840ada66b7492ea2873969}{strand\-\_\-tile\-\_\-unwrapper}, and \hyperlink{classgrad__fit__tile__unwrapper_a46a71a2adc53411289f792aae8c1b61c}{grad\-\_\-fit\-\_\-tile\-\_\-unwrapper}.
+
+\hypertarget{classabstract__tile__unwrapper_a74eedd36e55b9000b5986ff5980a563a}{\index{abstract\-\_\-tile\-\_\-unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!abstract_tile_unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{unwrap}]{\setlength{\rightskip}{0pt plus 5cm}virtual void abstract\-\_\-tile\-\_\-unwrapper\-::unwrap (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__tile__unwrapper_a74eedd36e55b9000b5986ff5980a563a}
+Unwrap a given tile. 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classstrand__tile__unwrapper_a520d7832e80746c9996fe042b5993235}{strand\-\_\-tile\-\_\-unwrapper}.
+
+\hypertarget{classabstract__tile__unwrapper_a469b36a7f302d5a2655631bbdb6f8daf}{\index{abstract\-\_\-tile\-\_\-unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}!usage\-\_\-help@{usage\-\_\-help}}
+\index{usage\-\_\-help@{usage\-\_\-help}!abstract_tile_unwrapper@{abstract\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{usage\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}virtual void abstract\-\_\-tile\-\_\-unwrapper\-::usage\-\_\-help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__tile__unwrapper_a469b36a7f302d5a2655631bbdb6f8daf}
+Display a help on how to use this merger, in particular usage of merger-\/settings 
+
+Implemented in \hyperlink{classleast__squares__grad__unwrapper_a8795b4b968a336d28a81e910cbc9f4ab}{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}, \hyperlink{classstrand__tile__unwrapper_aebfdb44f1be923a6528471ea38174669}{strand\-\_\-tile\-\_\-unwrapper}, and \hyperlink{classgrad__fit__tile__unwrapper_a62df2a6e799306b85f273a4f5aa43b4c}{grad\-\_\-fit\-\_\-tile\-\_\-unwrapper}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/abstract\-\_\-tile\-\_\-unwrapper.\-h\end{DoxyCompactItemize}

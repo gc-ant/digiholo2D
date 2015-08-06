@@ -1,0 +1,163 @@
+\hypertarget{classtilegroup}{\section{tilegroup Class Reference}
+\label{classtilegroup}\index{tilegroup@{tilegroup}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtilegroup_aa6c6f357f5ff2da2c609ec88695256dc}{\hyperlink{classtilegroup_aa6c6f357f5ff2da2c609ec88695256dc}{$\sim$tilegroup} ()}\label{classtilegroup_aa6c6f357f5ff2da2c609ec88695256dc}
+
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+int \hyperlink{classtilegroup_a77326f80d6ec031a7429f574591cc3ee}{size} ()
+\item 
+void \hyperlink{classtilegroup_a2c453918b11a2bc1f0cd5f8f7746a5b7}{add\-\_\-value} (float val)
+\item 
+void \hyperlink{classtilegroup_a79886bd5b038befda291f65d4b7fb63c}{add\-\_\-tile\-\_\-to\-\_\-group} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g)
+\item 
+bool \hyperlink{classtilegroup_acf6c23726967081f2f5094d118a18e8a}{add\-\_\-unique\-\_\-tile} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t, sharedptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g)
+\item 
+void \hyperlink{classtilegroup_a350ba22f7358323883ebbc917adc5448}{merge\-\_\-tilegroups} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g1, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g2)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classtilegroup}{tilegroup} $>$ \hyperlink{classtilegroup_a23c8855f4f61f5932db0eb3b89c1312a}{create\-\_\-new} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtilegroup_a82299213a6cc9d5d3fcbdaeb80060be7}{class {\bfseries tiled\-\_\-image}}\label{classtilegroup_a82299213a6cc9d5d3fcbdaeb80060be7}
+
+\item 
+\hypertarget{classtilegroup_afc864a305a7251d274bdf2ca681496e4}{class {\bfseries tile}}\label{classtilegroup_afc864a305a7251d274bdf2ca681496e4}
+
+\item 
+void \hyperlink{classtilegroup_ad9d048f39dc13c36b83a87295fdf75f9}{add\-\_\-tile\-\_\-to\-\_\-group} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g)
+\item 
+void \hyperlink{classtilegroup_afba0cc66139bf69ca850987161757cd2}{merge\-\_\-tilegroups} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g1, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+, die eine Gruppe von Smart-\/\-Tiles verwaltet. Die tiles haben strong pointer auf ihre tilegroup, wohingegen diese tilegroup nur schwache pointer auf die tiles haben. Die starken pointer auf die tiles sitzen im \hyperlink{classtiled__image}{tiled\-\_\-image}. Die tilegroup Objekte müssen demnach nirgendwo zwischengespeichert werden. Sie können über die entsprechenden tiles angesprochen werden. Wenn keine tile mehr auf die tilegroup zeigt, wird diese automatisch zerstört.
+
+Die Funktion zum hinzufügen von tiles zu einer Gruppe befindet sich in der tile Klasse. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classtilegroup_a79886bd5b038befda291f65d4b7fb63c}{\index{tilegroup@{tilegroup}!add\-\_\-tile\-\_\-to\-\_\-group@{add\-\_\-tile\-\_\-to\-\_\-group}}
+\index{add\-\_\-tile\-\_\-to\-\_\-group@{add\-\_\-tile\-\_\-to\-\_\-group}!tilegroup@{tilegroup}}
+\subsubsection[{add\-\_\-tile\-\_\-to\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}void tilegroup\-::add\-\_\-tile\-\_\-to\-\_\-group (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_a79886bd5b038befda291f65d4b7fb63c}
+Adds a tile to an existing tilegroup Note\-: The pointer g has to be a paramter, so that the tile t may be given the pointer to this group. ( $\ast$this is not a valid shared pointer!) 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile to add \\
+\hline
+{\em g} & tilegroup for adding the tile \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtilegroup_acf6c23726967081f2f5094d118a18e8a}{\index{tilegroup@{tilegroup}!add\-\_\-unique\-\_\-tile@{add\-\_\-unique\-\_\-tile}}
+\index{add\-\_\-unique\-\_\-tile@{add\-\_\-unique\-\_\-tile}!tilegroup@{tilegroup}}
+\subsubsection[{add\-\_\-unique\-\_\-tile}]{\setlength{\rightskip}{0pt plus 5cm}bool tilegroup\-::add\-\_\-unique\-\_\-tile (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t, }
+\item[{sharedptr$<$ {\bf tilegroup} $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_acf6c23726967081f2f5094d118a18e8a}
+Adds a tile to this group, iff it is not included anyway. Note\-: The pointer g has to be a paramter, so that the tile t may be given the pointer to this group. ( $\ast$this is not a valid shared pointer!) 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if tile has been added. False if tile was included in the group anyway 
+\end{DoxyReturn}
+\hypertarget{classtilegroup_a2c453918b11a2bc1f0cd5f8f7746a5b7}{\index{tilegroup@{tilegroup}!add\-\_\-value@{add\-\_\-value}}
+\index{add\-\_\-value@{add\-\_\-value}!tilegroup@{tilegroup}}
+\subsubsection[{add\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}void tilegroup\-::add\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{float}]{val}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_a2c453918b11a2bc1f0cd5f8f7746a5b7}
+Add value to all tiles in the group. 
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtilegroup_a23c8855f4f61f5932db0eb3b89c1312a}{\index{tilegroup@{tilegroup}!create\-\_\-new@{create\-\_\-new}}
+\index{create\-\_\-new@{create\-\_\-new}!tilegroup@{tilegroup}}
+\subsubsection[{create\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::shared\-\_\-ptr$<${\bf tilegroup}$>$ tilegroup\-::create\-\_\-new (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtilegroup_a23c8855f4f61f5932db0eb3b89c1312a}
+Static creator method, so that new tilegoups can only be constructed like this \begin{DoxyReturn}{Returns}
+A strong pointer to a new tilegroup. 
+\end{DoxyReturn}
+\hypertarget{classtilegroup_a350ba22f7358323883ebbc917adc5448}{\index{tilegroup@{tilegroup}!merge\-\_\-tilegroups@{merge\-\_\-tilegroups}}
+\index{merge\-\_\-tilegroups@{merge\-\_\-tilegroups}!tilegroup@{tilegroup}}
+\subsubsection[{merge\-\_\-tilegroups}]{\setlength{\rightskip}{0pt plus 5cm}void tilegroup\-::merge\-\_\-tilegroups (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g1, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g2}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_a350ba22f7358323883ebbc917adc5448}
+Merges two tilegroups together. 
+\begin{DoxyParams}{Parameters}
+{\em g1} & smaller tilegroup \\
+\hline
+{\em g2} & bigger tilegroup \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtilegroup_a77326f80d6ec031a7429f574591cc3ee}{\index{tilegroup@{tilegroup}!size@{size}}
+\index{size@{size}!tilegroup@{tilegroup}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int tilegroup\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_a77326f80d6ec031a7429f574591cc3ee}
+N\-O\-T\-E\-: This operation has O(n)! D\-O N\-O\-T U\-S\-E this if possible \begin{DoxyReturn}{Returns}
+The number of elements in the tilegroup. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classtilegroup_ad9d048f39dc13c36b83a87295fdf75f9}{\index{tilegroup@{tilegroup}!add\-\_\-tile\-\_\-to\-\_\-group@{add\-\_\-tile\-\_\-to\-\_\-group}}
+\index{add\-\_\-tile\-\_\-to\-\_\-group@{add\-\_\-tile\-\_\-to\-\_\-group}!tilegroup@{tilegroup}}
+\subsubsection[{add\-\_\-tile\-\_\-to\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}void add\-\_\-tile\-\_\-to\-\_\-group (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classtilegroup_ad9d048f39dc13c36b83a87295fdf75f9}
+This file offers the functionality of the tile class while using boost smart pointers to make memory management easier. One M\-A\-J\-O\-R D\-I\-F\-F\-E\-R\-E\-N\-C\-E is that it creates its own copy of the data and does not operate on pointers to the float image data. Sets the tilegroup of the tile t to the given group and adds this tile to the vector of tiles in the tilegroup g. A\-C\-H\-T\-U\-N\-G! This method should only be used if this tile is not alreay member in a tilegroup. If it is member of a tilegroup, then the reference to this tile in the old group will still be there. This can lead to errors. For merging tilegroups use the merge\-\_\-into method from tilegroup. These conditions are not checked. 
+\begin{DoxyParams}{Parameters}
+{\em t} & the tile. It must not be in a group. \\
+\hline
+{\em g} & the tilegroup. It must not already contain the tile t. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtilegroup_afba0cc66139bf69ca850987161757cd2}{\index{tilegroup@{tilegroup}!merge\-\_\-tilegroups@{merge\-\_\-tilegroups}}
+\index{merge\-\_\-tilegroups@{merge\-\_\-tilegroups}!tilegroup@{tilegroup}}
+\subsubsection[{merge\-\_\-tilegroups}]{\setlength{\rightskip}{0pt plus 5cm}void merge\-\_\-tilegroups (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g1, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classtilegroup_afba0cc66139bf69ca850987161757cd2}
+Merges tilegroup g1 into group g2. All tiles from g1 will now point to g2 as their group and g1 will be devoid of elements. 
+\begin{DoxyParams}{Parameters}
+{\em g1} & \\
+\hline
+{\em g2} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/tiles/tilegroup.\-h\item 
+src/tiles/tilegroup.\-cpp\end{DoxyCompactItemize}

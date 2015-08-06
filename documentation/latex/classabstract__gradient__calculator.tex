@@ -1,0 +1,103 @@
+\hypertarget{classabstract__gradient__calculator}{\section{abstract\-\_\-gradient\-\_\-calculator Class Reference}
+\label{classabstract__gradient__calculator}\index{abstract\-\_\-gradient\-\_\-calculator@{abstract\-\_\-gradient\-\_\-calculator}}
+}
+Inheritance diagram for abstract\-\_\-gradient\-\_\-calculator\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classabstract__gradient__calculator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classabstract__gradient__calculator_a259548d80ec064ee93f8342bbd9d16f3}{abstract\-\_\-gradient\-\_\-calculator} ()
+\item 
+\hypertarget{classabstract__gradient__calculator_ad492fd85c34849194dc566f32d93e641}{virtual \hyperlink{classabstract__gradient__calculator_ad492fd85c34849194dc566f32d93e641}{$\sim$abstract\-\_\-gradient\-\_\-calculator} ()}\label{classabstract__gradient__calculator_ad492fd85c34849194dc566f32d93e641}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual sharedptr$<$ std\-::vector\\*
+$<$ \hyperlink{classtile}{tile} $>$ $>$ \hyperlink{classabstract__gradient__calculator_a18d3f5191a95f8a3bfeb7b79862c0f24}{get\-\_\-gradient\-\_\-tile} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\item 
+virtual sharedptr$<$ std\-::vector\\*
+$<$ float $>$ $>$ \hyperlink{classabstract__gradient__calculator_afbc6ee285d21d21b2241cfe643f8adce}{get\-\_\-gradient\-\_\-floats} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t)=0
+\item 
+virtual sharedptr\\*
+$<$ Eigen\-::\-Vector\-Xf $>$ \hyperlink{classabstract__gradient__calculator_ae101a124df59f5dbcc4d21acffe43ae1}{get\-\_\-gradient\-\_\-eigen\-\_\-vector} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classabstract__gradient__calculator_a259548d80ec064ee93f8342bbd9d16f3}{\index{abstract\-\_\-gradient\-\_\-calculator@{abstract\-\_\-gradient\-\_\-calculator}!abstract\-\_\-gradient\-\_\-calculator@{abstract\-\_\-gradient\-\_\-calculator}}
+\index{abstract\-\_\-gradient\-\_\-calculator@{abstract\-\_\-gradient\-\_\-calculator}!abstract_gradient_calculator@{abstract\-\_\-gradient\-\_\-calculator}}
+\subsubsection[{abstract\-\_\-gradient\-\_\-calculator}]{\setlength{\rightskip}{0pt plus 5cm}abstract\-\_\-gradient\-\_\-calculator\-::abstract\-\_\-gradient\-\_\-calculator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract__gradient__calculator_a259548d80ec064ee93f8342bbd9d16f3}
+This constructor takes a pointer to an abstract\-\_\-coordinate system. This coordinate system is then used to calculate the derivative for the given tile in the get\-\_\-gradient\-\_\-... methods. 
+\begin{DoxyParams}{Parameters}
+{\em coord\-\_\-sys} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract__gradient__calculator_ae101a124df59f5dbcc4d21acffe43ae1}{\index{abstract\-\_\-gradient\-\_\-calculator@{abstract\-\_\-gradient\-\_\-calculator}!get\-\_\-gradient\-\_\-eigen\-\_\-vector@{get\-\_\-gradient\-\_\-eigen\-\_\-vector}}
+\index{get\-\_\-gradient\-\_\-eigen\-\_\-vector@{get\-\_\-gradient\-\_\-eigen\-\_\-vector}!abstract_gradient_calculator@{abstract\-\_\-gradient\-\_\-calculator}}
+\subsubsection[{get\-\_\-gradient\-\_\-eigen\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}virtual sharedptr$<$Eigen\-::\-Vector\-Xf$>$ abstract\-\_\-gradient\-\_\-calculator\-::get\-\_\-gradient\-\_\-eigen\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__gradient__calculator_ae101a124df59f5dbcc4d21acffe43ae1}
+Get the gradient of a given tile as a Eigen\-::\-Vector of floats 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eigen\-::vector of floats, first holds the x-\/gradient-\/values in order of tile has in its vector. Second holds y... 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsecond__order__gradient_a920ecf0cbc89fa73782a318186cc3a6b}{second\-\_\-order\-\_\-gradient}.
+
+\hypertarget{classabstract__gradient__calculator_afbc6ee285d21d21b2241cfe643f8adce}{\index{abstract\-\_\-gradient\-\_\-calculator@{abstract\-\_\-gradient\-\_\-calculator}!get\-\_\-gradient\-\_\-floats@{get\-\_\-gradient\-\_\-floats}}
+\index{get\-\_\-gradient\-\_\-floats@{get\-\_\-gradient\-\_\-floats}!abstract_gradient_calculator@{abstract\-\_\-gradient\-\_\-calculator}}
+\subsubsection[{get\-\_\-gradient\-\_\-floats}]{\setlength{\rightskip}{0pt plus 5cm}virtual sharedptr$<$std\-::vector$<$float$>$ $>$ abstract\-\_\-gradient\-\_\-calculator\-::get\-\_\-gradient\-\_\-floats (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__gradient__calculator_afbc6ee285d21d21b2241cfe643f8adce}
+Get the gradient of a given tile as raw float data. 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of floats, first holding the x-\/gradient-\/values in same order which the data array of the tiles stores the values. Afterwards appending the y-\/values... 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsecond__order__gradient_a611bd811d9a47b0a53b7a827344189ff}{second\-\_\-order\-\_\-gradient}.
+
+\hypertarget{classabstract__gradient__calculator_a18d3f5191a95f8a3bfeb7b79862c0f24}{\index{abstract\-\_\-gradient\-\_\-calculator@{abstract\-\_\-gradient\-\_\-calculator}!get\-\_\-gradient\-\_\-tile@{get\-\_\-gradient\-\_\-tile}}
+\index{get\-\_\-gradient\-\_\-tile@{get\-\_\-gradient\-\_\-tile}!abstract_gradient_calculator@{abstract\-\_\-gradient\-\_\-calculator}}
+\subsubsection[{get\-\_\-gradient\-\_\-tile}]{\setlength{\rightskip}{0pt plus 5cm}sharedptr$<$ std\-::vector$<$ {\bf tile} $>$ $>$ abstract\-\_\-gradient\-\_\-calculator\-::get\-\_\-gradient\-\_\-tile (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classabstract__gradient__calculator_a18d3f5191a95f8a3bfeb7b79862c0f24}
+Get the gradient of a given tile in the tile-\/format. First element of the vector will be a tile representing the x gradient and second element will be a tile representing the y gradient. This method is for debug purposes mostly since it will call the abstract get\-\_\-gradient\-\_\-floats method of the instance. 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+gradient of given tile in x and y direction. x is first, y is second 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/abstract\-\_\-gradient\-\_\-calculator.\-h\item 
+src/algorithm/abstract\-\_\-gradient\-\_\-calculator.\-cpp\end{DoxyCompactItemize}

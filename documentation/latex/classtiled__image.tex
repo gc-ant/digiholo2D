@@ -1,0 +1,324 @@
+\hypertarget{classtiled__image}{\section{tiled\-\_\-image Class Reference}
+\label{classtiled__image}\index{tiled\-\_\-image@{tiled\-\_\-image}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtiled__image_af727a95048112cced08bc7ee2a440010}{tiled\-\_\-image} ()
+\item 
+\hyperlink{classtiled__image_a6480c34f45160649875a7b07900a2319}{tiled\-\_\-image} (sharedptr$<$ \hyperlink{classrow__major__float__image}{row\-\_\-major\-\_\-float\-\_\-image} $>$ img, long tilecount\-\_\-width\-\_\-hint, long tilecount\-\_\-height\-\_\-hint)
+\item 
+virtual \hyperlink{classtiled__image_a20772dac65234d65049af89fa5b58472}{$\sim$tiled\-\_\-image} ()
+\item 
+\hypertarget{classtiled__image_a835c6244b693c7038f8141ff27e8fe39}{long {\bfseries get\-\_\-tilecount\-\_\-height} () const }\label{classtiled__image_a835c6244b693c7038f8141ff27e8fe39}
+
+\item 
+\hypertarget{classtiled__image_af7792839436444757c2f1b64f7c347cd}{long {\bfseries get\-\_\-tilecount\-\_\-width} () const }\label{classtiled__image_af7792839436444757c2f1b64f7c347cd}
+
+\item 
+\hypertarget{classtiled__image_a3a8cd506fb2a095e799236b8c0c4ac46}{long \hyperlink{classtiled__image_a3a8cd506fb2a095e799236b8c0c4ac46}{get\-\_\-pixel\-\_\-width} () const }\label{classtiled__image_a3a8cd506fb2a095e799236b8c0c4ac46}
+
+\begin{DoxyCompactList}\small\item\em Returns width of the image in pixels. \end{DoxyCompactList}\item 
+\hypertarget{classtiled__image_a1e9c9f6e7a99b092778d4f235a4fb460}{long \hyperlink{classtiled__image_a1e9c9f6e7a99b092778d4f235a4fb460}{get\-\_\-pixel\-\_\-height} () const }\label{classtiled__image_a1e9c9f6e7a99b092778d4f235a4fb460}
+
+\begin{DoxyCompactList}\small\item\em Returns height of the image in pixels. \end{DoxyCompactList}\item 
+\hypertarget{classtiled__image_a04bc77f4cc78651b1afc6a7cb2607cab}{long {\bfseries get\-\_\-size\-\_\-of\-\_\-junction\-\_\-array} () const }\label{classtiled__image_a04bc77f4cc78651b1afc6a7cb2607cab}
+
+\item 
+boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile__junction}{tile\-\_\-junction} $>$ \hyperlink{classtiled__image_a0b7dbc0229e16ce6f22df4c4c47afc6e}{get\-\_\-junction\-\_\-at} (long i)
+\item 
+boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ \hyperlink{classtiled__image_a0b800608334dc6e097f5d7828e0011b6}{get\-\_\-tile\-\_\-at} (long iw, long ih)
+\begin{DoxyCompactList}\small\item\em Returns the tile at the specified index. \end{DoxyCompactList}\item 
+bool \hyperlink{classtiled__image_a514919bd673c1dbd93d508f1d3f94ccd}{create\-\_\-all\-\_\-junctions} ()
+\item 
+boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile__junction}{tile\-\_\-junction} $>$ \hyperlink{classtiled__image_a166df72f9850b94c772a0f61fa362aae}{get\-\_\-junction} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t, \hyperlink{classtile_a637de74fd50d4b3583b657caa4bf0301}{tile\-::rel\-\_\-position} pos)
+\item 
+boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile__junction}{tile\-\_\-junction} $>$ \hyperlink{classtiled__image_a6c1a917c13f994b3bfdb23b8215b8658}{get\-\_\-junction} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t1, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t2)
+\item 
+boost\-::shared\-\_\-ptr$<$ std\-::vector\\*
+$<$ boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classtile__junction}{tile\-\_\-junction} $>$ $>$ $>$ \hyperlink{classtiled__image_aea1e2cca50d9c3b5a6d012daf33e871a}{get\-\_\-neighbouring\-\_\-junctions} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\item 
+boost\-::shared\-\_\-ptr$<$ std\-::vector\\*
+$<$ boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classtile__junction}{tile\-\_\-junction} $>$ $>$ $>$ \hyperlink{classtiled__image_aca93dc758da7972d63f9b6ae3b845be7}{get\-\_\-neighbouring\-\_\-junctions} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g)
+\item 
+boost\-::shared\-\_\-ptr$<$ std\-::vector\\*
+$<$ boost\-::weak\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ $>$ $>$ \hyperlink{classtiled__image_ae70cc88a06d95b9c7722b6a9a1425946}{get\-\_\-neighbours} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\item 
+boost\-::shared\-\_\-ptr$<$ std\-::vector\\*
+$<$ boost\-::weak\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ $>$ $>$ \hyperlink{classtiled__image_ab6a7e4f4a35c611408574f61e78788c9}{get\-\_\-neighbours} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g)
+\item 
+boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classrow__major__float__image}{row\-\_\-major\-\_\-float\-\_\-image} $>$ \hyperlink{classtiled__image_af07b3af38b336b89c632cd279a44800f}{convert\-\_\-to\-\_\-float\-\_\-image} ()
+\item 
+void \hyperlink{classtiled__image_a402abd626c8ea3b7ce6d55bb9944906e}{unwrap\-\_\-tiles} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classabstract__tile__unwrapper}{abstract\-\_\-tile\-\_\-unwrapper} $>$ uw)
+\item 
+void \hyperlink{classtiled__image_a7ea93c1b5df0ff8b40394f38e2ee13be}{gradient} (int dim, sharedptr$<$ \hyperlink{classabstract__gradient__calculator}{abstract\-\_\-gradient\-\_\-calculator} $>$ gcalc=sharedptr$<$ \hyperlink{classsecond__order__gradient}{second\-\_\-order\-\_\-gradient} $>$(new \hyperlink{classsecond__order__gradient}{second\-\_\-order\-\_\-gradient}()))
+\begin{DoxyCompactList}\small\item\em todo exception \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtiled__image_ad9d048f39dc13c36b83a87295fdf75f9}{add\-\_\-tile\-\_\-to\-\_\-group} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+ersetzt tesselated image.
+
+Sie verwaltet ein 2\-D Array von tiles, die zusammengesetzt ein Bild ergeben. Dabei erfolgt die Verwaltung des 2\-D Arrays intern über eine Indizierung eines 1\-D Vektors aus strong pointers auf die tiles. Damit kann die dynamische Speicherverwaltung von boost mit dynamischen Arrays kombiniert werden.
+
+Ein \hyperlink{classtiled__image}{tiled\-\_\-image} wird mit den Daten aus einem \hyperlink{classfloat__image}{float\-\_\-image} initialisiert, außerdem werdend die Anzahl der tiles in w und h Richtung übergeben in die das Bild zerlegt werden soll. Weil jede tile sich eine lokale Kopie der betreffenden Daten erstellt ist das \hyperlink{classtiled__image}{tiled\-\_\-image} in diesem Sinne auch eine Kopie des gegebenen \hyperlink{classfloat__image}{float\-\_\-image}. Die Operationen auf dem \hyperlink{classtiled__image}{tiled\-\_\-image} verändern das Originalbild also nicht. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtiled__image_af727a95048112cced08bc7ee2a440010}{\index{tiled\-\_\-image@{tiled\-\_\-image}!tiled\-\_\-image@{tiled\-\_\-image}}
+\index{tiled\-\_\-image@{tiled\-\_\-image}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{tiled\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}tiled\-\_\-image\-::tiled\-\_\-image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_af727a95048112cced08bc7ee2a440010}
+Standard constructor creates an empty tesselated image with tilecount\-\_\-width und tilecount\-\_\-height equals zero. \hypertarget{classtiled__image_a6480c34f45160649875a7b07900a2319}{\index{tiled\-\_\-image@{tiled\-\_\-image}!tiled\-\_\-image@{tiled\-\_\-image}}
+\index{tiled\-\_\-image@{tiled\-\_\-image}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{tiled\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}tiled\-\_\-image\-::tiled\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf row\-\_\-major\-\_\-float\-\_\-image} $>$}]{img, }
+\item[{long}]{tilecount\-\_\-width\-\_\-hint, }
+\item[{long}]{tilecount\-\_\-height\-\_\-hint}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_a6480c34f45160649875a7b07900a2319}
+Create a \hyperlink{classtiled__image}{tiled\-\_\-image} from an existing \hyperlink{classfloat__image}{float\-\_\-image}. The tiled image create a copy and thus not operate on the same memory as the original \hyperlink{classfloat__image}{float\-\_\-image}. 
+\begin{DoxyParams}{Parameters}
+{\em img} & The image to be split into tiles \\
+\hline
+{\em tilecount\-\_\-width\-\_\-hint} & Number if tiles in width direction. This number is not exactly adhered to, but the real number of tiles will be close. \\
+\hline
+{\em tilecount\-\_\-height\-\_\-hint} & Number of tiles in height direction. This number is not exactly adhered to, but the real number of tiles will be close. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtiled__image_a20772dac65234d65049af89fa5b58472}{\index{tiled\-\_\-image@{tiled\-\_\-image}!$\sim$tiled\-\_\-image@{$\sim$tiled\-\_\-image}}
+\index{$\sim$tiled\-\_\-image@{$\sim$tiled\-\_\-image}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{$\sim$tiled\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}tiled\-\_\-image\-::$\sim$tiled\-\_\-image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classtiled__image_a20772dac65234d65049af89fa5b58472}
+Frees the space associated with this image, if there are no more strong pointers to the tiles within this image. Tiles will be destroyed as soon as no strong pointers to them exist anymore. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classtiled__image_af07b3af38b336b89c632cd279a44800f}{\index{tiled\-\_\-image@{tiled\-\_\-image}!convert\-\_\-to\-\_\-float\-\_\-image@{convert\-\_\-to\-\_\-float\-\_\-image}}
+\index{convert\-\_\-to\-\_\-float\-\_\-image@{convert\-\_\-to\-\_\-float\-\_\-image}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{convert\-\_\-to\-\_\-float\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ {\bf row\-\_\-major\-\_\-float\-\_\-image} $>$ tiled\-\_\-image\-::convert\-\_\-to\-\_\-float\-\_\-image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_af07b3af38b336b89c632cd279a44800f}
+Generates a float image that contains a copy of the \hyperlink{classtiled__image}{tiled\-\_\-image}. \begin{DoxyReturn}{Returns}
+A shared pointer to that image. This shared pointer has a custom deleter with delete\-\_\-float\-\_\-image from \hyperlink{float__image_8h_source}{float\-\_\-image.\-h} so that it can deal with the memory-\/management without further need to address it in the code. 
+\end{DoxyReturn}
+Shared pointer mit custom deleter übergeben, damit das Memory Management übernommen werden kann. \hypertarget{classtiled__image_a514919bd673c1dbd93d508f1d3f94ccd}{\index{tiled\-\_\-image@{tiled\-\_\-image}!create\-\_\-all\-\_\-junctions@{create\-\_\-all\-\_\-junctions}}
+\index{create\-\_\-all\-\_\-junctions@{create\-\_\-all\-\_\-junctions}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{create\-\_\-all\-\_\-junctions}]{\setlength{\rightskip}{0pt plus 5cm}bool tiled\-\_\-image\-::create\-\_\-all\-\_\-junctions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_a514919bd673c1dbd93d508f1d3f94ccd}
+Create a junction for every junction between two first order neighbouring blocks \begin{DoxyReturn}{Returns}
+true if all junctions were created successfully, false if not or (!) junctions already initialized 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_a166df72f9850b94c772a0f61fa362aae}{\index{tiled\-\_\-image@{tiled\-\_\-image}!get\-\_\-junction@{get\-\_\-junction}}
+\index{get\-\_\-junction@{get\-\_\-junction}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{get\-\_\-junction}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ {\bf tile\-\_\-junction} $>$ tiled\-\_\-image\-::get\-\_\-junction (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t, }
+\item[{{\bf tile\-::rel\-\_\-position}}]{pos}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_a166df72f9850b94c772a0f61fa362aae}
+Overloaded function\-: You may use the other function with get\-\_\-junction(tile t1, tile t2), too. Returns the junction between t1 and the tile relative (in direction pos) to it, or unitizialed junction if there is no junction! Note\-: Runtime is O(1) 
+\begin{DoxyParams}{Parameters}
+{\em t1} & First tile \\
+\hline
+{\em pos} & Second tiles position relative to first tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Junction or unitialized junction if no junction exists 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_a6c1a917c13f994b3bfdb23b8215b8658}{\index{tiled\-\_\-image@{tiled\-\_\-image}!get\-\_\-junction@{get\-\_\-junction}}
+\index{get\-\_\-junction@{get\-\_\-junction}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{get\-\_\-junction}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ {\bf tile\-\_\-junction} $>$ tiled\-\_\-image\-::get\-\_\-junction (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t1, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t2}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_a6c1a917c13f994b3bfdb23b8215b8658}
+Overloaded function\-: You may use the other function with get\-\_\-junction(tile t, relative position), too Returns the junction between t1 and t2, or unitizialed junction if there is no junction! Note\-: Runtime is O(1) 
+\begin{DoxyParams}{Parameters}
+{\em t1} & First tile \\
+\hline
+{\em t2} & Second tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Junction between t1 and t2 or unitialized junction if no junction exists 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_a0b7dbc0229e16ce6f22df4c4c47afc6e}{\index{tiled\-\_\-image@{tiled\-\_\-image}!get\-\_\-junction\-\_\-at@{get\-\_\-junction\-\_\-at}}
+\index{get\-\_\-junction\-\_\-at@{get\-\_\-junction\-\_\-at}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{get\-\_\-junction\-\_\-at}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ {\bf tile\-\_\-junction} $>$ tiled\-\_\-image\-::get\-\_\-junction\-\_\-at (
+\begin{DoxyParamCaption}
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_a0b7dbc0229e16ce6f22df4c4c47afc6e}
+Returns the junction on index i in the vc\-\_\-junction\-\_\-array for eg. iterating over 
+\begin{DoxyParams}{Parameters}
+{\em i} & index of vc\-\_\-junction\-\_\-array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+junction 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_aea1e2cca50d9c3b5a6d012daf33e871a}{\index{tiled\-\_\-image@{tiled\-\_\-image}!get\-\_\-neighbouring\-\_\-junctions@{get\-\_\-neighbouring\-\_\-junctions}}
+\index{get\-\_\-neighbouring\-\_\-junctions@{get\-\_\-neighbouring\-\_\-junctions}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{get\-\_\-neighbouring\-\_\-junctions}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ std\-::vector$<$ boost\-::shared\-\_\-ptr$<$ {\bf tile\-\_\-junction} $>$ $>$ $>$ tiled\-\_\-image\-::get\-\_\-neighbouring\-\_\-junctions (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_aea1e2cca50d9c3b5a6d012daf33e871a}
+Search for junctions belonging to the tile t Note\-: Runtime is O(1) 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of shared ptr to the junctions with tile t and other unspecified neighbour tile t2 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_aca93dc758da7972d63f9b6ae3b845be7}{\index{tiled\-\_\-image@{tiled\-\_\-image}!get\-\_\-neighbouring\-\_\-junctions@{get\-\_\-neighbouring\-\_\-junctions}}
+\index{get\-\_\-neighbouring\-\_\-junctions@{get\-\_\-neighbouring\-\_\-junctions}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{get\-\_\-neighbouring\-\_\-junctions}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ std\-::vector$<$ boost\-::shared\-\_\-ptr$<$ {\bf tile\-\_\-junction} $>$ $>$ $>$ tiled\-\_\-image\-::get\-\_\-neighbouring\-\_\-junctions (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_aca93dc758da7972d63f9b6ae3b845be7}
+Search for junctions belonging to the tile t Note\-: Runtime is O(1) 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile \\
+\hline
+{\em g} & tilegroup in which the common junctions with tile t are beeing searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of shared ptr to the junctions with tile t and other unspecified neighbour tile t2 in group g 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_ae70cc88a06d95b9c7722b6a9a1425946}{\index{tiled\-\_\-image@{tiled\-\_\-image}!get\-\_\-neighbours@{get\-\_\-neighbours}}
+\index{get\-\_\-neighbours@{get\-\_\-neighbours}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{get\-\_\-neighbours}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ std\-::vector$<$ boost\-::weak\-\_\-ptr$<$ {\bf tile} $>$ $>$ $>$ tiled\-\_\-image\-::get\-\_\-neighbours (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_ae70cc88a06d95b9c7722b6a9a1425946}
+Search for first order (N\-S\-E\-W) neighbours of the given tile t. Note\-: Runtime is O(1) 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile for which the neighbours are searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared ptr to vector containing 0-\/4 weak ptr to the first order neighours 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_ab6a7e4f4a35c611408574f61e78788c9}{\index{tiled\-\_\-image@{tiled\-\_\-image}!get\-\_\-neighbours@{get\-\_\-neighbours}}
+\index{get\-\_\-neighbours@{get\-\_\-neighbours}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{get\-\_\-neighbours}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ std\-::vector$<$ boost\-::weak\-\_\-ptr$<$ {\bf tile} $>$ $>$ $>$ tiled\-\_\-image\-::get\-\_\-neighbours (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_ab6a7e4f4a35c611408574f61e78788c9}
+Search for first order (N\-S\-E\-W) neighbours of the given tile t, but only (!) in the tilegroup g N\-O\-T\-E\-: Neighbous of t N\-O\-T in the tilegroup g will not be added to the return statement! Note\-: Runtime is O(1) 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile for which the neighbours are searched \\
+\hline
+{\em g} & tilegroup in which the neigbhours should be \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared ptr to vector containing 0-\/4 weak ptr to the frist order neighbours in the tilegroup g 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_a0b800608334dc6e097f5d7828e0011b6}{\index{tiled\-\_\-image@{tiled\-\_\-image}!get\-\_\-tile\-\_\-at@{get\-\_\-tile\-\_\-at}}
+\index{get\-\_\-tile\-\_\-at@{get\-\_\-tile\-\_\-at}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{get\-\_\-tile\-\_\-at}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$ tiled\-\_\-image\-::get\-\_\-tile\-\_\-at (
+\begin{DoxyParamCaption}
+\item[{long}]{iw, }
+\item[{long}]{ih}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_a0b800608334dc6e097f5d7828e0011b6}
+
+
+Returns the tile at the specified index. 
+
+Returns the tile on index i in the vc\-\_\-tile\-\_\-array for eg. iterating over 
+\begin{DoxyParams}{Parameters}
+{\em i} & index of vc\-\_\-tile\-\_\-array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tile 
+\end{DoxyReturn}
+\hypertarget{classtiled__image_a7ea93c1b5df0ff8b40394f38e2ee13be}{\index{tiled\-\_\-image@{tiled\-\_\-image}!gradient@{gradient}}
+\index{gradient@{gradient}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{gradient}]{\setlength{\rightskip}{0pt plus 5cm}void tiled\-\_\-image\-::gradient (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{sharedptr$<$ {\bf abstract\-\_\-gradient\-\_\-calculator} $>$}]{gcalc = {\ttfamily sharedptr$<${\bf second\-\_\-order\-\_\-gradient}$>$(new~{\bf second\-\_\-order\-\_\-gradient}())}}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_a7ea93c1b5df0ff8b40394f38e2ee13be}
+
+
+todo exception 
+
+This method calculates the gradient of the image by calculating the gradient of every tile. 
+\begin{DoxyParams}{Parameters}
+{\em dim} & The dimension (0 or 1) along which the gradient is to be calculated. 0 respresents width dimension and 1 represents height dimension. If a parameter other than 0,1 is given dim is set to 0 w/o warning. \\
+\hline
+{\em gcalc} & Pointer to instance of gradient calculator. Standard argument is a second order gradient calculator on a unit cartesian system. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtiled__image_a402abd626c8ea3b7ce6d55bb9944906e}{\index{tiled\-\_\-image@{tiled\-\_\-image}!unwrap\-\_\-tiles@{unwrap\-\_\-tiles}}
+\index{unwrap\-\_\-tiles@{unwrap\-\_\-tiles}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{unwrap\-\_\-tiles}]{\setlength{\rightskip}{0pt plus 5cm}void tiled\-\_\-image\-::unwrap\-\_\-tiles (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf abstract\-\_\-tile\-\_\-unwrapper} $>$}]{uw}
+\end{DoxyParamCaption}
+)}}\label{classtiled__image_a402abd626c8ea3b7ce6d55bb9944906e}
+This method will apply the unwrap method of the tile unwrapper instance to every tile of the image. The order in which the tiles are unwrapped is as follows (keep in mind, tile indices run from 0,...,W-\/1 in width direction and 0,..., H-\/1 in height direction)
+
+1) First the rectangle with tiles w=0,...,W-\/2 and h=0,...,H-\/2 is unwrapped row by row. 2) Then the column with w=W-\/1 is unwrapped (excluding bottom right tile with w=W-\/1, h=H-\/1) 3) Lastly the bottom row is unwrapped (including bottom right tile)
+
+This order makes sure that tiles that have the same dimensions will be unwrapped en bloque. For most unwrappers this will not make a difference. However, if the unwrapper performs precalculations that only depend on the dimensions of the tile (as is the case in the least squares gradient unwrapper), this can significantly reduce the number of precalculations. 
+\begin{DoxyParams}{Parameters}
+{\em uw} & An instance of the unwrapper. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classtiled__image_ad9d048f39dc13c36b83a87295fdf75f9}{\index{tiled\-\_\-image@{tiled\-\_\-image}!add\-\_\-tile\-\_\-to\-\_\-group@{add\-\_\-tile\-\_\-to\-\_\-group}}
+\index{add\-\_\-tile\-\_\-to\-\_\-group@{add\-\_\-tile\-\_\-to\-\_\-group}!tiled_image@{tiled\-\_\-image}}
+\subsubsection[{add\-\_\-tile\-\_\-to\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}void add\-\_\-tile\-\_\-to\-\_\-group (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classtiled__image_ad9d048f39dc13c36b83a87295fdf75f9}
+This file offers the functionality of the tile class while using boost smart pointers to make memory management easier. One M\-A\-J\-O\-R D\-I\-F\-F\-E\-R\-E\-N\-C\-E is that it creates its own copy of the data and does not operate on pointers to the float image data. Sets the tilegroup of the tile t to the given group and adds this tile to the vector of tiles in the tilegroup g. A\-C\-H\-T\-U\-N\-G! This method should only be used if this tile is not alreay member in a tilegroup. If it is member of a tilegroup, then the reference to this tile in the old group will still be there. This can lead to errors. For merging tilegroups use the merge\-\_\-into method from tilegroup. These conditions are not checked. 
+\begin{DoxyParams}{Parameters}
+{\em t} & the tile. It must not be in a group. \\
+\hline
+{\em g} & the tilegroup. It must not already contain the tile t. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/tiles/tiled\-\_\-image.\-h\item 
+src/tiles/tiled\-\_\-image.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{classabstract__reliability__calculator}{\section{abstract\-\_\-reliability\-\_\-calculator Class Reference}
+\label{classabstract__reliability__calculator}\index{abstract\-\_\-reliability\-\_\-calculator@{abstract\-\_\-reliability\-\_\-calculator}}
+}
+
+
+{\ttfamily \#include $<$abstract\-\_\-reliability\-\_\-calculator.\-h$>$}
+
+Inheritance diagram for abstract\-\_\-reliability\-\_\-calculator\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.171548cm]{classabstract__reliability__calculator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classabstract__reliability__calculator_ac28dfe44888c3beb9d6ceeaeea1c99a7}{abstract\-\_\-reliability\-\_\-calculator} ()
+\item 
+virtual float \hyperlink{classabstract__reliability__calculator_a0c9a7778550b643b6a273e3bf0662023}{calculate\-\_\-reliability} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile__junction}{tile\-\_\-junction} $>$ junc)=0
+\item 
+virtual float \hyperlink{classabstract__reliability__calculator_a496b1743c17660ae4617eebdd312bb9d}{calculate\-\_\-reliability} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t)=0
+\item 
+virtual void \hyperlink{classabstract__reliability__calculator_a4457d3eece3c873e2cc2455a6dfdbb88}{init\-\_\-junctions} (sharedptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This pure virtual class provides an abstract interface for a reliability calculating class. Such a class must implement a function for calculating the reliability of a given junction and of a given tile. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classabstract__reliability__calculator_ac28dfe44888c3beb9d6ceeaeea1c99a7}{\index{abstract\-\_\-reliability\-\_\-calculator@{abstract\-\_\-reliability\-\_\-calculator}!abstract\-\_\-reliability\-\_\-calculator@{abstract\-\_\-reliability\-\_\-calculator}}
+\index{abstract\-\_\-reliability\-\_\-calculator@{abstract\-\_\-reliability\-\_\-calculator}!abstract_reliability_calculator@{abstract\-\_\-reliability\-\_\-calculator}}
+\subsubsection[{abstract\-\_\-reliability\-\_\-calculator}]{\setlength{\rightskip}{0pt plus 5cm}abstract\-\_\-reliability\-\_\-calculator\-::abstract\-\_\-reliability\-\_\-calculator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract__reliability__calculator_ac28dfe44888c3beb9d6ceeaeea1c99a7}
+Constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract__reliability__calculator_a0c9a7778550b643b6a273e3bf0662023}{\index{abstract\-\_\-reliability\-\_\-calculator@{abstract\-\_\-reliability\-\_\-calculator}!calculate\-\_\-reliability@{calculate\-\_\-reliability}}
+\index{calculate\-\_\-reliability@{calculate\-\_\-reliability}!abstract_reliability_calculator@{abstract\-\_\-reliability\-\_\-calculator}}
+\subsubsection[{calculate\-\_\-reliability}]{\setlength{\rightskip}{0pt plus 5cm}virtual float abstract\-\_\-reliability\-\_\-calculator\-::calculate\-\_\-reliability (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tiled\-\_\-image} $>$}]{ti, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile\-\_\-junction} $>$}]{junc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__reliability__calculator_a0c9a7778550b643b6a273e3bf0662023}
+Calculates the reliability of a given junction 
+\begin{DoxyParams}{Parameters}
+{\em ti} & tiled image \\
+\hline
+{\em junc} & junction \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classreliability__calculator__random_a73524f3dd704cb666c794b765e4216fc}{reliability\-\_\-calculator\-\_\-random}, \hyperlink{classreliability__calculator__variance__second_a1150171c57a7b9420e5f5211e71c265a}{reliability\-\_\-calculator\-\_\-variance\-\_\-second}, \hyperlink{classreliability__calculator__variance_ac6380a3bedfdc5648f501cd0a5c92369}{reliability\-\_\-calculator\-\_\-variance}, and \hyperlink{classreliability__calculator__mean__difference_a2d64711ed370d44aae8c276e1507ee4a}{reliability\-\_\-calculator\-\_\-mean\-\_\-difference}.
+
+\hypertarget{classabstract__reliability__calculator_a496b1743c17660ae4617eebdd312bb9d}{\index{abstract\-\_\-reliability\-\_\-calculator@{abstract\-\_\-reliability\-\_\-calculator}!calculate\-\_\-reliability@{calculate\-\_\-reliability}}
+\index{calculate\-\_\-reliability@{calculate\-\_\-reliability}!abstract_reliability_calculator@{abstract\-\_\-reliability\-\_\-calculator}}
+\subsubsection[{calculate\-\_\-reliability}]{\setlength{\rightskip}{0pt plus 5cm}virtual float abstract\-\_\-reliability\-\_\-calculator\-::calculate\-\_\-reliability (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tiled\-\_\-image} $>$}]{ti, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__reliability__calculator_a496b1743c17660ae4617eebdd312bb9d}
+Calculates the reliability of a given tile 
+\begin{DoxyParams}{Parameters}
+{\em ti} & tiled image \\
+\hline
+{\em t} & tile \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classreliability__calculator__variance__second_a0cab62b334c6f20aa821496f7364bd98}{reliability\-\_\-calculator\-\_\-variance\-\_\-second}, \hyperlink{classreliability__calculator__random_a7e49000129535b04968a5fb7a87fd5e4}{reliability\-\_\-calculator\-\_\-random}, \hyperlink{classreliability__calculator__variance_a0250bc0b9f2d62ec48b66449d6f94b56}{reliability\-\_\-calculator\-\_\-variance}, and \hyperlink{classreliability__calculator__mean__difference_a9e03f2bdf2a04d9a414530598db0cbf4}{reliability\-\_\-calculator\-\_\-mean\-\_\-difference}.
+
+\hypertarget{classabstract__reliability__calculator_a4457d3eece3c873e2cc2455a6dfdbb88}{\index{abstract\-\_\-reliability\-\_\-calculator@{abstract\-\_\-reliability\-\_\-calculator}!init\-\_\-junctions@{init\-\_\-junctions}}
+\index{init\-\_\-junctions@{init\-\_\-junctions}!abstract_reliability_calculator@{abstract\-\_\-reliability\-\_\-calculator}}
+\subsubsection[{init\-\_\-junctions}]{\setlength{\rightskip}{0pt plus 5cm}virtual void abstract\-\_\-reliability\-\_\-calculator\-::init\-\_\-junctions (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tiled\-\_\-image} $>$}]{ti}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__reliability__calculator_a4457d3eece3c873e2cc2455a6dfdbb88}
+Calculate the variance of each junction once, therefor making it possible to just access them via get\-\_\-variance. 
+\begin{DoxyParams}{Parameters}
+{\em ti} & tiled image \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classreliability__calculator__random_a3b5b45c3e398b70398ba139eb6046dc5}{reliability\-\_\-calculator\-\_\-random}, \hyperlink{classreliability__calculator__variance_ad371792568036db7a8dac6fabbb78d05}{reliability\-\_\-calculator\-\_\-variance}, \hyperlink{classreliability__calculator__variance__second_a5c7dcb23c303a0ec762504ea9a775b2b}{reliability\-\_\-calculator\-\_\-variance\-\_\-second}, and \hyperlink{classreliability__calculator__mean__difference_a6a49bd9cf9996cdee5919f2307ca473a}{reliability\-\_\-calculator\-\_\-mean\-\_\-difference}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/abstract\-\_\-reliability\-\_\-calculator.\-h\end{DoxyCompactItemize}

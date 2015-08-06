@@ -1,0 +1,65 @@
+\hypertarget{classmonomial__gradient}{\section{monomial\-\_\-gradient Class Reference}
+\label{classmonomial__gradient}\index{monomial\-\_\-gradient@{monomial\-\_\-gradient}}
+}
+Inheritance diagram for monomial\-\_\-gradient\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmonomial__gradient}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmonomial__gradient_a1150cd5186763d6b59b9b01abc8e82c8}{monomial\-\_\-gradient} (int m, int n)
+\item 
+virtual sharedarray$<$ float $>$ \hyperlink{classmonomial__gradient_a718fe4bdf3a6edd32d655de03db8badf}{eval} (float x, float y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmonomial__gradient_a1150cd5186763d6b59b9b01abc8e82c8}{\index{monomial\-\_\-gradient@{monomial\-\_\-gradient}!monomial\-\_\-gradient@{monomial\-\_\-gradient}}
+\index{monomial\-\_\-gradient@{monomial\-\_\-gradient}!monomial_gradient@{monomial\-\_\-gradient}}
+\subsubsection[{monomial\-\_\-gradient}]{\setlength{\rightskip}{0pt plus 5cm}monomial\-\_\-gradient\-::monomial\-\_\-gradient (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{classmonomial__gradient_a1150cd5186763d6b59b9b01abc8e82c8}
+Standard constructor. Takes the exponents m and n from the parent polynom. Eg. x$^\wedge$3y$^\wedge$4 calls this gradient with m = 3 \& n = 4. Conversion into the derivative comes in this constructor. 
+\begin{DoxyParams}{Parameters}
+{\em m} & power of x \\
+\hline
+{\em n} & power of y \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmonomial__gradient_a718fe4bdf3a6edd32d655de03db8badf}{\index{monomial\-\_\-gradient@{monomial\-\_\-gradient}!eval@{eval}}
+\index{eval@{eval}!monomial_gradient@{monomial\-\_\-gradient}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}sharedarray$<$ float $>$ monomial\-\_\-gradient\-::eval (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classmonomial__gradient_a718fe4bdf3a6edd32d655de03db8badf}
+Calculate the gradient for this function 
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate \\
+\hline
+{\em y} & coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+2 floats, first for x-\/value 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__gradient_a4720548702baebd45572547fd913ef30}{abstract\-\_\-gradient}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/model/monomial\-\_\-gradient.\-h\item 
+src/model/monomial\-\_\-gradient.\-cpp\end{DoxyCompactItemize}

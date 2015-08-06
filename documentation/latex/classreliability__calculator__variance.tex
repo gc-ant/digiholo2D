@@ -1,0 +1,90 @@
+\hypertarget{classreliability__calculator__variance}{\section{reliability\-\_\-calculator\-\_\-variance Class Reference}
+\label{classreliability__calculator__variance}\index{reliability\-\_\-calculator\-\_\-variance@{reliability\-\_\-calculator\-\_\-variance}}
+}
+Inheritance diagram for reliability\-\_\-calculator\-\_\-variance\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classreliability__calculator__variance}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classreliability__calculator__variance_aa97b8fa061b578f6be66a89afba64657}{\hyperlink{classreliability__calculator__variance_aa97b8fa061b578f6be66a89afba64657}{reliability\-\_\-calculator\-\_\-variance} ()}\label{classreliability__calculator__variance_aa97b8fa061b578f6be66a89afba64657}
+
+\begin{DoxyCompactList}\small\item\em Std Constructor. \end{DoxyCompactList}\item 
+virtual float \hyperlink{classreliability__calculator__variance_ac6380a3bedfdc5648f501cd0a5c92369}{calculate\-\_\-reliability} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile__junction}{tile\-\_\-junction} $>$ t)
+\item 
+virtual float \hyperlink{classreliability__calculator__variance_a0250bc0b9f2d62ec48b66449d6f94b56}{calculate\-\_\-reliability} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\item 
+void \hyperlink{classreliability__calculator__variance_ad371792568036db7a8dac6fabbb78d05}{init\-\_\-junctions} (sharedptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classreliability__calculator__variance_ac6380a3bedfdc5648f501cd0a5c92369}{\index{reliability\-\_\-calculator\-\_\-variance@{reliability\-\_\-calculator\-\_\-variance}!calculate\-\_\-reliability@{calculate\-\_\-reliability}}
+\index{calculate\-\_\-reliability@{calculate\-\_\-reliability}!reliability_calculator_variance@{reliability\-\_\-calculator\-\_\-variance}}
+\subsubsection[{calculate\-\_\-reliability}]{\setlength{\rightskip}{0pt plus 5cm}float reliability\-\_\-calculator\-\_\-variance\-::calculate\-\_\-reliability (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tiled\-\_\-image} $>$}]{ti, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile\-\_\-junction} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classreliability__calculator__variance_ac6380a3bedfdc5648f501cd0a5c92369}
+Calculates the reliability of a given junction 
+\begin{DoxyParams}{Parameters}
+{\em ti} & tiled image \\
+\hline
+{\em t} & junction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float between 0 and F\-L\-T\-\_\-\-M\-A\-X 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__reliability__calculator_a0c9a7778550b643b6a273e3bf0662023}{abstract\-\_\-reliability\-\_\-calculator}.
+
+\hypertarget{classreliability__calculator__variance_a0250bc0b9f2d62ec48b66449d6f94b56}{\index{reliability\-\_\-calculator\-\_\-variance@{reliability\-\_\-calculator\-\_\-variance}!calculate\-\_\-reliability@{calculate\-\_\-reliability}}
+\index{calculate\-\_\-reliability@{calculate\-\_\-reliability}!reliability_calculator_variance@{reliability\-\_\-calculator\-\_\-variance}}
+\subsubsection[{calculate\-\_\-reliability}]{\setlength{\rightskip}{0pt plus 5cm}float reliability\-\_\-calculator\-\_\-variance\-::calculate\-\_\-reliability (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tiled\-\_\-image} $>$}]{ti, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classreliability__calculator__variance_a0250bc0b9f2d62ec48b66449d6f94b56}
+Calculates the reliability of a given tile 
+\begin{DoxyParams}{Parameters}
+{\em ti} & tiled image \\
+\hline
+{\em t} & junction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float between 0 and F\-L\-T\-\_\-\-M\-A\-X (or inf) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__reliability__calculator_a496b1743c17660ae4617eebdd312bb9d}{abstract\-\_\-reliability\-\_\-calculator}.
+
+\hypertarget{classreliability__calculator__variance_ad371792568036db7a8dac6fabbb78d05}{\index{reliability\-\_\-calculator\-\_\-variance@{reliability\-\_\-calculator\-\_\-variance}!init\-\_\-junctions@{init\-\_\-junctions}}
+\index{init\-\_\-junctions@{init\-\_\-junctions}!reliability_calculator_variance@{reliability\-\_\-calculator\-\_\-variance}}
+\subsubsection[{init\-\_\-junctions}]{\setlength{\rightskip}{0pt plus 5cm}void reliability\-\_\-calculator\-\_\-variance\-::init\-\_\-junctions (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tiled\-\_\-image} $>$}]{ti}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classreliability__calculator__variance_ad371792568036db7a8dac6fabbb78d05}
+Calculate the variance of each junction once, therefore making it possible to just access them via get\-\_\-variance. 
+\begin{DoxyParams}{Parameters}
+{\em ti} & tiled image \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classabstract__reliability__calculator_a4457d3eece3c873e2cc2455a6dfdbb88}{abstract\-\_\-reliability\-\_\-calculator}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/reliability\-\_\-calculator\-\_\-variance.\-h\item 
+src/algorithm/reliability\-\_\-calculator\-\_\-variance.\-cpp\end{DoxyCompactItemize}

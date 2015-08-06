@@ -1,0 +1,79 @@
+\hypertarget{classstrand__tile__merger}{\section{strand\-\_\-tile\-\_\-merger Class Reference}
+\label{classstrand__tile__merger}\index{strand\-\_\-tile\-\_\-merger@{strand\-\_\-tile\-\_\-merger}}
+}
+Inheritance diagram for strand\-\_\-tile\-\_\-merger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classstrand__tile__merger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstrand__tile__merger_a8b5a748fc55b82bac06e27a43d591b8b}{strand\-\_\-tile\-\_\-merger} ()
+\item 
+void \hyperlink{classstrand__tile__merger_a9ac4662e82da56e988f060b1e138ac05}{merge\-\_\-tiles} (sharedptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti)
+\item 
+virtual std\-::string \hyperlink{classstrand__tile__merger_a3e548d789df5b5a39435c095dd51365b}{get\-\_\-name} ()
+\item 
+virtual void \hyperlink{classstrand__tile__merger_af623214f3fe92b402d1a5510f1208071}{usage\-\_\-help} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classstrand__tile__merger_ab8c6db72089df38a920d3b134cce2e76}{void {\bfseries add\-\_\-tile\-\_\-to\-\_\-group} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t, sharedptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g)}\label{classstrand__tile__merger_ab8c6db72089df38a920d3b134cce2e76}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstrand__tile__merger_a8b5a748fc55b82bac06e27a43d591b8b}{\index{strand\-\_\-tile\-\_\-merger@{strand\-\_\-tile\-\_\-merger}!strand\-\_\-tile\-\_\-merger@{strand\-\_\-tile\-\_\-merger}}
+\index{strand\-\_\-tile\-\_\-merger@{strand\-\_\-tile\-\_\-merger}!strand_tile_merger@{strand\-\_\-tile\-\_\-merger}}
+\subsubsection[{strand\-\_\-tile\-\_\-merger}]{\setlength{\rightskip}{0pt plus 5cm}strand\-\_\-tile\-\_\-merger\-::strand\-\_\-tile\-\_\-merger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classstrand__tile__merger_a8b5a748fc55b82bac06e27a43d591b8b}
+Konstruktor for a merger class, based on the (direct) merge-\/algorithm from the strand paper. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classstrand__tile__merger_a3e548d789df5b5a39435c095dd51365b}{\index{strand\-\_\-tile\-\_\-merger@{strand\-\_\-tile\-\_\-merger}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!strand_tile_merger@{strand\-\_\-tile\-\_\-merger}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string strand\-\_\-tile\-\_\-merger\-::get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classstrand__tile__merger_a3e548d789df5b5a39435c095dd51365b}
+Return a name (with options) to set in the output file name 
+
+Implements \hyperlink{classabstract__tile__merger_a12ec9d118912b3c571d61ff9649042c6}{abstract\-\_\-tile\-\_\-merger}.
+
+\hypertarget{classstrand__tile__merger_a9ac4662e82da56e988f060b1e138ac05}{\index{strand\-\_\-tile\-\_\-merger@{strand\-\_\-tile\-\_\-merger}!merge\-\_\-tiles@{merge\-\_\-tiles}}
+\index{merge\-\_\-tiles@{merge\-\_\-tiles}!strand_tile_merger@{strand\-\_\-tile\-\_\-merger}}
+\subsubsection[{merge\-\_\-tiles}]{\setlength{\rightskip}{0pt plus 5cm}void strand\-\_\-tile\-\_\-merger\-::merge\-\_\-tiles (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tiled\-\_\-image} $>$}]{ti}
+\end{DoxyParamCaption}
+)}}\label{classstrand__tile__merger_a9ac4662e82da56e988f060b1e138ac05}
+Merge all given tiles inside the smart tiled image. 
+\begin{DoxyParams}{Parameters}
+{\em ti} & boost shared\-\_\-ptr to smart tiled image \\
+\hline
+\end{DoxyParams}
+\hypertarget{classstrand__tile__merger_af623214f3fe92b402d1a5510f1208071}{\index{strand\-\_\-tile\-\_\-merger@{strand\-\_\-tile\-\_\-merger}!usage\-\_\-help@{usage\-\_\-help}}
+\index{usage\-\_\-help@{usage\-\_\-help}!strand_tile_merger@{strand\-\_\-tile\-\_\-merger}}
+\subsubsection[{usage\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}void strand\-\_\-tile\-\_\-merger\-::usage\-\_\-help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classstrand__tile__merger_af623214f3fe92b402d1a5510f1208071}
+Display a help on how to use this merger, in particular usage of merger-\/settings 
+
+Implements \hyperlink{classabstract__tile__merger_a7922b65624d12ef2d6c115218d2378b4}{abstract\-\_\-tile\-\_\-merger}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/strand\-\_\-tile\-\_\-merger.\-h\item 
+src/algorithm/strand\-\_\-tile\-\_\-merger.\-cpp\end{DoxyCompactItemize}

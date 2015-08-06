@@ -1,0 +1,53 @@
+\#\-Digiholo2\-D (vers. 0.\-2)\# A C++11 framework for tile-\/based phase unwrapping of 2\-D datasets for digital holography and other applications. This project provides a modular framework for implementation and testing of tile-\/based phase unwrapping algorithms. It introduces original algorithms presented in \mbox{[}1\mbox{]}, as well as a Block-\/\-Least-\/\-Squares approach described by Strand {\itshape et al.} in \mbox{[}2\mbox{]}. Moreover this contains a novel tile merging algorithm based on an idea by Herráez {\itshape et. al} \mbox{[}3\mbox{]}.
+
+\subsection*{In a nutshell}
+
+\char`\"{}\-A variety of physical and biomedical imaging techniques, such as digital holography, interferometric synthetic aperture radar (\-In\-S\-A\-R), or magnetic resonance imaging (\-M\-R\-I) enable measurement of the phase of a physical quantity additionally to its amplitude. However, the phase can commonly only be measured modulo 2pi, as a so called wrapped phase map. Phase unwrapping is the process of obtaining the underlying physical phase map from the wrapped phase. Tile-\/based phase unwrapping algorithms operate by first tessellating the phase map, then unwrapping individual tiles, and finally merging them to a continuous phase map. They can be implemented computationally efficiently and are robust to noise. However, they are prone to failure in the presence of phase residues or erroneous unwraps of single tiles. To increase the robustness of the tile unwrapping step, we implemented a model-\/based algorithm that makes efficient use of linear algebra to unwrap individual tiles. Furthermore, we adapted an established pixel-\/based unwrapping algorithm to create a quality guided tile merger. These original algorithms as well existing ones were implemented in a modular phase unwrapping C++ framework. By examining different combinations of unwrapping and merging algorithms we compared our method to existing approaches. We could show that the appropriate choice of unwrapping and merging algorithms can significantly improve the unwrapped result in the presence of phase residues and unwrap errors. Beyond that, our modular framework allows for efficient design and test of new tile-\/based phase unwrapping algorithms.\char`\"{} \mbox{[}1\mbox{]}
+
+\subsection*{Tile-\/based phase unwrapping}
+
+For tile-\/based phase unwrapping, a phase map is tesselated into rectangular tiles of fixed dimensions. Unwrapping is then performed ion a two step process\-:
+
+
+\begin{DoxyEnumerate}
+\item Unwrapping of individual tiles by a tile unwrapping algorithm (tile\-\_\-unwrapper).
+\item Merging of unwrapped tiles to a continuous surface (tile\-\_\-merger).
+\end{DoxyEnumerate}
+
+Combining a tile\-\_\-unwrapper and a tile\-\_\-merger yields a tile-\/based phase unwrapping algorithm. Various implementations of tile unwrapping and merging algorithms are provided, see the documentation and \mbox{[}1\mbox{]} for additional information.
+
+\subsection*{Usage}
+
+\subsubsection*{F\-I\-J\-I (Image\-J) plugin (win64)}
+
+An F\-I\-J\-I (Image\-J) plugin is included in the {\bfseries imagej} directory. The plugin provides a graphical user interface for the command line tool. It comes packaged with the command line tool as well as a one-\/click installer. Navigate to the {\bfseries imagej} directory for more information.
+
+\subsubsection*{Command line tool (win64)}
+
+An executable binary for use under 64-\/bit Windows systems is located in the {\bfseries dist} directory. The binary provides a command line interface and more options to interact with the program than the F\-I\-J\-I plugin. Navigate to the {\bfseries dist} directory for more information.
+
+\subsubsection*{Compiling from source}
+
+The source code is provided as a \href{https://netbeans.org/}{\tt Net\-Beans} project file. Tthe easiest way to compile from source is to open the project in the Net\-Beans I\-D\-E version 8.\-0.\-2 or higher. Then edit the project properties so the paths to the included third party libraries and headers match your configuration and compiler toolset. This project depends on free and open source third party libraries, namely the \href{https://www.boost.org/}{\tt B\-O\-O\-S\-T C++ Library} and the \href{https://eigen.tuxfamily.org/dox-devel/index.html}{\tt Eigen3} library for numerical linear algebra. Your compiler must support the C++11 standard.
+
+\subsubsection*{Documentation}
+
+The source code in a \href{https://www.stack.nl/~dimitri/doxygen/}{\tt doxygen} compatible format. Doxygen output in H\-T\-M\-L and La\-Te\-X is found in the {\bfseries documentation} directory.
+
+\subsection*{References}
+
+\mbox{[}1\mbox{]} G. Antonopoulos, B. Steltner, A. Heisterkamp, T. Ripken, H. Meyer\-: \char`\"{}\-Tile-\/based two-\/dimensional phase unwrapping for digital holography using a modular framework\char`\"{}, {\itshape submitted} (2015)
+
+\mbox{[}2\mbox{]} J. Strand, T. Taxt, A. K. Jain\-: \char`\"{}\-Two-\/dimensional phase unwrapping using a block least-\/squares method\char`\"{}, I\-E\-E\-E transactions on image processing (1999), doi\-: \href{http://dx.doi.org/10.1109/83.748892}{\tt 10.\-1109/83.748892}
+
+\mbox{[}3\mbox{]} M.\-A. Herráez, D.\-R. Burton, M. J. Lalor, M. A. Gdeisat\-: \char`\"{}\-Fast two-\/dimensional phase-\/unwrapping algorithm based on sorting by reliability following a noncontinuous path\char`\"{}, Applied Optics (2002), doi\-: \href{http://dx.doi.org/10.1364/AO.41.007437}{\tt 10.\-1364/\-A\-O.41.\-007437}
+
+\subsection*{License}
+
+Copyright 2015 G.\-C. Antonopoulos and B. Steltner, Laser Zentrum Hannover e.\-V.
+
+Licensed under the Apache License, Version 2.\-0 (the \char`\"{}\-License\char`\"{}); you may not use this software package except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\-://www.\-apache.\-org/licenses/\-L\-I\-C\-E\-N\-S\-E-\/2.\-0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\-A\-S I\-S\char`\"{} B\-A\-S\-I\-S, W\-I\-T\-H\-O\-U\-T W\-A\-R\-R\-A\-N\-T\-I\-E\-S O\-R C\-O\-N\-D\-I\-T\-I\-O\-N\-S O\-F A\-N\-Y K\-I\-N\-D, either express or implied. See the License for the specific language governing permissions and limitations under the License. 

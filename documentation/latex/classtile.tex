@@ -1,0 +1,320 @@
+\hypertarget{classtile}{\section{tile Class Reference}
+\label{classtile}\index{tile@{tile}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classtile_a637de74fd50d4b3583b657caa4bf0301}{rel\-\_\-position} \{ {\bfseries U\-P} = 123, 
+{\bfseries D\-O\-W\-N} = -\/123, 
+{\bfseries R\-I\-G\-H\-T} = 321, 
+{\bfseries L\-E\-F\-T} = -\/321
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtile_a294955b8c59ebef580775218e9df6f56}{tile} ()
+\item 
+\hyperlink{classtile_a9eb578c5a392a61165ed34c45c3b529f}{tile} (sharedarray$<$ float $>$ values, long width, long height, long pos\-H, long pos\-W)
+\item 
+\hypertarget{classtile_afbef14bff799cec1be0b2d504d66507b}{\hyperlink{classtile_afbef14bff799cec1be0b2d504d66507b}{$\sim$tile} ()}\label{classtile_afbef14bff799cec1be0b2d504d66507b}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classtile_a989390f231f21621f98d2225dedea204}{tile} (const \hyperlink{classtile}{tile} \&other)
+\item 
+\hyperlink{classtile}{tile} \& \hyperlink{classtile_aefa643e1cf1b5d0805b02cfcc8c223ea}{operator=} (const \hyperlink{classtile}{tile} \&other)
+\item 
+\hyperlink{classtile_acda1ae264eae8604e3865178270bed66}{tile} (sharedptr$<$ \hyperlink{classrow__major__float__image}{row\-\_\-major\-\_\-float\-\_\-image} $>$ img, long grid\-\_\-width, long grid\-\_\-height, long iw, long ih)
+\item 
+\hypertarget{classtile_abffe6ab01bda427012726f7be95044f3}{float \hyperlink{classtile_abffe6ab01bda427012726f7be95044f3}{get\-\_\-value\-\_\-at} (long iw, long ih)}\label{classtile_abffe6ab01bda427012726f7be95044f3}
+
+\begin{DoxyCompactList}\small\item\em Get value of pixel in tile (raw\-\_\-value + offset) \end{DoxyCompactList}\item 
+\hypertarget{classtile_a28e6b8eaf4247af53a2193cdba8fc405}{float \hyperlink{classtile_a28e6b8eaf4247af53a2193cdba8fc405}{get\-\_\-raw\-\_\-value\-\_\-at} (long iw, long ih)}\label{classtile_a28e6b8eaf4247af53a2193cdba8fc405}
+
+\begin{DoxyCompactList}\small\item\em Get the raw value of the pixel in this tile, explicitly without the tile-\/offset. \end{DoxyCompactList}\item 
+\hypertarget{classtile_ae0a2a8b43ca654d1e35d4100d56ff1ba}{void \hyperlink{classtile_ae0a2a8b43ca654d1e35d4100d56ff1ba}{set\-\_\-value\-\_\-at} (long iw, long ih, float val)}\label{classtile_ae0a2a8b43ca654d1e35d4100d56ff1ba}
+
+\begin{DoxyCompactList}\small\item\em Set value of the specified pixel to val. \end{DoxyCompactList}\item 
+\hypertarget{classtile_a98ed93611772f6a3d36e8200c5cfb7ae}{void \hyperlink{classtile_a98ed93611772f6a3d36e8200c5cfb7ae}{add\-\_\-value\-\_\-at} (long iw, long ih, float val)}\label{classtile_a98ed93611772f6a3d36e8200c5cfb7ae}
+
+\begin{DoxyCompactList}\small\item\em Add value of the specified pixel. \end{DoxyCompactList}\item 
+\hypertarget{classtile_a3f5a91078193780febf5dac4e506392f}{float \hyperlink{classtile_a3f5a91078193780febf5dac4e506392f}{get\-\_\-offset} ()}\label{classtile_a3f5a91078193780febf5dac4e506392f}
+
+\begin{DoxyCompactList}\small\item\em Get offset of this tile. \end{DoxyCompactList}\item 
+\hypertarget{classtile_aa7077bc22ada6ea7e524d9d8e44431a1}{long \hyperlink{classtile_aa7077bc22ada6ea7e524d9d8e44431a1}{get\-\_\-height} () const }\label{classtile_aa7077bc22ada6ea7e524d9d8e44431a1}
+
+\begin{DoxyCompactList}\small\item\em Get height number of elements in tile in h-\/direction. \end{DoxyCompactList}\item 
+\hypertarget{classtile_ab17cd2ca85fb73ee40612f543dea083c}{long \hyperlink{classtile_ab17cd2ca85fb73ee40612f543dea083c}{get\-\_\-width} () const }\label{classtile_ab17cd2ca85fb73ee40612f543dea083c}
+
+\begin{DoxyCompactList}\small\item\em Get number of elements in tile in w-\/direction. \end{DoxyCompactList}\item 
+\hypertarget{classtile_a6e2f4315c17b62ed2ac5ca2d7d3b01dc}{\hyperlink{classtile}{tile} \& \hyperlink{classtile_a6e2f4315c17b62ed2ac5ca2d7d3b01dc}{add\-\_\-value} (float val)}\label{classtile_a6e2f4315c17b62ed2ac5ca2d7d3b01dc}
+
+\begin{DoxyCompactList}\small\item\em Adds a specified value to each pixel in the tile. Returns $\ast$this. \end{DoxyCompactList}\item 
+\hyperlink{classtile}{tile} \& \hyperlink{classtile_ae49006ba53d712e098409e4e7e679d8d}{set\-\_\-values} (sharedptr$<$ \hyperlink{classabstract__function}{abstract\-\_\-function} $>$ func, sharedptr$<$ \hyperlink{classabstract__coordinate__system}{abstract\-\_\-coordinate\-\_\-system} $>$ coordsys)
+\item 
+\hyperlink{classtile}{tile} \& \hyperlink{classtile_a0e331de98d713a293c2d09524ceb2abb}{wrap} ()
+\begin{DoxyCompactList}\small\item\em !\-N\-O\-T N\-E\-E\-D\-E\-D A\-N\-D P\-O\-S\-S\-I\-B\-L\-Y D\-A\-N\-G\-E\-R\-O\-U\-S I\-F T\-I\-L\-E\-G\-R\-O\-U\-P G\-E\-T\-S O\-W\-N O\-F\-F\-S\-E\-T \end{DoxyCompactList}\item 
+\hyperlink{classtile}{tile} \& \hyperlink{classtile_a04907d189cf875a5749d751a8af1c7a9}{rewrap} (float val)
+\item 
+float \hyperlink{classtile_a6e5a33cfdb72b176001bc47d2e13f208}{calc\-\_\-mean} ()
+\item 
+bool \hyperlink{classtile_a388f69f6e58d5bf92a028d58269774f5}{has\-\_\-tilegroup} ()
+\item 
+\hypertarget{classtile_ad9c68142f0e04176f81d0b512b707f94}{long \hyperlink{classtile_ad9c68142f0e04176f81d0b512b707f94}{get\-\_\-pos\-H} () const }\label{classtile_ad9c68142f0e04176f81d0b512b707f94}
+
+\begin{DoxyCompactList}\small\item\em Get position in h-\/direction of this tile in the tilegroup. \end{DoxyCompactList}\item 
+\hypertarget{classtile_ab7c3e805886c7acc10eaad668b54c23f}{long \hyperlink{classtile_ab7c3e805886c7acc10eaad668b54c23f}{get\-\_\-pos\-W} () const }\label{classtile_ab7c3e805886c7acc10eaad668b54c23f}
+
+\begin{DoxyCompactList}\small\item\em Get position in w-\/direction of this tile in the tilegroup. \end{DoxyCompactList}\item 
+bool \hyperlink{classtile_a67e26234566d6ed3033c98ae0cadd3d0}{is\-\_\-neighbour} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ other)
+\item 
+boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ \hyperlink{classtile_a495fcf79bc5b2dd4286467dd9d8bc999}{get\-\_\-tilegroup} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtile_a2fa7ac0b19bb84e1e68b73be2631ac2f}{class {\bfseries tilegroup}}\label{classtile_a2fa7ac0b19bb84e1e68b73be2631ac2f}
+
+\item 
+void \hyperlink{classtile_ad9d048f39dc13c36b83a87295fdf75f9}{add\-\_\-tile\-\_\-to\-\_\-group} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g)
+\item 
+void \hyperlink{classtile_afba0cc66139bf69ca850987161757cd2}{merge\-\_\-tilegroups} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g1, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtilegroup}{tilegroup} $>$ g2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classtile_a637de74fd50d4b3583b657caa4bf0301}{\index{tile@{tile}!rel\-\_\-position@{rel\-\_\-position}}
+\index{rel\-\_\-position@{rel\-\_\-position}!tile@{tile}}
+\subsubsection[{rel\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf tile\-::rel\-\_\-position}}}\label{classtile_a637de74fd50d4b3583b657caa4bf0301}
+This enum provides a way of describing the relative position of two tiles. The values are chosen pretty much arbitrarily but such that -\/\-U\-P = D\-O\-W\-N and -\/\-R\-I\-G\-H\-T = L\-E\-F\-T. Meaning\-: right/left = +/-\/ 1 in w direction and down/up = +/-\/ 1 in h direction
+
+The tile junction does not own the tiles, that means it has only weak pointers to the tiles. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtile_a294955b8c59ebef580775218e9df6f56}{\index{tile@{tile}!tile@{tile}}
+\index{tile@{tile}!tile@{tile}}
+\subsubsection[{tile}]{\setlength{\rightskip}{0pt plus 5cm}tile\-::tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile_a294955b8c59ebef580775218e9df6f56}
+This constructor performs nothing and reserves no memory for data. The width and heigt of the tile will be 0 (zero). See also operator=. \hypertarget{classtile_a9eb578c5a392a61165ed34c45c3b529f}{\index{tile@{tile}!tile@{tile}}
+\index{tile@{tile}!tile@{tile}}
+\subsubsection[{tile}]{\setlength{\rightskip}{0pt plus 5cm}tile\-::tile (
+\begin{DoxyParamCaption}
+\item[{sharedarray$<$ float $>$}]{values, }
+\item[{long}]{width, }
+\item[{long}]{height, }
+\item[{long}]{pos\-H, }
+\item[{long}]{pos\-W}
+\end{DoxyParamCaption}
+)}}\label{classtile_a9eb578c5a392a61165ed34c45c3b529f}
+Constructor with explicit values at initialisation 
+\begin{DoxyParams}{Parameters}
+{\em values} & sharedarray of width$\ast$height float-\/values \\
+\hline
+{\em width} & width of the tile \\
+\hline
+{\em height} & height of the tile \\
+\hline
+{\em pos\-H} & position in the grid \\
+\hline
+{\em pos\-W} & position in the grid \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtile_a989390f231f21621f98d2225dedea204}{\index{tile@{tile}!tile@{tile}}
+\index{tile@{tile}!tile@{tile}}
+\subsubsection[{tile}]{\setlength{\rightskip}{0pt plus 5cm}tile\-::tile (
+\begin{DoxyParamCaption}
+\item[{const {\bf tile} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classtile_a989390f231f21621f98d2225dedea204}
+Copy Constructor. The new tile will point to the same memory as the old tile. 
+\begin{DoxyParams}{Parameters}
+{\em other} & Given tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classtile_acda1ae264eae8604e3865178270bed66}{\index{tile@{tile}!tile@{tile}}
+\index{tile@{tile}!tile@{tile}}
+\subsubsection[{tile}]{\setlength{\rightskip}{0pt plus 5cm}tile\-::tile (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf row\-\_\-major\-\_\-float\-\_\-image} $>$}]{img, }
+\item[{long}]{grid\-\_\-width, }
+\item[{long}]{grid\-\_\-height, }
+\item[{long}]{iw, }
+\item[{long}]{ih}
+\end{DoxyParamCaption}
+)}}\label{classtile_acda1ae264eae8604e3865178270bed66}
+Dieser Konstruktor erstellt eine neue Tile, die eine lokale Kopie der Daten auf den entsprechenden Bereich aus einem \hyperlink{classfloat__image}{float\-\_\-image} erstellt. Dabei wird das Bild in ein Gitter mit grid\-\_\-width und grid\-\_\-height zerteilt und die Tiles entsprechend indiziert (w\-:links-\/$>$rechts, h\-:oben nach unten, wobei linke obere Ecke iw,ih=0,0 entspricht). Falls das Gridding genau aufgeht sind alle Tiles gleich groß nämlich grid\-\_\-width$\ast$grid\-\_\-height. Falls nicht, dann werden die untersten Tiles entsprechend kleiner gemacht. Vergleiche Methode 
+\begin{DoxyParams}{Parameters}
+{\em img} & Das Bild, welches in Tiles zerlegt werden soll \\
+\hline
+{\em grid\-\_\-width} & Die (maximale) Anzahl der Elemente in dem Tile. \\
+\hline
+{\em grid\-\_\-height} & \\
+\hline
+{\em iw} & Index der Tile in w-\/\-Richtung \\
+\hline
+{\em ih} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtile_a6e5a33cfdb72b176001bc47d2e13f208}{\index{tile@{tile}!calc\-\_\-mean@{calc\-\_\-mean}}
+\index{calc\-\_\-mean@{calc\-\_\-mean}!tile@{tile}}
+\subsubsection[{calc\-\_\-mean}]{\setlength{\rightskip}{0pt plus 5cm}float tile\-::calc\-\_\-mean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile_a6e5a33cfdb72b176001bc47d2e13f208}
+Calculates the mean value of the tile's pixels. \begin{DoxyReturn}{Returns}
+mean value 
+\end{DoxyReturn}
+\hypertarget{classtile_a495fcf79bc5b2dd4286467dd9d8bc999}{\index{tile@{tile}!get\-\_\-tilegroup@{get\-\_\-tilegroup}}
+\index{get\-\_\-tilegroup@{get\-\_\-tilegroup}!tile@{tile}}
+\subsubsection[{get\-\_\-tilegroup}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$ tile\-::get\-\_\-tilegroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile_a495fcf79bc5b2dd4286467dd9d8bc999}
+\begin{DoxyReturn}{Returns}
+Pointer to the tilegroup. If no tilegroup is present a N\-U\-L\-L pointer is returned. That may lead to bad things... so check first that the tile has a group. 
+\end{DoxyReturn}
+\hypertarget{classtile_a388f69f6e58d5bf92a028d58269774f5}{\index{tile@{tile}!has\-\_\-tilegroup@{has\-\_\-tilegroup}}
+\index{has\-\_\-tilegroup@{has\-\_\-tilegroup}!tile@{tile}}
+\subsubsection[{has\-\_\-tilegroup}]{\setlength{\rightskip}{0pt plus 5cm}bool tile\-::has\-\_\-tilegroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile_a388f69f6e58d5bf92a028d58269774f5}
+\begin{DoxyReturn}{Returns}
+true if this tile is member in a tilegroup, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classtile_a67e26234566d6ed3033c98ae0cadd3d0}{\index{tile@{tile}!is\-\_\-neighbour@{is\-\_\-neighbour}}
+\index{is\-\_\-neighbour@{is\-\_\-neighbour}!tile@{tile}}
+\subsubsection[{is\-\_\-neighbour}]{\setlength{\rightskip}{0pt plus 5cm}bool tile\-::is\-\_\-neighbour (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{other}
+\end{DoxyParamCaption}
+)}}\label{classtile_a67e26234566d6ed3033c98ae0cadd3d0}
+Check other \& this tile if they are first order neighbours 
+\begin{DoxyParams}{Parameters}
+{\em other} & tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if other \& this are first order neighbours 
+\end{DoxyReturn}
+\hypertarget{classtile_aefa643e1cf1b5d0805b02cfcc8c223ea}{\index{tile@{tile}!operator=@{operator=}}
+\index{operator=@{operator=}!tile@{tile}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tile} \& tile\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf tile} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classtile_aefa643e1cf1b5d0805b02cfcc8c223ea}
+Assignment operator. This operator assigns the properties and elements of other to this. This tile will then share ownership of the data array of the other tile.
+
+The operator will throw a \hyperlink{classtile__dimension__exception}{tile\-\_\-dimension\-\_\-exception} if this tile and the other tile have different dimensions. This prevents the dimensions of a \hyperlink{classtiled__image}{tiled\-\_\-image} changing when assigning something to a tile. Only when this tile has both dimensions equals 0 (zero) nothing will be thrown.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classtile__dimension__exception}{tile\-\_\-dimension\-\_\-exception}} & Thrown when this tile has dimensions other than zero which are unequal to the other tiles dimension. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to $\ast$this.
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]copy all class members that might come in the future, too \end{DoxyRefDesc}
+\hypertarget{classtile_a04907d189cf875a5749d751a8af1c7a9}{\index{tile@{tile}!rewrap@{rewrap}}
+\index{rewrap@{rewrap}!tile@{tile}}
+\subsubsection[{rewrap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tile} \& tile\-::rewrap (
+\begin{DoxyParamCaption}
+\item[{float}]{val}
+\end{DoxyParamCaption}
+)}}\label{classtile_a04907d189cf875a5749d751a8af1c7a9}
+For each pixel T sets pixel to T= wrap(T+val)-\/val. 
+\begin{DoxyParams}{Parameters}
+{\em val} & value to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to this 
+\end{DoxyReturn}
+\hypertarget{classtile_ae49006ba53d712e098409e4e7e679d8d}{\index{tile@{tile}!set\-\_\-values@{set\-\_\-values}}
+\index{set\-\_\-values@{set\-\_\-values}!tile@{tile}}
+\subsubsection[{set\-\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tile} \& tile\-::set\-\_\-values (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf abstract\-\_\-function} $>$}]{func, }
+\item[{sharedptr$<$ {\bf abstract\-\_\-coordinate\-\_\-system} $>$}]{coordsys}
+\end{DoxyParamCaption}
+)}}\label{classtile_ae49006ba53d712e098409e4e7e679d8d}
+Set the pixel values of the tile to the given function values, evaluated on the given coordinate system. 
+\begin{DoxyParams}{Parameters}
+{\em func} & Function \\
+\hline
+{\em coordsys} & Coordinate system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this. 
+\end{DoxyReturn}
+\hypertarget{classtile_a0e331de98d713a293c2d09524ceb2abb}{\index{tile@{tile}!wrap@{wrap}}
+\index{wrap@{wrap}!tile@{tile}}
+\subsubsection[{wrap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tile} \& tile\-::wrap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile_a0e331de98d713a293c2d09524ceb2abb}
+
+
+!\-N\-O\-T N\-E\-E\-D\-E\-D A\-N\-D P\-O\-S\-S\-I\-B\-L\-Y D\-A\-N\-G\-E\-R\-O\-U\-S I\-F T\-I\-L\-E\-G\-R\-O\-U\-P G\-E\-T\-S O\-W\-N O\-F\-F\-S\-E\-T 
+
+Apply the tile-\/offset and to the values of the pixels, resetting the tile-\/ and tilegroup-\/offset.\-Wraps all values in this tile to interval \mbox{[}-\/\-Pi, Pi\mbox{]}. Returns pointer to this$\ast$. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classtile_ad9d048f39dc13c36b83a87295fdf75f9}{\index{tile@{tile}!add\-\_\-tile\-\_\-to\-\_\-group@{add\-\_\-tile\-\_\-to\-\_\-group}}
+\index{add\-\_\-tile\-\_\-to\-\_\-group@{add\-\_\-tile\-\_\-to\-\_\-group}!tile@{tile}}
+\subsubsection[{add\-\_\-tile\-\_\-to\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}void add\-\_\-tile\-\_\-to\-\_\-group (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classtile_ad9d048f39dc13c36b83a87295fdf75f9}
+This file offers the functionality of the tile class while using boost smart pointers to make memory management easier. One M\-A\-J\-O\-R D\-I\-F\-F\-E\-R\-E\-N\-C\-E is that it creates its own copy of the data and does not operate on pointers to the float image data. Sets the tilegroup of the tile t to the given group and adds this tile to the vector of tiles in the tilegroup g. A\-C\-H\-T\-U\-N\-G! This method should only be used if this tile is not alreay member in a tilegroup. If it is member of a tilegroup, then the reference to this tile in the old group will still be there. This can lead to errors. For merging tilegroups use the merge\-\_\-into method from tilegroup. These conditions are not checked. 
+\begin{DoxyParams}{Parameters}
+{\em t} & the tile. It must not be in a group. \\
+\hline
+{\em g} & the tilegroup. It must not already contain the tile t. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtile_afba0cc66139bf69ca850987161757cd2}{\index{tile@{tile}!merge\-\_\-tilegroups@{merge\-\_\-tilegroups}}
+\index{merge\-\_\-tilegroups@{merge\-\_\-tilegroups}!tile@{tile}}
+\subsubsection[{merge\-\_\-tilegroups}]{\setlength{\rightskip}{0pt plus 5cm}void merge\-\_\-tilegroups (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g1, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tilegroup} $>$}]{g2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classtile_afba0cc66139bf69ca850987161757cd2}
+Merges tilegroup g1 into group g2. All tiles from g1 will now point to g2 as their group and g1 will be devoid of elements. 
+\begin{DoxyParams}{Parameters}
+{\em g1} & \\
+\hline
+{\em g2} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/tiles/tile.\-h\item 
+src/tiles/tile.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,252 @@
+\hypertarget{classmodel__function}{\section{model\-\_\-function Class Reference}
+\label{classmodel__function}\index{model\-\_\-function@{model\-\_\-function}}
+}
+
+
+{\ttfamily \#include $<$model\-\_\-function.\-h$>$}
+
+Inheritance diagram for model\-\_\-function\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmodel__function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmodel__function_a1a982c2cec5a63de6c1480e0b1c946eb}{\hyperlink{classmodel__function_a1a982c2cec5a63de6c1480e0b1c946eb}{model\-\_\-function} ()}\label{classmodel__function_a1a982c2cec5a63de6c1480e0b1c946eb}
+
+\begin{DoxyCompactList}\small\item\em Std constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmodel__function_a2e9d9ebb47826758798b094079f1abcc}{model\-\_\-function} (sharedptr$<$ std\-::vector$<$ sharedptr$<$ \hyperlink{classabstract__function}{abstract\-\_\-function} $>$ $>$ $>$ vc\-\_\-base, sharedptr$<$ \hyperlink{classabstract__coordinate__system}{abstract\-\_\-coordinate\-\_\-system} $>$ coord\-\_\-system)
+\item 
+\hypertarget{classmodel__function_a9f51895f06daf4d454b16eccf44dc57c}{virtual \hyperlink{classmodel__function_a9f51895f06daf4d454b16eccf44dc57c}{$\sim$model\-\_\-function} ()}\label{classmodel__function_a9f51895f06daf4d454b16eccf44dc57c}
+
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+float \hyperlink{classmodel__function_a5ca38b00e9064eb46b697dab3b3e848f}{eval} (float x, float y)
+\item 
+float \hyperlink{classmodel__function_add97095253744605c1da638d2dc6c3b0}{eval} (float x, float y, sharedptr$<$ std\-::vector$<$ float $>$ $>$ vc\-\_\-coeff)
+\item 
+float \hyperlink{classmodel__function_a2f5c7afd1f910bef7f545c0384a23c1e}{eval} (float x, float y, sharedptr$<$ Eigen\-::\-Vector\-Xf $>$ v\-\_\-coeff)
+\item 
+sharedptr$<$ \hyperlink{classabstract__gradient}{abstract\-\_\-gradient} $>$ \hyperlink{classmodel__function_adf3a7a6ff204c7e993f63f61cd2cfcf1}{get\-\_\-gradient} ()
+\item 
+\hypertarget{classmodel__function_a0e4bcd2cf988b0e9f06d25f9ef552d71}{sharedptr\\*
+$<$ \hyperlink{classabstract__coordinate__system}{abstract\-\_\-coordinate\-\_\-system} $>$ \hyperlink{classmodel__function_a0e4bcd2cf988b0e9f06d25f9ef552d71}{get\-\_\-coordinate\-\_\-system} ()}\label{classmodel__function_a0e4bcd2cf988b0e9f06d25f9ef552d71}
+
+\begin{DoxyCompactList}\small\item\em Returs a pointer to the used coordinate system. This is the unit cartesian system given by the \hyperlink{classsecond__order__gradient}{second\-\_\-order\-\_\-gradient} calculator. \end{DoxyCompactList}\item 
+void \hyperlink{classmodel__function_ace253fd777dee5695cc0b8b3591e0fc7}{set\-\_\-coeff\-\_\-vector} (sharedptr$<$ std\-::vector$<$ float $>$ $>$ coeff)
+\item 
+\hypertarget{classmodel__function_ad83f4720b10229ae6369a85bc9606bdf}{void \hyperlink{classmodel__function_ad83f4720b10229ae6369a85bc9606bdf}{set\-\_\-coeff\-\_\-vector} (sharedptr$<$ Eigen\-::\-Vector\-Xf $>$ coeff)}\label{classmodel__function_ad83f4720b10229ae6369a85bc9606bdf}
+
+\begin{DoxyCompactList}\small\item\em Overloaded function to work with Eigen\-::\-Vector\-Xf. \end{DoxyCompactList}\item 
+void \hyperlink{classmodel__function_a4064f37008f43c8921c3ca20541eb75c}{set\-\_\-base\-\_\-vector} (sharedptr$<$ std\-::vector$<$ sharedptr$<$ \hyperlink{classabstract__function}{abstract\-\_\-function} $>$ $>$ $>$ vc\-\_\-base)
+\item 
+\hypertarget{classmodel__function_a776e5515af16cc021e7ff72ad6e10bad}{void \hyperlink{classmodel__function_a776e5515af16cc021e7ff72ad6e10bad}{set\-\_\-constant\-\_\-offset} (float value)}\label{classmodel__function_a776e5515af16cc021e7ff72ad6e10bad}
+
+\begin{DoxyCompactList}\small\item\em Set the constant offset of this function to the specified value. \end{DoxyCompactList}\item 
+sharedptr$<$ std\-::vector\\*
+$<$ sharedptr$<$ \hyperlink{classabstract__function}{abstract\-\_\-function} $>$ $>$ $>$ \hyperlink{classmodel__function_a6c3b24ae19c7178775002a5178487f9e}{get\-\_\-base\-\_\-vector} ()
+\item 
+int \hyperlink{classmodel__function_a9af5216fc0b4964b4269ff4babee4c4d}{get\-\_\-coeff\-\_\-size} ()
+\item 
+int \hyperlink{classmodel__function_acfbb42766697bfc2dcaeb045e5ab60d0}{get\-\_\-base\-\_\-size} ()
+\item 
+\hypertarget{classmodel__function_abad3b2aa7dab1fe6cb7e657166a608dc}{float \hyperlink{classmodel__function_abad3b2aa7dab1fe6cb7e657166a608dc}{get\-\_\-constant\-\_\-offset} ()}\label{classmodel__function_abad3b2aa7dab1fe6cb7e657166a608dc}
+
+\begin{DoxyCompactList}\small\item\em Return the constant offset of this function. \end{DoxyCompactList}\item 
+void \hyperlink{classmodel__function_a16243e1bb23590acce533652d6eed732}{subtract\-\_\-wrap\-\_\-add\-\_\-function} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t, int step\-\_\-count)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmodel__function_ac27dd96bd16703d8015997a0e9011a33}{sharedptr\\*
+$<$ \hyperlink{classabstract__coordinate__system}{abstract\-\_\-coordinate\-\_\-system} $>$ \hyperlink{classmodel__function_ac27dd96bd16703d8015997a0e9011a33}{coordinate\-\_\-system}}\label{classmodel__function_ac27dd96bd16703d8015997a0e9011a33}
+
+\begin{DoxyCompactList}\small\item\em The model functions holds the coordinate system used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a vector of base functions. These are linear combined to a full function, providing a method to model the image with functions. Major advantage is that the functions itself must not be linear, nor be constants. Polynomial functions as well as a linear combination of exponentiation of sin/cosin. !! Base functions must not be constants. A constant offset is treated separately by the model function. It is set to 0 on initialization. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmodel__function_a2e9d9ebb47826758798b094079f1abcc}{\index{model\-\_\-function@{model\-\_\-function}!model\-\_\-function@{model\-\_\-function}}
+\index{model\-\_\-function@{model\-\_\-function}!model_function@{model\-\_\-function}}
+\subsubsection[{model\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}model\-\_\-function\-::model\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ std\-::vector$<$ sharedptr$<$ {\bf abstract\-\_\-function} $>$ $>$ $>$}]{vc\-\_\-base, }
+\item[{sharedptr$<$ {\bf abstract\-\_\-coordinate\-\_\-system} $>$}]{coord\-\_\-system}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_a2e9d9ebb47826758798b094079f1abcc}
+
+\begin{DoxyParams}{Parameters}
+{\em vc\-\_\-base} & vector of base functions this method should use \\
+\hline
+{\em coord\-\_\-system} & coordinate system in use with this base functions \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmodel__function_a5ca38b00e9064eb46b697dab3b3e848f}{\index{model\-\_\-function@{model\-\_\-function}!eval@{eval}}
+\index{eval@{eval}!model_function@{model\-\_\-function}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}float model\-\_\-function\-::eval (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classmodel__function_a5ca38b00e9064eb46b697dab3b3e848f}
+Evaluates the value of this function with the coefficients this model itself holds 
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate \\
+\hline
+{\em y} & coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of this function
+\end{DoxyReturn}
+Calculate the value of this function with \char`\"{}build-\/in\char`\"{} coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate \\
+\hline
+{\em y} & coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of the function 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__function_ae313a63bae0ae1b88bcabd1bebc22f4f}{abstract\-\_\-function}.
+
+\hypertarget{classmodel__function_add97095253744605c1da638d2dc6c3b0}{\index{model\-\_\-function@{model\-\_\-function}!eval@{eval}}
+\index{eval@{eval}!model_function@{model\-\_\-function}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}float model\-\_\-function\-::eval (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{sharedptr$<$ std\-::vector$<$ float $>$ $>$}]{vc\-\_\-coeff}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_add97095253744605c1da638d2dc6c3b0}
+Evaluates the value of this function with the coefficients provided 
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate \\
+\hline
+{\em y} & coordinate \\
+\hline
+{\em vc\-\_\-coeff} & set of coeff to scale the base functions. N\-O\-T\-E\-: Must have the same size as the base functions... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of this function
+\end{DoxyReturn}
+Calculate the value of this function. 
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate \\
+\hline
+{\em y} & coordinate \\
+\hline
+{\em vc\-\_\-coeff} & set of coefficients for the linear combination of the base functions. N\-O\-T\-E\-: vc\-\_\-coeff must have the same amount of elements as there are base functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of the function 
+\end{DoxyReturn}
+\hypertarget{classmodel__function_a2f5c7afd1f910bef7f545c0384a23c1e}{\index{model\-\_\-function@{model\-\_\-function}!eval@{eval}}
+\index{eval@{eval}!model_function@{model\-\_\-function}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}float model\-\_\-function\-::eval (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{sharedptr$<$ Eigen\-::\-Vector\-Xf $>$}]{v\-\_\-coeff}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_a2f5c7afd1f910bef7f545c0384a23c1e}
+Evaluates this function with the coefficients provided, see overloaded method \hypertarget{classmodel__function_acfbb42766697bfc2dcaeb045e5ab60d0}{\index{model\-\_\-function@{model\-\_\-function}!get\-\_\-base\-\_\-size@{get\-\_\-base\-\_\-size}}
+\index{get\-\_\-base\-\_\-size@{get\-\_\-base\-\_\-size}!model_function@{model\-\_\-function}}
+\subsubsection[{get\-\_\-base\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int model\-\_\-function\-::get\-\_\-base\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_acfbb42766697bfc2dcaeb045e5ab60d0}
+Get the size of the base set \begin{DoxyReturn}{Returns}
+size of the vc\-\_\-base\-\_\-functions 
+\end{DoxyReturn}
+\hypertarget{classmodel__function_a6c3b24ae19c7178775002a5178487f9e}{\index{model\-\_\-function@{model\-\_\-function}!get\-\_\-base\-\_\-vector@{get\-\_\-base\-\_\-vector}}
+\index{get\-\_\-base\-\_\-vector@{get\-\_\-base\-\_\-vector}!model_function@{model\-\_\-function}}
+\subsubsection[{get\-\_\-base\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}sharedptr$<$ std\-::vector$<$ sharedptr$<$ {\bf abstract\-\_\-function} $>$ $>$ $>$ model\-\_\-function\-::get\-\_\-base\-\_\-vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_a6c3b24ae19c7178775002a5178487f9e}
+\begin{DoxyReturn}{Returns}
+The set of base functions 
+\end{DoxyReturn}
+\hypertarget{classmodel__function_a9af5216fc0b4964b4269ff4babee4c4d}{\index{model\-\_\-function@{model\-\_\-function}!get\-\_\-coeff\-\_\-size@{get\-\_\-coeff\-\_\-size}}
+\index{get\-\_\-coeff\-\_\-size@{get\-\_\-coeff\-\_\-size}!model_function@{model\-\_\-function}}
+\subsubsection[{get\-\_\-coeff\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int model\-\_\-function\-::get\-\_\-coeff\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_a9af5216fc0b4964b4269ff4babee4c4d}
+Get the size of the coefficients set \begin{DoxyReturn}{Returns}
+size of the vc\-\_\-coeff 
+\end{DoxyReturn}
+\hypertarget{classmodel__function_adf3a7a6ff204c7e993f63f61cd2cfcf1}{\index{model\-\_\-function@{model\-\_\-function}!get\-\_\-gradient@{get\-\_\-gradient}}
+\index{get\-\_\-gradient@{get\-\_\-gradient}!model_function@{model\-\_\-function}}
+\subsubsection[{get\-\_\-gradient}]{\setlength{\rightskip}{0pt plus 5cm}sharedptr$<$ {\bf abstract\-\_\-gradient} $>$ model\-\_\-function\-::get\-\_\-gradient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classmodel__function_adf3a7a6ff204c7e993f63f61cd2cfcf1}
+S\-E\-R\-V\-E\-S N\-O P\-U\-R\-P\-O\-S\-E. Implementation is purly because its a inherited pure virtual function by abstract function class \begin{DoxyReturn}{Returns}
+gradient N\-O\-T M\-E\-A\-N\-I\-N\-G\-F\-U\-L\-L -\/ N\-O\-T E\-V\-E\-N I\-N\-I\-T\-I\-A\-L\-I\-S\-E\-D 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__function_a6ac83b83ed81cbd1c67ccfb9ddcf310b}{abstract\-\_\-function}.
+
+\hypertarget{classmodel__function_a4064f37008f43c8921c3ca20541eb75c}{\index{model\-\_\-function@{model\-\_\-function}!set\-\_\-base\-\_\-vector@{set\-\_\-base\-\_\-vector}}
+\index{set\-\_\-base\-\_\-vector@{set\-\_\-base\-\_\-vector}!model_function@{model\-\_\-function}}
+\subsubsection[{set\-\_\-base\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}void model\-\_\-function\-::set\-\_\-base\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ std\-::vector$<$ sharedptr$<$ {\bf abstract\-\_\-function} $>$ $>$ $>$}]{vc\-\_\-base}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_a4064f37008f43c8921c3ca20541eb75c}
+Add (or replace!) the set of base functions 
+\begin{DoxyParams}{Parameters}
+{\em vc\-\_\-base} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel__function_ace253fd777dee5695cc0b8b3591e0fc7}{\index{model\-\_\-function@{model\-\_\-function}!set\-\_\-coeff\-\_\-vector@{set\-\_\-coeff\-\_\-vector}}
+\index{set\-\_\-coeff\-\_\-vector@{set\-\_\-coeff\-\_\-vector}!model_function@{model\-\_\-function}}
+\subsubsection[{set\-\_\-coeff\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}void model\-\_\-function\-::set\-\_\-coeff\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ std\-::vector$<$ float $>$ $>$}]{coeff}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_ace253fd777dee5695cc0b8b3591e0fc7}
+Set (that is replace) the current set of coefficients 
+\begin{DoxyParams}{Parameters}
+{\em coeff} & set of coefficients \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel__function_a16243e1bb23590acce533652d6eed732}{\index{model\-\_\-function@{model\-\_\-function}!subtract\-\_\-wrap\-\_\-add\-\_\-function@{subtract\-\_\-wrap\-\_\-add\-\_\-function}}
+\index{subtract\-\_\-wrap\-\_\-add\-\_\-function@{subtract\-\_\-wrap\-\_\-add\-\_\-function}!model_function@{model\-\_\-function}}
+\subsubsection[{subtract\-\_\-wrap\-\_\-add\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void model\-\_\-function\-::subtract\-\_\-wrap\-\_\-add\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t, }
+\item[{int}]{step\-\_\-count}
+\end{DoxyParamCaption}
+)}}\label{classmodel__function_a16243e1bb23590acce533652d6eed732}
+This method subtracts a function from the pixels of the tile. The underlying coordinate system on which the function is evaluated for every pixel is given as the second argument. There is no check, that the given function is defined on the given coordinate system. So if the function expects polar coordinates but a cartesian system is used the evaluation of the function will return values that are not useful. 
+\begin{DoxyParams}{Parameters}
+{\em tile} & \\
+\hline
+{\em number} & of steps for the strand unwrapper to make \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/model/model\-\_\-function.\-h\item 
+src/model/model\-\_\-function.\-cpp\end{DoxyCompactItemize}

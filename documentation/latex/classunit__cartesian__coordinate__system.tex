@@ -1,0 +1,102 @@
+\hypertarget{classunit__cartesian__coordinate__system}{\section{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system Class Reference}
+\label{classunit__cartesian__coordinate__system}\index{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}}
+}
+
+
+{\ttfamily \#include $<$unit\-\_\-cartesian\-\_\-coordinate\-\_\-system.\-h$>$}
+
+Inheritance diagram for unit\-\_\-cartesian\-\_\-coordinate\-\_\-system\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classunit__cartesian__coordinate__system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classunit__cartesian__coordinate__system_a0a471305ff0743a900c9c270e52bd243}{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system} ()
+\item 
+virtual void \hyperlink{classunit__cartesian__coordinate__system_a96d70a42cec4279c1320995e770c3fe5}{init} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\item 
+virtual float \hyperlink{classunit__cartesian__coordinate__system_a9093a6700e1a34f6dfb127358973c8c5}{calc\-\_\-delta\-\_\-x} (long iw, long ih)
+\item 
+\hypertarget{classunit__cartesian__coordinate__system_aa9cd14787ed2ca759ee7552dc799b9ba}{virtual float \hyperlink{classunit__cartesian__coordinate__system_aa9cd14787ed2ca759ee7552dc799b9ba}{calc\-\_\-delta\-\_\-y} (long iw, long ih)}\label{classunit__cartesian__coordinate__system_aa9cd14787ed2ca759ee7552dc799b9ba}
+
+\begin{DoxyCompactList}\small\item\em See calc\-\_\-delta\-\_\-x\-\_\-at. \end{DoxyCompactList}\item 
+\hypertarget{classunit__cartesian__coordinate__system_aeae04db199b3e27c57f955bccf8c3155}{virtual float \hyperlink{classunit__cartesian__coordinate__system_aeae04db199b3e27c57f955bccf8c3155}{get\-\_\-delta\-\_\-x} ()}\label{classunit__cartesian__coordinate__system_aeae04db199b3e27c57f955bccf8c3155}
+
+\begin{DoxyCompactList}\small\item\em Special overloaded method that gives the equidistant space between points in x. \end{DoxyCompactList}\item 
+\hypertarget{classunit__cartesian__coordinate__system_a8b6ec8c5b8230d1fcc79f9e9f1c365f1}{virtual float \hyperlink{classunit__cartesian__coordinate__system_a8b6ec8c5b8230d1fcc79f9e9f1c365f1}{get\-\_\-delta\-\_\-y} ()}\label{classunit__cartesian__coordinate__system_a8b6ec8c5b8230d1fcc79f9e9f1c365f1}
+
+\begin{DoxyCompactList}\small\item\em See get\-\_\-delta\-\_\-x. \end{DoxyCompactList}\item 
+\hypertarget{classunit__cartesian__coordinate__system_a765716f6eeb58e5340139f220f8e4649}{float \hyperlink{classunit__cartesian__coordinate__system_a765716f6eeb58e5340139f220f8e4649}{calc\-\_\-x\-\_\-at} (long iw, long ih)}\label{classunit__cartesian__coordinate__system_a765716f6eeb58e5340139f220f8e4649}
+
+\begin{DoxyCompactList}\small\item\em Calculate x coordinate at given pixel. \end{DoxyCompactList}\item 
+\hypertarget{classunit__cartesian__coordinate__system_ab45fbd73df0d1d3f4fe3bce0f65d2a8e}{float \hyperlink{classunit__cartesian__coordinate__system_ab45fbd73df0d1d3f4fe3bce0f65d2a8e}{calc\-\_\-y\-\_\-at} (long iw, long ih)}\label{classunit__cartesian__coordinate__system_ab45fbd73df0d1d3f4fe3bce0f65d2a8e}
+
+\begin{DoxyCompactList}\small\item\em Calculate y coordinate at given pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a class that represents the unit cartesian coordinate system of a tile. For a given pixel coordinate iw,ih this class provides a method to obtain the x coordinate (corresponding to the width-\/direction) and the y coordinate of the pixel coordinate system. The coordinate system for this class is defined as such\-: Coordinates are given in (x,y)
+
+(0,0)-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$>$(1,0) $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ (x,y) (floating point values!) $\vert$ $\vert$ v v (1,0)-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$>$(1,1)
+\begin{DoxyItemize}
+\item These coordinates will hold even if the tile is N\-O\-T Q\-U\-A\-D\-R\-A\-T\-I\-C! This makes it easy to define model functions that live on this unit coordinate system indepedent of the shape and number of pixels of the tiles. 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classunit__cartesian__coordinate__system_a0a471305ff0743a900c9c270e52bd243}{\index{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}!unit\-\_\-cartesian\-\_\-coordinate\-\_\-system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}}
+\index{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}!unit_cartesian_coordinate_system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}}
+\subsubsection[{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}unit\-\_\-cartesian\-\_\-coordinate\-\_\-system\-::unit\-\_\-cartesian\-\_\-coordinate\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classunit__cartesian__coordinate__system_a0a471305ff0743a900c9c270e52bd243}
+Constructor. Before the coordinate system can be used, it has to be initialized with the given tile. Only after the init(...) method is called will the calculations functions give useful results. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classunit__cartesian__coordinate__system_a9093a6700e1a34f6dfb127358973c8c5}{\index{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}!calc\-\_\-delta\-\_\-x@{calc\-\_\-delta\-\_\-x}}
+\index{calc\-\_\-delta\-\_\-x@{calc\-\_\-delta\-\_\-x}!unit_cartesian_coordinate_system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}}
+\subsubsection[{calc\-\_\-delta\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}float unit\-\_\-cartesian\-\_\-coordinate\-\_\-system\-::calc\-\_\-delta\-\_\-x (
+\begin{DoxyParamCaption}
+\item[{long}]{iw, }
+\item[{long}]{ih}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classunit__cartesian__coordinate__system_a9093a6700e1a34f6dfb127358973c8c5}
+This is a method that returns the distance between neighboring points at point iw,ih. It was implemented to enable calculating the gradient in non equidistant coordinate systems (Jacobian). Here it just returns a constant. 
+\begin{DoxyParams}{Parameters}
+{\em iw} & \\
+\hline
+{\em ih} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+deltax 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__coordinate__system_a7df5507f5b2fddc0eb691e79514accab}{abstract\-\_\-coordinate\-\_\-system}.
+
+\hypertarget{classunit__cartesian__coordinate__system_a96d70a42cec4279c1320995e770c3fe5}{\index{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}!init@{init}}
+\index{init@{init}!unit_cartesian_coordinate_system@{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void unit\-\_\-cartesian\-\_\-coordinate\-\_\-system\-::init (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classunit__cartesian__coordinate__system_a96d70a42cec4279c1320995e770c3fe5}
+This method initializes the coordinate system with the dimensions of the given tile. This method must be called before the calc\-\_\-... methods are called. 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classabstract__coordinate__system_a646c34b26579fa6f27ce00dcd8ab5951}{abstract\-\_\-coordinate\-\_\-system}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/tiles/unit\-\_\-cartesian\-\_\-coordinate\-\_\-system.\-h\item 
+src/tiles/unit\-\_\-cartesian\-\_\-coordinate\-\_\-system.\-cpp\end{DoxyCompactItemize}

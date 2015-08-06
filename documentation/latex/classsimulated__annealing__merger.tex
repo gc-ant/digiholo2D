@@ -1,0 +1,124 @@
+\hypertarget{classsimulated__annealing__merger}{\section{simulated\-\_\-annealing\-\_\-merger Class Reference}
+\label{classsimulated__annealing__merger}\index{simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}}
+}
+Inheritance diagram for simulated\-\_\-annealing\-\_\-merger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsimulated__annealing__merger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimulated__annealing__merger_a33e2b3d30d61a34eb697e3015142ce73}{simulated\-\_\-annealing\-\_\-merger} (std\-::vector$<$ std\-::string $>$ msettings)
+\item 
+\hyperlink{classsimulated__annealing__merger_aea3607464ea329c96df54078c8ce5240}{simulated\-\_\-annealing\-\_\-merger} (int check\-\_\-steps, float convergence\-\_\-criterion, std\-::string merge\-\_\-prior, float name\-\_\-energy\-\_\-after\-\_\-merging, float name\-\_\-energy\-\_\-prior\-\_\-merging, bool name\-\_\-extended, int name\-\_\-steps\-\_\-to\-\_\-convergence, long seed, int series\-\_\-start, int series\-\_\-steps, int series\-\_\-stop, float temperature)
+\item 
+virtual void \hyperlink{classsimulated__annealing__merger_a21e9db315c2a977b06a2e0f1594eea8c}{merge\-\_\-tiles} (sharedptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ ti)
+\item 
+virtual std\-::string \hyperlink{classsimulated__annealing__merger_a2548233017acafb226be7bcdb2c91e22}{get\-\_\-name} ()
+\item 
+virtual void \hyperlink{classsimulated__annealing__merger_a34ac2a006a40fe0b4e57c6868803bf07}{usage\-\_\-help} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsimulated__annealing__merger_a33e2b3d30d61a34eb697e3015142ce73}{\index{simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}!simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}}
+\index{simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}!simulated_annealing_merger@{simulated\-\_\-annealing\-\_\-merger}}
+\subsubsection[{simulated\-\_\-annealing\-\_\-merger}]{\setlength{\rightskip}{0pt plus 5cm}simulated\-\_\-annealing\-\_\-merger\-::simulated\-\_\-annealing\-\_\-merger (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$}]{msettings}
+\end{DoxyParamCaption}
+)}}\label{classsimulated__annealing__merger_a33e2b3d30d61a34eb697e3015142ce73}
+Default Constructor 
+\begin{DoxyParams}{Parameters}
+{\em msettings} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classsimulated__annealing__merger_aea3607464ea329c96df54078c8ce5240}{\index{simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}!simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}}
+\index{simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}!simulated_annealing_merger@{simulated\-\_\-annealing\-\_\-merger}}
+\subsubsection[{simulated\-\_\-annealing\-\_\-merger}]{\setlength{\rightskip}{0pt plus 5cm}simulated\-\_\-annealing\-\_\-merger\-::simulated\-\_\-annealing\-\_\-merger (
+\begin{DoxyParamCaption}
+\item[{int}]{check\-\_\-steps, }
+\item[{float}]{convergence\-\_\-criterion, }
+\item[{std\-::string}]{merge\-\_\-prior, }
+\item[{float}]{name\-\_\-energy\-\_\-after\-\_\-merging, }
+\item[{float}]{name\-\_\-energy\-\_\-prior\-\_\-merging, }
+\item[{bool}]{name\-\_\-extended, }
+\item[{int}]{name\-\_\-steps\-\_\-to\-\_\-convergence, }
+\item[{long}]{seed, }
+\item[{int}]{series\-\_\-start, }
+\item[{int}]{series\-\_\-steps, }
+\item[{int}]{series\-\_\-stop, }
+\item[{float}]{temperature}
+\end{DoxyParamCaption}
+)}}\label{classsimulated__annealing__merger_aea3607464ea329c96df54078c8ce5240}
+Explicit constructor for this merger. Note\-: Options that should not be used are marked as\-:
+\begin{DoxyItemize}
+\item std\-::strings should be $\ast$.empty() == true
+\item int should be set to -\/1 eg.\-: No merging preprocessing\-: mergie\-\_\-prior = \char`\"{}\char`\"{}; No image series\-: series\-\_\-steps = -\/1; 
+\begin{DoxyParams}{Parameters}
+{\em check\-\_\-steps} & Distance in steps when the abort parameter is calcualted again. Runtime w/o convergence is allthough dependant on this paramter. \\
+\hline
+{\em convergence\-\_\-criterion} & Criterion for the convergence -\/ If after check\-\_\-steps steps the detla\-\_\-energy is higher than -\/convergence\-\_\-criterion, convergence is assumed \\
+\hline
+{\em merge\-\_\-prior} & Name of the merger which should run prior the simann merger. If no pre-\/processing should be done, the string is empty \\
+\hline
+{\em name\-\_\-energy\-\_\-after\-\_\-merging} & naming variable for the get\-\_\-name method \\
+\hline
+{\em name\-\_\-energy\-\_\-prior\-\_\-merging} & naming variable for the get\-\_\-name method \\
+\hline
+{\em name\-\_\-extended} & naming variable for the get\-\_\-name method -\/ true if the output file name should contain important data from this merging process \\
+\hline
+{\em name\-\_\-steps\-\_\-to\-\_\-convergence} & naming variable for the get\-\_\-name method \\
+\hline
+{\em seed} & Seed for the random number generator. If seed and input\-\_\-image are equal, the output will be the same! \\
+\hline
+{\em series\-\_\-start} & Image series paramater\-: At which step should the saving of the images start. \\
+\hline
+{\em series\-\_\-steps} & Every series\-\_\-steps step a image should be saved \\
+\hline
+{\em series\-\_\-stop} & Image series parameter\-: At which step should the saving of the image stop. \\
+\hline
+{\em temperature} & Changes the accept guess probability. Highter temperatures makes more \char`\"{}bad\char`\"{} jumps possible \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{classsimulated__annealing__merger_a2548233017acafb226be7bcdb2c91e22}{\index{simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!simulated_annealing_merger@{simulated\-\_\-annealing\-\_\-merger}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string simulated\-\_\-annealing\-\_\-merger\-::get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsimulated__annealing__merger_a2548233017acafb226be7bcdb2c91e22}
+Return a name (with options) to set in the output file name 
+
+Implements \hyperlink{classabstract__tile__merger_a12ec9d118912b3c571d61ff9649042c6}{abstract\-\_\-tile\-\_\-merger}.
+
+\hypertarget{classsimulated__annealing__merger_a21e9db315c2a977b06a2e0f1594eea8c}{\index{simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}!merge\-\_\-tiles@{merge\-\_\-tiles}}
+\index{merge\-\_\-tiles@{merge\-\_\-tiles}!simulated_annealing_merger@{simulated\-\_\-annealing\-\_\-merger}}
+\subsubsection[{merge\-\_\-tiles}]{\setlength{\rightskip}{0pt plus 5cm}void simulated\-\_\-annealing\-\_\-merger\-::merge\-\_\-tiles (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tiled\-\_\-image} $>$}]{ti}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsimulated__annealing__merger_a21e9db315c2a977b06a2e0f1594eea8c}
+Merge all given tiles inside the tiled image \hypertarget{classsimulated__annealing__merger_a34ac2a006a40fe0b4e57c6868803bf07}{\index{simulated\-\_\-annealing\-\_\-merger@{simulated\-\_\-annealing\-\_\-merger}!usage\-\_\-help@{usage\-\_\-help}}
+\index{usage\-\_\-help@{usage\-\_\-help}!simulated_annealing_merger@{simulated\-\_\-annealing\-\_\-merger}}
+\subsubsection[{usage\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}void simulated\-\_\-annealing\-\_\-merger\-::usage\-\_\-help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsimulated__annealing__merger_a34ac2a006a40fe0b4e57c6868803bf07}
+Display a help on how to use this merger, in particular usage of merger-\/settings 
+
+Implements \hyperlink{classabstract__tile__merger_a7922b65624d12ef2d6c115218d2378b4}{abstract\-\_\-tile\-\_\-merger}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/simulated\-\_\-annealing\-\_\-merger.\-h\item 
+src/algorithm/simulated\-\_\-annealing\-\_\-merger.\-cpp\end{DoxyCompactItemize}

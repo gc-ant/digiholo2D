@@ -1,0 +1,90 @@
+\hypertarget{classmonomial__function}{\section{monomial\-\_\-function Class Reference}
+\label{classmonomial__function}\index{monomial\-\_\-function@{monomial\-\_\-function}}
+}
+Inheritance diagram for monomial\-\_\-function\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmonomial__function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmonomial__function_a61b1594741e022f6e1f97b8b8df0b776}{monomial\-\_\-function} (int m, int n)
+\item 
+\hypertarget{classmonomial__function_a761359711793df68bfea7cb75401a088}{virtual \hyperlink{classmonomial__function_a761359711793df68bfea7cb75401a088}{$\sim$monomial\-\_\-function} ()}\label{classmonomial__function_a761359711793df68bfea7cb75401a088}
+
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+float \hyperlink{classmonomial__function_ac28af6c7f8c7c48216c7bdc270598728}{eval} (float x, float y)
+\item 
+sharedptr$<$ \hyperlink{classabstract__gradient}{abstract\-\_\-gradient} $>$ \hyperlink{classmonomial__function_a1bb8949943f068e0597c7a8983011d12}{get\-\_\-gradient} ()
+\item 
+\hypertarget{classmonomial__function_af87735c8ef3441a348e10762efe84b71}{int \hyperlink{classmonomial__function_af87735c8ef3441a348e10762efe84b71}{get\-\_\-x\-\_\-exp} ()}\label{classmonomial__function_af87735c8ef3441a348e10762efe84b71}
+
+\begin{DoxyCompactList}\small\item\em Experimental. \end{DoxyCompactList}\item 
+\hypertarget{classmonomial__function_a35d7ae825a7b6d37c644a6670b8c7a23}{int \hyperlink{classmonomial__function_a35d7ae825a7b6d37c644a6670b8c7a23}{get\-\_\-y\-\_\-exp} ()}\label{classmonomial__function_a35d7ae825a7b6d37c644a6670b8c7a23}
+
+\begin{DoxyCompactList}\small\item\em Experimental. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmonomial__function_a61b1594741e022f6e1f97b8b8df0b776}{\index{monomial\-\_\-function@{monomial\-\_\-function}!monomial\-\_\-function@{monomial\-\_\-function}}
+\index{monomial\-\_\-function@{monomial\-\_\-function}!monomial_function@{monomial\-\_\-function}}
+\subsubsection[{monomial\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}monomial\-\_\-function\-::monomial\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{classmonomial__function_a61b1594741e022f6e1f97b8b8df0b776}
+Constructor for x$^\wedge$m $\ast$ y$^\wedge$n monomial 
+\begin{DoxyParams}{Parameters}
+{\em m} & power of x \\
+\hline
+{\em n} & power of y \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmonomial__function_ac28af6c7f8c7c48216c7bdc270598728}{\index{monomial\-\_\-function@{monomial\-\_\-function}!eval@{eval}}
+\index{eval@{eval}!monomial_function@{monomial\-\_\-function}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}float monomial\-\_\-function\-::eval (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classmonomial__function_ac28af6c7f8c7c48216c7bdc270598728}
+Calculate the value of this function 
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate \\
+\hline
+{\em y} & coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of this function 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__function_ae313a63bae0ae1b88bcabd1bebc22f4f}{abstract\-\_\-function}.
+
+\hypertarget{classmonomial__function_a1bb8949943f068e0597c7a8983011d12}{\index{monomial\-\_\-function@{monomial\-\_\-function}!get\-\_\-gradient@{get\-\_\-gradient}}
+\index{get\-\_\-gradient@{get\-\_\-gradient}!monomial_function@{monomial\-\_\-function}}
+\subsubsection[{get\-\_\-gradient}]{\setlength{\rightskip}{0pt plus 5cm}sharedptr$<$ {\bf abstract\-\_\-gradient} $>$ monomial\-\_\-function\-::get\-\_\-gradient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classmonomial__function_a1bb8949943f068e0597c7a8983011d12}
+\begin{DoxyReturn}{Returns}
+sharedptr to the gradient of this function 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__function_a6ac83b83ed81cbd1c67ccfb9ddcf310b}{abstract\-\_\-function}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/model/monomial\-\_\-function.\-h\item 
+src/model/monomial\-\_\-function.\-cpp\end{DoxyCompactItemize}

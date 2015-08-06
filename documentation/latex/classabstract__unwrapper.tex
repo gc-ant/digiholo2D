@@ -1,0 +1,49 @@
+\hypertarget{classabstract__unwrapper}{\section{abstract\-\_\-unwrapper Class Reference}
+\label{classabstract__unwrapper}\index{abstract\-\_\-unwrapper@{abstract\-\_\-unwrapper}}
+}
+
+
+{\ttfamily \#include $<$abstract\-\_\-unwrapper.\-h$>$}
+
+Inheritance diagram for abstract\-\_\-unwrapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classabstract__unwrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classfloat__image}{float\-\_\-image} $>$ \hyperlink{classabstract__unwrapper_af7d5640f6f7e8beb7f7829c2260b94ee}{unwrap} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classfloat__image}{float\-\_\-image} $>$ wrapped\-\_\-phase\-\_\-image)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This pure virtual class provides an interface for a general unwrapper that operates with boost smart pointers. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract__unwrapper_af7d5640f6f7e8beb7f7829c2260b94ee}{\index{abstract\-\_\-unwrapper@{abstract\-\_\-unwrapper}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!abstract_unwrapper@{abstract\-\_\-unwrapper}}
+\subsubsection[{unwrap}]{\setlength{\rightskip}{0pt plus 5cm}virtual boost\-::shared\-\_\-ptr$<${\bf float\-\_\-image}$>$ abstract\-\_\-unwrapper\-::unwrap (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf float\-\_\-image} $>$}]{wrapped\-\_\-phase\-\_\-image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__unwrapper_af7d5640f6f7e8beb7f7829c2260b94ee}
+An asbtract method for phase unwrapping. 
+\begin{DoxyParams}{Parameters}
+{\em wrapped\-\_\-phase\-\_\-image} & This image contains the wrapped phase data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{classfloat__image}{float\-\_\-image} with the unwrapped phase data. The image will actually be a \hyperlink{classrow__major__float__image}{row\-\_\-major\-\_\-float\-\_\-image}. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classpx__floodfill__sim__ann__unwrapper_a72c5c9cb7f151f50042b3d17f8b10b79}{px\-\_\-floodfill\-\_\-sim\-\_\-ann\-\_\-unwrapper}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/abstract\-\_\-unwrapper.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,185 @@
+\hypertarget{classtile__junction}{\section{tile\-\_\-junction Class Reference}
+\label{classtile__junction}\index{tile\-\_\-junction@{tile\-\_\-junction}}
+}
+
+
+{\ttfamily \#include $<$tile\-\_\-junction.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtile__junction_abe9fc83c0fc28c3ba07c59e30df8f8f1}{boost\-::weak\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ {\bfseries get\-\_\-first} ()}\label{classtile__junction_abe9fc83c0fc28c3ba07c59e30df8f8f1}
+
+\item 
+\hypertarget{classtile__junction_a59dc0f6ef66d85874884a9259a2b85da}{boost\-::weak\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ {\bfseries get\-\_\-second} ()}\label{classtile__junction_a59dc0f6ef66d85874884a9259a2b85da}
+
+\item 
+\hyperlink{classtile_a637de74fd50d4b3583b657caa4bf0301}{tile\-::rel\-\_\-position} \hyperlink{classtile__junction_a222e9cb6349da7d2d4110e018cd83ea8}{get\-\_\-relative\-\_\-position} ()
+\item 
+float \hyperlink{classtile__junction_a9d2e8b1303da7aa81ff193bc0f41698b}{calc\-\_\-junction\-\_\-mean\-\_\-difference} ()
+\begin{DoxyCompactList}\small\item\em !! A\-B\-G\-L\-E\-I\-C\-H P\-O\-S R\-E\-L\-A\-T\-I\-V \end{DoxyCompactList}\item 
+float \hyperlink{classtile__junction_a4b8bc23606f7563ee9b41c10be9603f1}{get\-\_\-mean} ()
+\item 
+bool \hyperlink{classtile__junction_a60d08274e74382906b010c5e599b9d51}{has\-\_\-mean} ()
+\item 
+float \hyperlink{classtile__junction_a102b5e0b0cb510cbe20a8c13c80cbbcd}{calc\-\_\-junction\-\_\-variance} ()
+\item 
+float \hyperlink{classtile__junction_a5e9c45d6920446d2231fb1f37b91671b}{get\-\_\-variance} ()
+\item 
+bool \hyperlink{classtile__junction_a65d3be341735ee1dfaf64875cc3d3ea8}{has\-\_\-variance} ()
+\item 
+float \hyperlink{classtile__junction_aa0c50934755f155de45cbb723cb2c2c0}{calc\-\_\-junction\-\_\-squared\-\_\-difference} ()
+\item 
+bool \hyperlink{classtile__junction_a521b989aca823f04ac432484de5307a0}{is\-\_\-junction\-\_\-between} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t1, boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t2)
+\item 
+bool \hyperlink{classtile__junction_a113ddf352ff4c8743ac0dbd2e10cc796}{is\-\_\-junction\-\_\-between} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t, \hyperlink{classtile_a637de74fd50d4b3583b657caa4bf0301}{tile\-::rel\-\_\-position} pos)
+\item 
+void \hyperlink{classtile__junction_ab8d78bac6a8173133d4b12db4672dfc7}{to\-String} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtile__junction_a82299213a6cc9d5d3fcbdaeb80060be7}{class {\bfseries tiled\-\_\-image}}\label{classtile__junction_a82299213a6cc9d5d3fcbdaeb80060be7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A little helper that encapsules a connection between two tiles. It stores the two tiles connected as well as the relative position of the second tile to the first. It also provides methods for calculating the differences, variance of the junction. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classtile__junction_a9d2e8b1303da7aa81ff193bc0f41698b}{\index{tile\-\_\-junction@{tile\-\_\-junction}!calc\-\_\-junction\-\_\-mean\-\_\-difference@{calc\-\_\-junction\-\_\-mean\-\_\-difference}}
+\index{calc\-\_\-junction\-\_\-mean\-\_\-difference@{calc\-\_\-junction\-\_\-mean\-\_\-difference}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{calc\-\_\-junction\-\_\-mean\-\_\-difference}]{\setlength{\rightskip}{0pt plus 5cm}float tile\-\_\-junction\-::calc\-\_\-junction\-\_\-mean\-\_\-difference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a9d2e8b1303da7aa81ff193bc0f41698b}
+
+
+!! A\-B\-G\-L\-E\-I\-C\-H P\-O\-S R\-E\-L\-A\-T\-I\-V 
+
+Calculates the mean difference of the junction between the two tiles this junction inherits \begin{DoxyReturn}{Returns}
+mean difference value mostly between \mbox{[}-\/3 Pi, 3 Pi\mbox{]} 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_aa0c50934755f155de45cbb723cb2c2c0}{\index{tile\-\_\-junction@{tile\-\_\-junction}!calc\-\_\-junction\-\_\-squared\-\_\-difference@{calc\-\_\-junction\-\_\-squared\-\_\-difference}}
+\index{calc\-\_\-junction\-\_\-squared\-\_\-difference@{calc\-\_\-junction\-\_\-squared\-\_\-difference}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{calc\-\_\-junction\-\_\-squared\-\_\-difference}]{\setlength{\rightskip}{0pt plus 5cm}float tile\-\_\-junction\-::calc\-\_\-junction\-\_\-squared\-\_\-difference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_aa0c50934755f155de45cbb723cb2c2c0}
+Calculates the squared difference of the junction between the two tiles this junction inherits \begin{DoxyReturn}{Returns}
+squared difference 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_a102b5e0b0cb510cbe20a8c13c80cbbcd}{\index{tile\-\_\-junction@{tile\-\_\-junction}!calc\-\_\-junction\-\_\-variance@{calc\-\_\-junction\-\_\-variance}}
+\index{calc\-\_\-junction\-\_\-variance@{calc\-\_\-junction\-\_\-variance}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{calc\-\_\-junction\-\_\-variance}]{\setlength{\rightskip}{0pt plus 5cm}float tile\-\_\-junction\-::calc\-\_\-junction\-\_\-variance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a102b5e0b0cb510cbe20a8c13c80cbbcd}
+Calculates the variance of the junction between the two tiles this junction inherits \begin{DoxyReturn}{Returns}
+variance value between \mbox{[}0,small float\mbox{]}, mostly only up to $\sim$0.001 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_a4b8bc23606f7563ee9b41c10be9603f1}{\index{tile\-\_\-junction@{tile\-\_\-junction}!get\-\_\-mean@{get\-\_\-mean}}
+\index{get\-\_\-mean@{get\-\_\-mean}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{get\-\_\-mean}]{\setlength{\rightskip}{0pt plus 5cm}float tile\-\_\-junction\-::get\-\_\-mean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a4b8bc23606f7563ee9b41c10be9603f1}
+Returns mean\-\_\-difference. This method D\-O\-E\-S N\-O\-T check if it is calculated/initialised. \begin{DoxyReturn}{Returns}
+mean\-\_\-difference of this junction. 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_a222e9cb6349da7d2d4110e018cd83ea8}{\index{tile\-\_\-junction@{tile\-\_\-junction}!get\-\_\-relative\-\_\-position@{get\-\_\-relative\-\_\-position}}
+\index{get\-\_\-relative\-\_\-position@{get\-\_\-relative\-\_\-position}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{get\-\_\-relative\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tile\-::rel\-\_\-position} tile\-\_\-junction\-::get\-\_\-relative\-\_\-position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a222e9cb6349da7d2d4110e018cd83ea8}
+Gives the relative position of second tile to first tile. \begin{DoxyReturn}{Returns}
+the relative position 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_a5e9c45d6920446d2231fb1f37b91671b}{\index{tile\-\_\-junction@{tile\-\_\-junction}!get\-\_\-variance@{get\-\_\-variance}}
+\index{get\-\_\-variance@{get\-\_\-variance}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{get\-\_\-variance}]{\setlength{\rightskip}{0pt plus 5cm}float tile\-\_\-junction\-::get\-\_\-variance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a5e9c45d6920446d2231fb1f37b91671b}
+Returns the variance. This method D\-O\-E\-S N\-O\-T check if it is calculated/initiliased. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classtile__junction_a60d08274e74382906b010c5e599b9d51}{\index{tile\-\_\-junction@{tile\-\_\-junction}!has\-\_\-mean@{has\-\_\-mean}}
+\index{has\-\_\-mean@{has\-\_\-mean}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{has\-\_\-mean}]{\setlength{\rightskip}{0pt plus 5cm}bool tile\-\_\-junction\-::has\-\_\-mean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a60d08274e74382906b010c5e599b9d51}
+Is the mean calculated? \begin{DoxyReturn}{Returns}
+False if mean is not initialised. True if it is calculated 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_a65d3be341735ee1dfaf64875cc3d3ea8}{\index{tile\-\_\-junction@{tile\-\_\-junction}!has\-\_\-variance@{has\-\_\-variance}}
+\index{has\-\_\-variance@{has\-\_\-variance}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{has\-\_\-variance}]{\setlength{\rightskip}{0pt plus 5cm}bool tile\-\_\-junction\-::has\-\_\-variance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a65d3be341735ee1dfaf64875cc3d3ea8}
+Is the variance calculated? \begin{DoxyReturn}{Returns}
+False if variance is not initialised. True if it is calculated 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_a521b989aca823f04ac432484de5307a0}{\index{tile\-\_\-junction@{tile\-\_\-junction}!is\-\_\-junction\-\_\-between@{is\-\_\-junction\-\_\-between}}
+\index{is\-\_\-junction\-\_\-between@{is\-\_\-junction\-\_\-between}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{is\-\_\-junction\-\_\-between}]{\setlength{\rightskip}{0pt plus 5cm}bool tile\-\_\-junction\-::is\-\_\-junction\-\_\-between (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t1, }
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t2}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a521b989aca823f04ac432484de5307a0}
+Check if this junction is a junction between the tile t1 and t2 (not necessarily in this order!). 
+\begin{DoxyParams}{Parameters}
+{\em t1} & One tile (may be the second tile!) \\
+\hline
+{\em t2} & Another tile (may be the first tile!) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if this junction is between t1 and t2 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_a113ddf352ff4c8743ac0dbd2e10cc796}{\index{tile\-\_\-junction@{tile\-\_\-junction}!is\-\_\-junction\-\_\-between@{is\-\_\-junction\-\_\-between}}
+\index{is\-\_\-junction\-\_\-between@{is\-\_\-junction\-\_\-between}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{is\-\_\-junction\-\_\-between}]{\setlength{\rightskip}{0pt plus 5cm}bool tile\-\_\-junction\-::is\-\_\-junction\-\_\-between (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t, }
+\item[{{\bf tile\-::rel\-\_\-position}}]{pos}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_a113ddf352ff4c8743ac0dbd2e10cc796}
+Check if this junction is a junction between the tile t and an unspecified tile t2 in the direction \char`\"{}pos\char`\"{}. I\-M\-P\-O\-R\-T\-A\-N\-T\-: t may be the first O\-R the second tile. If t is the second tile however, the relative position gets \char`\"{}flipped\char`\"{} by \char`\"{}-\/1\char`\"{} (eg. D\-O\-W\-N =$>$ U\-P). E\-X\-A\-M\-P\-L\-E \#1\-: Let t be the F\-I\-R\-S\-T tile t1, pos be \char`\"{}\-R\-I\-G\-H\-T\char`\"{} \& we call the second tile \char`\"{}other\char`\"{}\-: This function shall return T\-R\-U\-E, I\-F\-F \char`\"{}other\char`\"{} is on the R\-I\-G\-H\-T-\/hand side of t ( $<$=$>$ t2 is on R\-I\-G\-H\-T-\/hand side of t1 $<$=$>$ \mbox{[}t1\mbox{]}\mbox{[}t2\mbox{]} !) E\-X\-A\-M\-P\-L\-E \#2\-: Let t be the S\-E\-C\-O\-N\-D tile t2, pos be \char`\"{}\-R\-I\-G\-H\-T\char`\"{} \& we call the first tile \char`\"{}other\char`\"{}\-: This function shall return T\-R\-U\-E, I\-F\-F t is on the R\-I\-G\-H\-T-\/hand side of \char`\"{}other\char`\"{} ( $<$=$>$ t2 is on R\-I\-G\-H\-T-\/hand side of t1 $<$=$>$ \mbox{[}t1\mbox{]}\mbox{[}t2\mbox{]} ) N\-O\-T\-E\-: Both statements are equivalent\-: \mbox{[} other is on the R\-I\-G\-H\-T-\/hand side of t \mbox{]} $<$=$>$ \mbox{[} t is on the L\-E\-F\-T-\/hand side of other \mbox{]}
+
+Further N\-O\-T\-E\-: With the flip of the relative position, dependent on t as the first or the second tile, E\-A\-C\-H pair (t, pos) has an U\-N\-I\-Q\-U\-E junction it belongs to. Therefore only one junction can return true with a given tile t and a relative position pos, making it safe to search through eg. a list of junctions to find the belonging junction. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The stationary tile \\
+\hline
+{\em pos} & The relative position in which the O\-T\-H\-E\-R tile is to t (N\-O\-T t1 is to t2!) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if this junction belongs to t and the relative position matches. 
+\end{DoxyReturn}
+\hypertarget{classtile__junction_ab8d78bac6a8173133d4b12db4672dfc7}{\index{tile\-\_\-junction@{tile\-\_\-junction}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!tile_junction@{tile\-\_\-junction}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}void tile\-\_\-junction\-::to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtile__junction_ab8d78bac6a8173133d4b12db4672dfc7}
+Write informations about this class into the standard output 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/tiles/tile\-\_\-junction.\-h\item 
+src/tiles/tile\-\_\-junction.\-cpp\end{DoxyCompactItemize}

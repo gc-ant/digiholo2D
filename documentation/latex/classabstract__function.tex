@@ -1,0 +1,68 @@
+\hypertarget{classabstract__function}{\section{abstract\-\_\-function Class Reference}
+\label{classabstract__function}\index{abstract\-\_\-function@{abstract\-\_\-function}}
+}
+
+
+{\ttfamily \#include $<$abstract\-\_\-function.\-h$>$}
+
+Inheritance diagram for abstract\-\_\-function\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classabstract__function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \hyperlink{classabstract__function_ae313a63bae0ae1b88bcabd1bebc22f4f}{eval} (float x, float y)=0
+\item 
+virtual sharedptr\\*
+$<$ \hyperlink{classabstract__gradient}{abstract\-\_\-gradient} $>$ \hyperlink{classabstract__function_a6ac83b83ed81cbd1c67ccfb9ddcf310b}{get\-\_\-gradient} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This pure virtual class provides an interface for the modeling functions f\-:R$^\wedge$2-\/$>$R 
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract__function_ae313a63bae0ae1b88bcabd1bebc22f4f}{\index{abstract\-\_\-function@{abstract\-\_\-function}!eval@{eval}}
+\index{eval@{eval}!abstract_function@{abstract\-\_\-function}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}virtual float abstract\-\_\-function\-::eval (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__function_ae313a63bae0ae1b88bcabd1bebc22f4f}
+returns the value of the function at (x,y) 
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate \\
+\hline
+{\em y} & coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of the function 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel__function_a5ca38b00e9064eb46b697dab3b3e848f}{model\-\_\-function}, and \hyperlink{classmonomial__function_ac28af6c7f8c7c48216c7bdc270598728}{monomial\-\_\-function}.
+
+\hypertarget{classabstract__function_a6ac83b83ed81cbd1c67ccfb9ddcf310b}{\index{abstract\-\_\-function@{abstract\-\_\-function}!get\-\_\-gradient@{get\-\_\-gradient}}
+\index{get\-\_\-gradient@{get\-\_\-gradient}!abstract_function@{abstract\-\_\-function}}
+\subsubsection[{get\-\_\-gradient}]{\setlength{\rightskip}{0pt plus 5cm}virtual sharedptr$<${\bf abstract\-\_\-gradient}$>$ abstract\-\_\-function\-::get\-\_\-gradient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__function_a6ac83b83ed81cbd1c67ccfb9ddcf310b}
+Get the gradient function of this base function \begin{DoxyReturn}{Returns}
+gradient function 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel__function_adf3a7a6ff204c7e993f63f61cd2cfcf1}{model\-\_\-function}, and \hyperlink{classmonomial__function_a1bb8949943f068e0597c7a8983011d12}{monomial\-\_\-function}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/model/abstract\-\_\-function.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{classsecond__order__gradient}{\section{second\-\_\-order\-\_\-gradient Class Reference}
+\label{classsecond__order__gradient}\index{second\-\_\-order\-\_\-gradient@{second\-\_\-order\-\_\-gradient}}
+}
+
+
+{\ttfamily \#include $<$second\-\_\-order\-\_\-gradient.\-h$>$}
+
+Inheritance diagram for second\-\_\-order\-\_\-gradient\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsecond__order__gradient}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classsecond__order__gradient_ab188e5caf3d7739c254e181197766adb}{\hyperlink{classsecond__order__gradient_ab188e5caf3d7739c254e181197766adb}{second\-\_\-order\-\_\-gradient} ()}\label{classsecond__order__gradient_ab188e5caf3d7739c254e181197766adb}
+
+\begin{DoxyCompactList}\small\item\em Std Constructor. This class always uses a cartesian\-\_\-unit\-\_\-coordinate system as the underlying coordinate system. \end{DoxyCompactList}\item 
+\hypertarget{classsecond__order__gradient_a2ba4cf69f1e941099a618d1b6a9c5f2a}{\hyperlink{classsecond__order__gradient_a2ba4cf69f1e941099a618d1b6a9c5f2a}{second\-\_\-order\-\_\-gradient} (sharedptr$<$ \hyperlink{classabstract__coordinate__system}{abstract\-\_\-coordinate\-\_\-system} $>$ coord\-\_\-sys)}\label{classsecond__order__gradient_a2ba4cf69f1e941099a618d1b6a9c5f2a}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classsecond__order__gradient_a4adcb194a263b8eb0cb9162dd0f272d8}{virtual \hyperlink{classsecond__order__gradient_a4adcb194a263b8eb0cb9162dd0f272d8}{$\sim$second\-\_\-order\-\_\-gradient} ()}\label{classsecond__order__gradient_a4adcb194a263b8eb0cb9162dd0f272d8}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+sharedptr$<$ std\-::vector$<$ float $>$ $>$ \hyperlink{classsecond__order__gradient_a611bd811d9a47b0a53b7a827344189ff}{get\-\_\-gradient\-\_\-floats} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\item 
+sharedptr$<$ Eigen\-::\-Vector\-Xf $>$ \hyperlink{classsecond__order__gradient_a920ecf0cbc89fa73782a318186cc3a6b}{get\-\_\-gradient\-\_\-eigen\-\_\-vector} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class calculates the numerical derivative of a tile using a cartesian\-\_\-unit\-\_\-coordinate system as the underlying coordinate system of each tile. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classsecond__order__gradient_a920ecf0cbc89fa73782a318186cc3a6b}{\index{second\-\_\-order\-\_\-gradient@{second\-\_\-order\-\_\-gradient}!get\-\_\-gradient\-\_\-eigen\-\_\-vector@{get\-\_\-gradient\-\_\-eigen\-\_\-vector}}
+\index{get\-\_\-gradient\-\_\-eigen\-\_\-vector@{get\-\_\-gradient\-\_\-eigen\-\_\-vector}!second_order_gradient@{second\-\_\-order\-\_\-gradient}}
+\subsubsection[{get\-\_\-gradient\-\_\-eigen\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}sharedptr$<$ Eigen\-::\-Vector\-Xf $>$ second\-\_\-order\-\_\-gradient\-::get\-\_\-gradient\-\_\-eigen\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsecond__order__gradient_a920ecf0cbc89fa73782a318186cc3a6b}
+Get the gradient of a given tile as a Eigen\-::\-Vector of floats 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eigen\-::vector of floats, first holds the x-\/gradient-\/values in order of tile has in its vector. Second holds y... 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__gradient__calculator_ae101a124df59f5dbcc4d21acffe43ae1}{abstract\-\_\-gradient\-\_\-calculator}.
+
+\hypertarget{classsecond__order__gradient_a611bd811d9a47b0a53b7a827344189ff}{\index{second\-\_\-order\-\_\-gradient@{second\-\_\-order\-\_\-gradient}!get\-\_\-gradient\-\_\-floats@{get\-\_\-gradient\-\_\-floats}}
+\index{get\-\_\-gradient\-\_\-floats@{get\-\_\-gradient\-\_\-floats}!second_order_gradient@{second\-\_\-order\-\_\-gradient}}
+\subsubsection[{get\-\_\-gradient\-\_\-floats}]{\setlength{\rightskip}{0pt plus 5cm}sharedptr$<$ std\-::vector$<$ float $>$ $>$ second\-\_\-order\-\_\-gradient\-::get\-\_\-gradient\-\_\-floats (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsecond__order__gradient_a611bd811d9a47b0a53b7a827344189ff}
+Get the gradient of a given tile as raw float data 
+\begin{DoxyParams}{Parameters}
+{\em t} & tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of floats, first holds the x-\/gradient-\/values in order of tile has in its vector. Second holds y... 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__gradient__calculator_afbc6ee285d21d21b2241cfe643f8adce}{abstract\-\_\-gradient\-\_\-calculator}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/second\-\_\-order\-\_\-gradient.\-h\item 
+src/algorithm/second\-\_\-order\-\_\-gradient.\-cpp\end{DoxyCompactItemize}

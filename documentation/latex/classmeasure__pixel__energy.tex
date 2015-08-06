@@ -1,0 +1,45 @@
+\hypertarget{classmeasure__pixel__energy}{\section{measure\-\_\-pixel\-\_\-energy Class Reference}
+\label{classmeasure__pixel__energy}\index{measure\-\_\-pixel\-\_\-energy@{measure\-\_\-pixel\-\_\-energy}}
+}
+
+
+{\ttfamily \#include $<$measure\-\_\-pixel\-\_\-energy.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmeasure__pixel__energy_aa9963e55dd7af85c1935775973c75975}{\hyperlink{classmeasure__pixel__energy_aa9963e55dd7af85c1935775973c75975}{measure\-\_\-pixel\-\_\-energy} ()}\label{classmeasure__pixel__energy_aa9963e55dd7af85c1935775973c75975}
+
+\begin{DoxyCompactList}\small\item\em Std constructor. \end{DoxyCompactList}\item 
+\hypertarget{classmeasure__pixel__energy_aa363a45d7c89bd76509b384d0597cfb8}{virtual \hyperlink{classmeasure__pixel__energy_aa363a45d7c89bd76509b384d0597cfb8}{$\sim$measure\-\_\-pixel\-\_\-energy} ()}\label{classmeasure__pixel__energy_aa363a45d7c89bd76509b384d0597cfb8}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+float \hyperlink{classmeasure__pixel__energy_af74ec0c136a474c85102a292c157a5a9}{calc} (sharedptr$<$ \hyperlink{classrow__major__float__image}{row\-\_\-major\-\_\-float\-\_\-image} $>$ image)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a measure of the quality for a image provided. The quality is set to the summation over every neighbouring tiles squared difference. Therefore faulty unwraps result in a big penalty, increasing the \char`\"{}energy\char`\"{} of the image. Note\-: This measure is not definite, it only provides a option to compare two familiar images. E.\-g. compare a image unwrapped with unwrapper\#1 and the same image unwarpped with unwrapper\#2. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classmeasure__pixel__energy_af74ec0c136a474c85102a292c157a5a9}{\index{measure\-\_\-pixel\-\_\-energy@{measure\-\_\-pixel\-\_\-energy}!calc@{calc}}
+\index{calc@{calc}!measure_pixel_energy@{measure\-\_\-pixel\-\_\-energy}}
+\subsubsection[{calc}]{\setlength{\rightskip}{0pt plus 5cm}float measure\-\_\-pixel\-\_\-energy\-::calc (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf row\-\_\-major\-\_\-float\-\_\-image} $>$}]{image}
+\end{DoxyParamCaption}
+)}}\label{classmeasure__pixel__energy_af74ec0c136a474c85102a292c157a5a9}
+This method calculates the energy of the image 
+\begin{DoxyParams}{Parameters}
+{\em image} & the image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+energy-\/value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/analyse/measure\-\_\-pixel\-\_\-energy.\-h\item 
+src/analyse/measure\-\_\-pixel\-\_\-energy.\-cpp\end{DoxyCompactItemize}

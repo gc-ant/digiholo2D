@@ -1,0 +1,30 @@
+\#\-Digiholo2\-D F\-I\-J\-I (Image\-J) plugin\# This is an \href{http://fiji.sc/Fiji}{\tt F\-I\-J\-I} plugin which provides a graphical user interface for interaction with the command line tool. Please refer to the documentation of the command line tool in the {\bfseries dist} directory for a description of the algorithms and their parameters.
+
+Next to the G\-U\-I, a set of plugins for generating a synthetic noisy wrapped phase map are provided (see examples).
+
+The F\-I\-J\-I plugin does not provide an interface to the full functionality of the command line tool (i.\-e batch execution and experimental algorithms). However it provides enough functionality to test the program without having to bother with the command line interface.
+
+The plugin also works with Image\-J, however some functionality requires the \href{http://www.imagescience.org/meijering/software/randomj/}{\tt Random\-J} package to work. F\-I\-J\-I already provides this package.
+
+\subsection*{Installation (win64)}
+
+
+\begin{DoxyEnumerate}
+\item Download the zip archive {\bfseries digiholo2\-D.\-zip} provided in this directory. It contains a copy of the command line tool for Windows 64-\/bit environments.
+\item Unzip the contents of the archive to your F\-I\-J\-I plugins directory so that you end up with \mbox{[}F\-I\-J\-I D\-I\-R\-E\-C\-T\-O\-R\-Y\mbox{]}. It is necessary that the folder has this exact name, since the macro expects the command line tool to be located at '\mbox{[}F\-I\-J\-I D\-I\-R\-E\-C\-T\-O\-R\-Y\mbox{]}.exe'.
+\item The collection of plugins will now be accessible to you using the F\-I\-J\-I Plugin bar.
+\end{DoxyEnumerate}
+
+\subsection*{Example}
+
+After completing the installation try the following steps\-:
+
+
+\begin{DoxyEnumerate}
+\item Generate a synthetic phase map using the 'Create synthetic phase map' Plugin. It will let you choose the size and noise level of a synthetic phase map. Just click O\-K for default settings.
+\item Wrap the phase map using the 'wrap to pi' macro.
+\item Unwrap the phase map using the 'unwrap digiholo' macro. Just click O\-K for an unwrap using Strand's algorithm.
+\item Experiment by using different combinations of tile unwrwapping and tile merging algorithms.
+\end{DoxyEnumerate}
+
+For further information on the unwrapping and merging algorithms and their parameters navigate to the {\bfseries dist} directory. 

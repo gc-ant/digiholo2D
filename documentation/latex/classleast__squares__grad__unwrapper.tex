@@ -1,0 +1,99 @@
+\hypertarget{classleast__squares__grad__unwrapper}{\section{least\-\_\-squares\-\_\-grad\-\_\-unwrapper Class Reference}
+\label{classleast__squares__grad__unwrapper}\index{least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}}
+}
+
+
+{\ttfamily \#include $<$least\-\_\-squares\-\_\-grad\-\_\-unwrapper.\-h$>$}
+
+Inheritance diagram for least\-\_\-squares\-\_\-grad\-\_\-unwrapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classleast__squares__grad__unwrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleast__squares__grad__unwrapper_a33a10b9f3200e5b1fb5827dc50687772}{least\-\_\-squares\-\_\-grad\-\_\-unwrapper} (std\-::vector$<$ std\-::string $>$ usettings)
+\item 
+\hyperlink{classleast__squares__grad__unwrapper_ab22c6e1009b5b8ceae4dea542d0f469d}{least\-\_\-squares\-\_\-grad\-\_\-unwrapper} (sharedptr$<$ \hyperlink{classmodel__function}{model\-\_\-function} $>$ model)
+\item 
+\hypertarget{classleast__squares__grad__unwrapper_ab7a1685800926ffbba4b1e829a21052d}{virtual \hyperlink{classleast__squares__grad__unwrapper_ab7a1685800926ffbba4b1e829a21052d}{$\sim$least\-\_\-squares\-\_\-grad\-\_\-unwrapper} ()}\label{classleast__squares__grad__unwrapper_ab7a1685800926ffbba4b1e829a21052d}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classleast__squares__grad__unwrapper_a4a0c29f7e7cfa21b5a87a291565d123f}{unwrap} (sharedptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\item 
+virtual std\-::string \hyperlink{classleast__squares__grad__unwrapper_af66d1a659d6cfbb82200d120f43dd939}{get\-\_\-name} ()
+\item 
+virtual void \hyperlink{classleast__squares__grad__unwrapper_a8795b4b968a336d28a81e910cbc9f4ab}{usage\-\_\-help} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class uses a general linear least squares approach for unwrapping the tiles (M\-L\-S\-Q\-U). General\-: Within its constructor, this class takes a given set of base functions, calculates the coefficients and fit them to the data. Linear\-: The choice of the base functions is up to the user. Only limitation is that these base functions have to be linear in the coefficients. Eg. a$\ast$x$^\wedge$5$\ast$y$^\wedge$3, b$\ast$x$^\wedge$2, c$\ast$1 is as good as a$\ast$sin(x), b$\ast$cos(x/4), c$\ast$tan(3). N\-O\-T working is sin(a$\ast$x), x$^\wedge$b, x$^\wedge$y. Least Squares\-: This approach leads to a big matrix / system of equastions, which will be solved with least squares methods, namely the S\-V-\/\-Decomposition.
+
+This class will always use the second order gradient calculator for calculation of the gradient profile of the tile. Thus it will always operate on a \hyperlink{classunit__cartesian__coordinate__system}{unit\-\_\-cartesian\-\_\-coordinate\-\_\-system} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleast__squares__grad__unwrapper_a33a10b9f3200e5b1fb5827dc50687772}{\index{least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}!least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}}
+\index{least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}!least_squares_grad_unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}}
+\subsubsection[{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}]{\setlength{\rightskip}{0pt plus 5cm}least\-\_\-squares\-\_\-grad\-\_\-unwrapper\-::least\-\_\-squares\-\_\-grad\-\_\-unwrapper (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$}]{usettings}
+\end{DoxyParamCaption}
+)}}\label{classleast__squares__grad__unwrapper_a33a10b9f3200e5b1fb5827dc50687772}
+This constructor is used in the main programm working with the command line option. 
+\begin{DoxyParams}{Parameters}
+{\em usettings} & vector of strings with options for the unwrapper \\
+\hline
+\end{DoxyParams}
+\hypertarget{classleast__squares__grad__unwrapper_ab22c6e1009b5b8ceae4dea542d0f469d}{\index{least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}!least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}}
+\index{least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}!least_squares_grad_unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}}
+\subsubsection[{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}]{\setlength{\rightskip}{0pt plus 5cm}least\-\_\-squares\-\_\-grad\-\_\-unwrapper\-::least\-\_\-squares\-\_\-grad\-\_\-unwrapper (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf model\-\_\-function} $>$}]{model}
+\end{DoxyParamCaption}
+)}}\label{classleast__squares__grad__unwrapper_ab22c6e1009b5b8ceae4dea542d0f469d}
+Constructor with explicit model function as a parameter 
+
+\subsection{Member Function Documentation}
+\hypertarget{classleast__squares__grad__unwrapper_af66d1a659d6cfbb82200d120f43dd939}{\index{least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!least_squares_grad_unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string least\-\_\-squares\-\_\-grad\-\_\-unwrapper\-::get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleast__squares__grad__unwrapper_af66d1a659d6cfbb82200d120f43dd939}
+Return a name (with options) to set in the output file name 
+
+Implements \hyperlink{classabstract__tile__unwrapper_ae70f69a703e622e5ab13eabcc91fca4d}{abstract\-\_\-tile\-\_\-unwrapper}.
+
+\hypertarget{classleast__squares__grad__unwrapper_a4a0c29f7e7cfa21b5a87a291565d123f}{\index{least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!least_squares_grad_unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}}
+\subsubsection[{unwrap}]{\setlength{\rightskip}{0pt plus 5cm}void least\-\_\-squares\-\_\-grad\-\_\-unwrapper\-::unwrap (
+\begin{DoxyParamCaption}
+\item[{sharedptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)}}\label{classleast__squares__grad__unwrapper_a4a0c29f7e7cfa21b5a87a291565d123f}
+Unwrap a given tile. 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+sharedptr$<$abstr....\-unwrapper$>$ stu this-\/$>$model-\/$>$subtract\-\_\-wrap\-\_\-add\-\_\-function(t, sharedptr$<$abstract\-\_\-tile\-\_\-unwrapper$>$ strand\-\_\-bla);\hypertarget{classleast__squares__grad__unwrapper_a8795b4b968a336d28a81e910cbc9f4ab}{\index{least\-\_\-squares\-\_\-grad\-\_\-unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}!usage\-\_\-help@{usage\-\_\-help}}
+\index{usage\-\_\-help@{usage\-\_\-help}!least_squares_grad_unwrapper@{least\-\_\-squares\-\_\-grad\-\_\-unwrapper}}
+\subsubsection[{usage\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}void least\-\_\-squares\-\_\-grad\-\_\-unwrapper\-::usage\-\_\-help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleast__squares__grad__unwrapper_a8795b4b968a336d28a81e910cbc9f4ab}
+Display a help on how to use this merger, in particular usage of merger-\/settings 
+
+Implements \hyperlink{classabstract__tile__unwrapper_a469b36a7f302d5a2655631bbdb6f8daf}{abstract\-\_\-tile\-\_\-unwrapper}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/least\-\_\-squares\-\_\-grad\-\_\-unwrapper.\-h\item 
+src/algorithm/least\-\_\-squares\-\_\-grad\-\_\-unwrapper.\-cpp\end{DoxyCompactItemize}

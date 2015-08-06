@@ -1,0 +1,98 @@
+\hypertarget{classstrand__tile__unwrapper}{\section{strand\-\_\-tile\-\_\-unwrapper Class Reference}
+\label{classstrand__tile__unwrapper}\index{strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}}
+}
+Inheritance diagram for strand\-\_\-tile\-\_\-unwrapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classstrand__tile__unwrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstrand__tile__unwrapper_a266a163ecbe547398be7339039f15991}{strand\-\_\-tile\-\_\-unwrapper} (int N\-\_\-rho)
+\item 
+\hyperlink{classstrand__tile__unwrapper_a5ba0ae8f39431c91e35bec18de4d67ef}{strand\-\_\-tile\-\_\-unwrapper} (std\-::vector$<$ std\-::string $>$ usettings)
+\item 
+void \hyperlink{classstrand__tile__unwrapper_a520d7832e80746c9996fe042b5993235}{unwrap} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtile}{tile} $>$ t)
+\item 
+virtual std\-::string \hyperlink{classstrand__tile__unwrapper_ae4ce9d7459840ada66b7492ea2873969}{get\-\_\-name} ()
+\item 
+virtual void \hyperlink{classstrand__tile__unwrapper_aebfdb44f1be923a6528471ea38174669}{usage\-\_\-help} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstrand__tile__unwrapper_a266a163ecbe547398be7339039f15991}{\index{strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}!strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}}
+\index{strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}!strand_tile_unwrapper@{strand\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{strand\-\_\-tile\-\_\-unwrapper}]{\setlength{\rightskip}{0pt plus 5cm}strand\-\_\-tile\-\_\-unwrapper\-::strand\-\_\-tile\-\_\-unwrapper (
+\begin{DoxyParamCaption}
+\item[{int}]{N\-\_\-rho}
+\end{DoxyParamCaption}
+)}}\label{classstrand__tile__unwrapper_a266a163ecbe547398be7339039f15991}
+Constructor with explicit number of steps 
+\begin{DoxyParams}{Parameters}
+{\em N\-\_\-rho} & Number of values in \mbox{[}0,2pi\mbox{]} to use for value rho (equidistant) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classstrand__tile__unwrapper_a5ba0ae8f39431c91e35bec18de4d67ef}{\index{strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}!strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}}
+\index{strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}!strand_tile_unwrapper@{strand\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{strand\-\_\-tile\-\_\-unwrapper}]{\setlength{\rightskip}{0pt plus 5cm}strand\-\_\-tile\-\_\-unwrapper\-::strand\-\_\-tile\-\_\-unwrapper (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$}]{usettings}
+\end{DoxyParamCaption}
+)}}\label{classstrand__tile__unwrapper_a5ba0ae8f39431c91e35bec18de4d67ef}
+Constructor with vector of settings for the strand unwrapper 
+\begin{DoxyParams}{Parameters}
+{\em usettings} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstrand__tile__unwrapper_ae4ce9d7459840ada66b7492ea2873969}{\index{strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!strand_tile_unwrapper@{strand\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string strand\-\_\-tile\-\_\-unwrapper\-::get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classstrand__tile__unwrapper_ae4ce9d7459840ada66b7492ea2873969}
+Return a name (with options) to set in the output file name 
+
+Implements \hyperlink{classabstract__tile__unwrapper_ae70f69a703e622e5ab13eabcc91fca4d}{abstract\-\_\-tile\-\_\-unwrapper}.
+
+\hypertarget{classstrand__tile__unwrapper_a520d7832e80746c9996fe042b5993235}{\index{strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!strand_tile_unwrapper@{strand\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{unwrap}]{\setlength{\rightskip}{0pt plus 5cm}void strand\-\_\-tile\-\_\-unwrapper\-::unwrap (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tile} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classstrand__tile__unwrapper_a520d7832e80746c9996fe042b5993235}
+Unwrap a given tile. 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]remove this hack. Problem with non-\/constant runtime (?) \end{DoxyRefDesc}
+
+
+Implements \hyperlink{classabstract__tile__unwrapper_a74eedd36e55b9000b5986ff5980a563a}{abstract\-\_\-tile\-\_\-unwrapper}.
+
+\hypertarget{classstrand__tile__unwrapper_aebfdb44f1be923a6528471ea38174669}{\index{strand\-\_\-tile\-\_\-unwrapper@{strand\-\_\-tile\-\_\-unwrapper}!usage\-\_\-help@{usage\-\_\-help}}
+\index{usage\-\_\-help@{usage\-\_\-help}!strand_tile_unwrapper@{strand\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{usage\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}void strand\-\_\-tile\-\_\-unwrapper\-::usage\-\_\-help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classstrand__tile__unwrapper_aebfdb44f1be923a6528471ea38174669}
+Display a help on how to use this merger, in particular usage of merger-\/settings 
+
+Implements \hyperlink{classabstract__tile__unwrapper_a469b36a7f302d5a2655631bbdb6f8daf}{abstract\-\_\-tile\-\_\-unwrapper}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/strand\-\_\-tile\-\_\-unwrapper.\-h\item 
+src/algorithm/strand\-\_\-tile\-\_\-unwrapper.\-cpp\end{DoxyCompactItemize}

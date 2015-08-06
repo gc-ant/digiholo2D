@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['eval',['eval',['../classabstract__function.html#ae313a63bae0ae1b88bcabd1bebc22f4f',1,'abstract_function::eval()'],['../classabstract__gradient.html#a4720548702baebd45572547fd913ef30',1,'abstract_gradient::eval()'],['../classmodel__function.html#a5ca38b00e9064eb46b697dab3b3e848f',1,'model_function::eval(float x, float y)'],['../classmodel__function.html#add97095253744605c1da638d2dc6c3b0',1,'model_function::eval(float x, float y, sharedptr&lt; std::vector&lt; float &gt; &gt; vc_coeff)'],['../classmodel__function.html#a2f5c7afd1f910bef7f545c0384a23c1e',1,'model_function::eval(float x, float y, sharedptr&lt; Eigen::VectorXf &gt; v_coeff)'],['../classmodel__gradient.html#a3342773b28b53352dfd08abd25b946f6',1,'model_gradient::eval()'],['../classmonomial__function.html#ac28af6c7f8c7c48216c7bdc270598728',1,'monomial_function::eval()'],['../classmonomial__gradient.html#a718fe4bdf3a6edd32d655de03db8badf',1,'monomial_gradient::eval()']]],
+  ['execute',['execute',['../classcommand__line.html#a738a0e35cd1635340369d23a9094acea',1,'command_line']]]
+];

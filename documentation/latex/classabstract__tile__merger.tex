@@ -1,0 +1,83 @@
+\hypertarget{classabstract__tile__merger}{\section{abstract\-\_\-tile\-\_\-merger Class Reference}
+\label{classabstract__tile__merger}\index{abstract\-\_\-tile\-\_\-merger@{abstract\-\_\-tile\-\_\-merger}}
+}
+
+
+{\ttfamily \#include $<$abstract\-\_\-tile\-\_\-merger.\-h$>$}
+
+Inheritance diagram for abstract\-\_\-tile\-\_\-merger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.978166cm]{classabstract__tile__merger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classabstract__tile__merger_a69c603d54ddfaf3346713756bfceaab5}{abstract\-\_\-tile\-\_\-merger} ()
+\item 
+virtual void \hyperlink{classabstract__tile__merger_a52ab494f77e495ab1a59b49e49c98db4}{merge\-\_\-tiles} (boost\-::shared\-\_\-ptr$<$ \hyperlink{classtiled__image}{tiled\-\_\-image} $>$ t)=0
+\item 
+virtual std\-::string \hyperlink{classabstract__tile__merger_a12ec9d118912b3c571d61ff9649042c6}{get\-\_\-name} ()=0
+\item 
+virtual void \hyperlink{classabstract__tile__merger_a7922b65624d12ef2d6c115218d2378b4}{usage\-\_\-help} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This pure virtual class provides an abstract interface for an merger that merges all tiles of a smart tiled image. It operates with boost smart pointers. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classabstract__tile__merger_a69c603d54ddfaf3346713756bfceaab5}{\index{abstract\-\_\-tile\-\_\-merger@{abstract\-\_\-tile\-\_\-merger}!abstract\-\_\-tile\-\_\-merger@{abstract\-\_\-tile\-\_\-merger}}
+\index{abstract\-\_\-tile\-\_\-merger@{abstract\-\_\-tile\-\_\-merger}!abstract_tile_merger@{abstract\-\_\-tile\-\_\-merger}}
+\subsubsection[{abstract\-\_\-tile\-\_\-merger}]{\setlength{\rightskip}{0pt plus 5cm}abstract\-\_\-tile\-\_\-merger\-::abstract\-\_\-tile\-\_\-merger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract__tile__merger_a69c603d54ddfaf3346713756bfceaab5}
+Konstruktor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract__tile__merger_a12ec9d118912b3c571d61ff9649042c6}{\index{abstract\-\_\-tile\-\_\-merger@{abstract\-\_\-tile\-\_\-merger}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!abstract_tile_merger@{abstract\-\_\-tile\-\_\-merger}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string abstract\-\_\-tile\-\_\-merger\-::get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__tile__merger_a12ec9d118912b3c571d61ff9649042c6}
+Return a name (with options) to set in the output file name 
+
+Implemented in \hyperlink{classsimulated__annealing__floodfill__merger_a1e235b700efd2ccdcf771cd93251a1b9}{simulated\-\_\-annealing\-\_\-floodfill\-\_\-merger}, \hyperlink{classsimulated__annealing__merger_a2548233017acafb226be7bcdb2c91e22}{simulated\-\_\-annealing\-\_\-merger}, \hyperlink{classsrncp__tile__merger_a7e6fb5b07129a1354a8d997161b210c4}{srncp\-\_\-tile\-\_\-merger}, \hyperlink{classsimple1d__tile__merger_ac0810b20cdeb08613cb2a214267cf26a}{simple1d\-\_\-tile\-\_\-merger}, and \hyperlink{classstrand__tile__merger_a3e548d789df5b5a39435c095dd51365b}{strand\-\_\-tile\-\_\-merger}.
+
+\hypertarget{classabstract__tile__merger_a52ab494f77e495ab1a59b49e49c98db4}{\index{abstract\-\_\-tile\-\_\-merger@{abstract\-\_\-tile\-\_\-merger}!merge\-\_\-tiles@{merge\-\_\-tiles}}
+\index{merge\-\_\-tiles@{merge\-\_\-tiles}!abstract_tile_merger@{abstract\-\_\-tile\-\_\-merger}}
+\subsubsection[{merge\-\_\-tiles}]{\setlength{\rightskip}{0pt plus 5cm}virtual void abstract\-\_\-tile\-\_\-merger\-::merge\-\_\-tiles (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf tiled\-\_\-image} $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__tile__merger_a52ab494f77e495ab1a59b49e49c98db4}
+Merge all given tiles inside the smart tiled image 
+\begin{DoxyParams}{Parameters}
+{\em t} & boost shared\-\_\-ptr to smart tiled image \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsrncp__tile__merger_ad8330c73633437c5f4860d837bf63345}{srncp\-\_\-tile\-\_\-merger}, and \hyperlink{classsimple1d__tile__merger_ad73f710dd3ea0116859dcf2e5f6c5a14}{simple1d\-\_\-tile\-\_\-merger}.
+
+\hypertarget{classabstract__tile__merger_a7922b65624d12ef2d6c115218d2378b4}{\index{abstract\-\_\-tile\-\_\-merger@{abstract\-\_\-tile\-\_\-merger}!usage\-\_\-help@{usage\-\_\-help}}
+\index{usage\-\_\-help@{usage\-\_\-help}!abstract_tile_merger@{abstract\-\_\-tile\-\_\-merger}}
+\subsubsection[{usage\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}virtual void abstract\-\_\-tile\-\_\-merger\-::usage\-\_\-help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__tile__merger_a7922b65624d12ef2d6c115218d2378b4}
+Display a help on how to use this merger, in particular usage of merger-\/settings 
+
+Implemented in \hyperlink{classsimulated__annealing__floodfill__merger_a6470774a227b289d5e16beac41e163d2}{simulated\-\_\-annealing\-\_\-floodfill\-\_\-merger}, \hyperlink{classsimulated__annealing__merger_a34ac2a006a40fe0b4e57c6868803bf07}{simulated\-\_\-annealing\-\_\-merger}, \hyperlink{classsrncp__tile__merger_ae57137ab8a1df19b86c28d3ff4aa1d9e}{srncp\-\_\-tile\-\_\-merger}, \hyperlink{classsimple1d__tile__merger_a4f18628ddf20f24efc13e705b469268c}{simple1d\-\_\-tile\-\_\-merger}, and \hyperlink{classstrand__tile__merger_af623214f3fe92b402d1a5510f1208071}{strand\-\_\-tile\-\_\-merger}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/algorithm/abstract\-\_\-tile\-\_\-merger.\-h\end{DoxyCompactItemize}
