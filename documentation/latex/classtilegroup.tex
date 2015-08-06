@@ -1,0 +1,114 @@
+\hypertarget{classtilegroup}{\section{tilegroup Class Reference}
+\label{classtilegroup}\index{tilegroup@{tilegroup}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtilegroup_aa6c6f357f5ff2da2c609ec88695256dc}{$\sim$tilegroup} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+void \hyperlink{classtilegroup_a4bec8ed94afb7cf220641232f86e92eb}{add\-\_\-tile} (\hyperlink{classtile}{tile} $\ast$t)
+\item 
+int \hyperlink{classtilegroup_a77326f80d6ec031a7429f574591cc3ee}{size} ()
+\item 
+void \hyperlink{classtilegroup_a2c453918b11a2bc1f0cd5f8f7746a5b7}{add\-\_\-value} (float val)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classtilegroup}{tilegroup} $\ast$ \hyperlink{classtilegroup_a1f6b1c44202332fa7271bae39e30981d}{create\-\_\-new} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtilegroup_ae067cbd35e55edd62f9eb0158d925a21}{merge\-\_\-tilegroups} (\hyperlink{classtilegroup}{tilegroup} $\ast$g1, \hyperlink{classtilegroup}{tilegroup} $\ast$g2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a helper class that groups tiles into a single group It allows easy access to all elements of a tile group. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtilegroup_aa6c6f357f5ff2da2c609ec88695256dc}{\index{tilegroup@{tilegroup}!$\sim$tilegroup@{$\sim$tilegroup}}
+\index{$\sim$tilegroup@{$\sim$tilegroup}!tilegroup@{tilegroup}}
+\subsubsection[{$\sim$tilegroup}]{\setlength{\rightskip}{0pt plus 5cm}tilegroup\-::$\sim$tilegroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_aa6c6f357f5ff2da2c609ec88695256dc}
+
+
+Destruktor. 
+
+S\-E\-G\-F\-A\-U\-L\-T?
+
+\href{http://stackoverflow.com/questions/10464992/c-delete-vector-objects-free-memory}{\tt http\-://stackoverflow.\-com/questions/10464992/c-\/delete-\/vector-\/objects-\/free-\/memory} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classtilegroup_a4bec8ed94afb7cf220641232f86e92eb}{\index{tilegroup@{tilegroup}!add\-\_\-tile@{add\-\_\-tile}}
+\index{add\-\_\-tile@{add\-\_\-tile}!tilegroup@{tilegroup}}
+\subsubsection[{add\-\_\-tile}]{\setlength{\rightskip}{0pt plus 5cm}void tilegroup\-::add\-\_\-tile (
+\begin{DoxyParamCaption}
+\item[{{\bf tile} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_a4bec8ed94afb7cf220641232f86e92eb}
+Add an Element to this group. The pointer to the tilegroup is updated in for the given tile t and O\-N\-L\-Y F\-O\-R T\-H\-I\-S T\-I\-L\-E and not any other tiles in any other group it might have been in. 
+\begin{DoxyParams}{Parameters}
+{\em t} & Tile to add to this group. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtilegroup_a2c453918b11a2bc1f0cd5f8f7746a5b7}{\index{tilegroup@{tilegroup}!add\-\_\-value@{add\-\_\-value}}
+\index{add\-\_\-value@{add\-\_\-value}!tilegroup@{tilegroup}}
+\subsubsection[{add\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}void tilegroup\-::add\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{float}]{val}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_a2c453918b11a2bc1f0cd5f8f7746a5b7}
+Add value to all tiles. 
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtilegroup_a1f6b1c44202332fa7271bae39e30981d}{\index{tilegroup@{tilegroup}!create\-\_\-new@{create\-\_\-new}}
+\index{create\-\_\-new@{create\-\_\-new}!tilegroup@{tilegroup}}
+\subsubsection[{create\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf tilegroup}$\ast$ tilegroup\-::create\-\_\-new (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtilegroup_a1f6b1c44202332fa7271bae39e30981d}
+Creates a new tilegroup. This is so new groups can only be created on the heap; \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classtilegroup_a77326f80d6ec031a7429f574591cc3ee}{\index{tilegroup@{tilegroup}!size@{size}}
+\index{size@{size}!tilegroup@{tilegroup}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int tilegroup\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtilegroup_a77326f80d6ec031a7429f574591cc3ee}
+\begin{DoxyReturn}{Returns}
+The number of elements in the tilegroup. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classtilegroup_ae067cbd35e55edd62f9eb0158d925a21}{\index{tilegroup@{tilegroup}!merge\-\_\-tilegroups@{merge\-\_\-tilegroups}}
+\index{merge\-\_\-tilegroups@{merge\-\_\-tilegroups}!tilegroup@{tilegroup}}
+\subsubsection[{merge\-\_\-tilegroups}]{\setlength{\rightskip}{0pt plus 5cm}void merge\-\_\-tilegroups (
+\begin{DoxyParamCaption}
+\item[{{\bf tilegroup} $\ast$}]{g1, }
+\item[{{\bf tilegroup} $\ast$}]{g2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classtilegroup_ae067cbd35e55edd62f9eb0158d925a21}
+Merges the tiles from 2 groups into one group. Group g2 is merged into g1. 
+\begin{DoxyParams}{Parameters}
+{\em g1} & First group \\
+\hline
+{\em g2} & Second group. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/block\-\_\-srncp/tile.\-h\item 
+src/block\-\_\-srncp/tilegroup.\-cpp\end{DoxyCompactItemize}

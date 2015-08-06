@@ -1,0 +1,51 @@
+\hypertarget{classsrncp__unwrapper}{\section{srncp\-\_\-unwrapper Class Reference}
+\label{classsrncp__unwrapper}\index{srncp\-\_\-unwrapper@{srncp\-\_\-unwrapper}}
+}
+Inheritance diagram for srncp\-\_\-unwrapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsrncp__unwrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classsrncp__unwrapper_a9ca1b579f9ad3595daad40a7d9391376}{unwrap} (\hyperlink{classfloat__image}{float\-\_\-image} $\ast$wrapped, \hyperlink{classfloat__image}{float\-\_\-image} $\ast$unwrapped)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provides the functionality of the srncp unwrapper using the abstract unwrapper interface. \begin{DoxyAuthor}{Author}
+g.\-antonopoulos 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsrncp__unwrapper_a9ca1b579f9ad3595daad40a7d9391376}{\index{srncp\-\_\-unwrapper@{srncp\-\_\-unwrapper}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!srncp_unwrapper@{srncp\-\_\-unwrapper}}
+\subsubsection[{unwrap}]{\setlength{\rightskip}{0pt plus 5cm}bool srncp\-\_\-unwrapper\-::unwrap (
+\begin{DoxyParamCaption}
+\item[{{\bf float\-\_\-image} $\ast$}]{wrapped\-\_\-phase\-\_\-image, }
+\item[{{\bf float\-\_\-image} $\ast$}]{unwrapped\-\_\-phase\-\_\-image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsrncp__unwrapper_a9ca1b579f9ad3595daad40a7d9391376}
+Abstrakte Methode für den Phase Unwrap 
+\begin{DoxyParams}{Parameters}
+{\em wrapped\-\_\-phase\-\_\-image} & Das Bild mit der Wrapped Phase Verteilung. \\
+\hline
+{\em unwrapped\-\_\-phase\-\_\-image} & Zeiger auf ein Bild mit Platz für die Unwrapped Phase Distribution. Muss gleiche größe wie wrapped phase haben!! \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, wenn keine Fehler aufgetreten sind, sonst false. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classabstract__unwrapper_a6d5c72cae9fcea45668cb02ddd3d9012}{abstract\-\_\-unwrapper}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/srncp/srncp\-\_\-unwrap.\-h\item 
+src/srncp/srncp\-\_\-unwrap.\-cpp\end{DoxyCompactItemize}

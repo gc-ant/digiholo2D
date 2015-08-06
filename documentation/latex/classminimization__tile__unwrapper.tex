@@ -1,0 +1,66 @@
+\hypertarget{classminimization__tile__unwrapper}{\section{minimization\-\_\-tile\-\_\-unwrapper Class Reference}
+\label{classminimization__tile__unwrapper}\index{minimization\-\_\-tile\-\_\-unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}}
+}
+Inheritance diagram for minimization\-\_\-tile\-\_\-unwrapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classminimization__tile__unwrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classminimization__tile__unwrapper_acd1f71bbf4da842023eeb888ff07df07}{minimization\-\_\-tile\-\_\-unwrapper} (int max\-\_\-inter, float tol=0.\-0314)
+\item 
+virtual \hyperlink{classminimization__tile__unwrapper_a87733a219fdd57965ecccf833d6d8ea7}{$\sim$minimization\-\_\-tile\-\_\-unwrapper} ()
+\item 
+virtual void \hyperlink{classminimization__tile__unwrapper_a029e05336da3208ecb7a00ab553dd1c1}{unwrap} (\hyperlink{classtile}{tile} $\ast$t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+!! Diese Klasse soll mit G\-S\-L eine effizienteren Tile-\/\-Unwrap als der \hyperlink{class_strand__tile__unwrapper}{Strand\-\_\-tile\-\_\-unwrapper} durchführen. Es ist allerdings nicht so leicht, das Minimierungsproblem so zu verpacken, dass es mit Minimierungsroutinen gelöst werden kann. Man muss erstmal das Minimum eingrenzen... wie soll ich das möglichst effizient machen? 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classminimization__tile__unwrapper_acd1f71bbf4da842023eeb888ff07df07}{\index{minimization\-\_\-tile\-\_\-unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}!minimization\-\_\-tile\-\_\-unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}}
+\index{minimization\-\_\-tile\-\_\-unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}!minimization_tile_unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{minimization\-\_\-tile\-\_\-unwrapper}]{\setlength{\rightskip}{0pt plus 5cm}minimization\-\_\-tile\-\_\-unwrapper\-::minimization\-\_\-tile\-\_\-unwrapper (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-\_\-inter, }
+\item[{float}]{tol = {\ttfamily 0.0314}}
+\end{DoxyParamCaption}
+)}}\label{classminimization__tile__unwrapper_acd1f71bbf4da842023eeb888ff07df07}
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em max\-\_\-inter} & Max number of iterations for minimization \\
+\hline
+{\em tol} & Tolerance parameter as stopping criterion for minimization \\
+\hline
+\end{DoxyParams}
+Allocate a Brent type minimizer; \hypertarget{classminimization__tile__unwrapper_a87733a219fdd57965ecccf833d6d8ea7}{\index{minimization\-\_\-tile\-\_\-unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}!$\sim$minimization\-\_\-tile\-\_\-unwrapper@{$\sim$minimization\-\_\-tile\-\_\-unwrapper}}
+\index{$\sim$minimization\-\_\-tile\-\_\-unwrapper@{$\sim$minimization\-\_\-tile\-\_\-unwrapper}!minimization_tile_unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{$\sim$minimization\-\_\-tile\-\_\-unwrapper}]{\setlength{\rightskip}{0pt plus 5cm}minimization\-\_\-tile\-\_\-unwrapper\-::$\sim$minimization\-\_\-tile\-\_\-unwrapper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classminimization__tile__unwrapper_a87733a219fdd57965ecccf833d6d8ea7}
+Destruktor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classminimization__tile__unwrapper_a029e05336da3208ecb7a00ab553dd1c1}{\index{minimization\-\_\-tile\-\_\-unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!minimization_tile_unwrapper@{minimization\-\_\-tile\-\_\-unwrapper}}
+\subsubsection[{unwrap}]{\setlength{\rightskip}{0pt plus 5cm}void minimization\-\_\-tile\-\_\-unwrapper\-::unwrap (
+\begin{DoxyParamCaption}
+\item[{{\bf tile} $\ast$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classminimization__tile__unwrapper_a029e05336da3208ecb7a00ab553dd1c1}
+Diese Methode unwrappt eine einzelne tile. H\-I\-E\-R T\-W\-E\-A\-K MÖ\-G\-L\-I\-C\-H FÜ\-R R\-E\-L\-A\-T\-I\-V\-E\-S S\-T\-O\-P\-P\-I\-N\-G K\-R\-I\-T\-E\-R\-I\-U\-M. Ich habe es auf 0.\-0 gesetzt. Siehe auch G\-S\-L Reference Manual.
+
+Implements \hyperlink{classabstract__tile__unwrapper_a8fdb3a4fdb7600f643f4af3c861ff296}{abstract\-\_\-tile\-\_\-unwrapper}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/block\-\_\-srncp/minimization\-\_\-tile\-\_\-unwrapper.\-h\item 
+src/block\-\_\-srncp/minimization\-\_\-tile\-\_\-unwrapper.\-cpp\end{DoxyCompactItemize}

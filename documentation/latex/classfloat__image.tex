@@ -1,0 +1,207 @@
+\hypertarget{classfloat__image}{\section{float\-\_\-image Class Reference}
+\label{classfloat__image}\index{float\-\_\-image@{float\-\_\-image}}
+}
+Inheritance diagram for float\-\_\-image\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classfloat__image}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfloat__image_a9e4ea7f98eb8c33e025cd21d61703c66}{float\-\_\-image} (long width, long height)
+\item 
+\hyperlink{classfloat__image_a4626247e8da835a5be04e346b577f85e}{float\-\_\-image} (float $\ast$data, long width, long height)
+\item 
+virtual long \hyperlink{classfloat__image_a08ba5e995f656dfebc5aaad0a9be390c}{get\-\_\-width} () const 
+\item 
+virtual long \hyperlink{classfloat__image_aeab41642909a0ee8d6e0ffcc2e7287b1}{get\-\_\-height} () const 
+\item 
+virtual float $\ast$ \hyperlink{classfloat__image_ab6dbf1f20614ba84f7b8f2c01b7aa3da}{get\-\_\-data\-\_\-pointer} ()
+\item 
+virtual float \& \hyperlink{classfloat__image_a62e1446efb51fadcfeebf50568f9d1e9}{operator()} (long w, long h)=0
+\item 
+\hypertarget{classfloat__image_ae3ae19180d1903bdeb0ffdb6f509a9f5}{virtual float {\bfseries operator()} (long w, long h) const =0}\label{classfloat__image_ae3ae19180d1903bdeb0ffdb6f509a9f5}
+
+\item 
+virtual void \hyperlink{classfloat__image_adffd8782a04ea4d764865aace1e43c93}{zero\-\_\-fill} ()
+\item 
+virtual bool \hyperlink{classfloat__image_a9cead12d50823ca313f6b7b16a57b092}{copy\-\_\-data\-\_\-to} (\hyperlink{classfloat__image}{float\-\_\-image} $\ast$img)
+\item 
+virtual void \hyperlink{classfloat__image_a3ef2df1d69f6791d2bef54636b625f82}{clear\-\_\-mem} ()
+\item 
+virtual float \hyperlink{classfloat__image_a53701b38abc94f8a707e8ceb2e6e71da}{get\-\_\-pixel} (long iw, long ih)
+\item 
+virtual void \hyperlink{classfloat__image_a97b520fc634fc4eb1930491b74d1f79b}{set\-\_\-pixel} (long iw, long ih, float val)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classfloat__image_a43df6eebb483b16921cee23e80f61f5b}{float $\ast$ {\bfseries data}}\label{classfloat__image_a43df6eebb483b16921cee23e80f61f5b}
+
+\item 
+\hypertarget{classfloat__image_a92e539199f8cfa3c8ece64e2bdca54c7}{long {\bfseries width}}\label{classfloat__image_a92e539199f8cfa3c8ece64e2bdca54c7}
+
+\item 
+\hypertarget{classfloat__image_af7c859a1a77e6886adff0fd47976d069}{long {\bfseries height}}\label{classfloat__image_af7c859a1a77e6886adff0fd47976d069}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+speichert ein 2\-D Bild, welches in einem 1\-D Datenvektor gespeichert wird. Die Ordnung des Datenvektors gibt die Klasse nicht vor. Es müssen auch nicht alle Daten hintereinander weg liegen. Die Zugriffsoperatoren sollen überladen werden, um eine bestimmte Art der Speicherung (z.\-b. row-\/major / column-\/major) oder sonstwas zu abstrahieren. Wichtig\-: Beim Aufruf des Destruktors des Bildes wird das entsprechende Array nicht freigegeben! 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfloat__image_a9e4ea7f98eb8c33e025cd21d61703c66}{\index{float\-\_\-image@{float\-\_\-image}!float\-\_\-image@{float\-\_\-image}}
+\index{float\-\_\-image@{float\-\_\-image}!float_image@{float\-\_\-image}}
+\subsubsection[{float\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}float\-\_\-image\-::float\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{long}]{width, }
+\item[{long}]{height}
+\end{DoxyParamCaption}
+)}}\label{classfloat__image_a9e4ea7f98eb8c33e025cd21d61703c66}
+Create float image with and allocate data array! The data will not be zero filled. 
+\begin{DoxyParams}{Parameters}
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classfloat__image_a4626247e8da835a5be04e346b577f85e}{\index{float\-\_\-image@{float\-\_\-image}!float\-\_\-image@{float\-\_\-image}}
+\index{float\-\_\-image@{float\-\_\-image}!float_image@{float\-\_\-image}}
+\subsubsection[{float\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}float\-\_\-image\-::float\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{data, }
+\item[{long}]{width, }
+\item[{long}]{height}
+\end{DoxyParamCaption}
+)}}\label{classfloat__image_a4626247e8da835a5be04e346b577f85e}
+Create float image with specified data array. The image will operate on this array. 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfloat__image_a3ef2df1d69f6791d2bef54636b625f82}{\index{float\-\_\-image@{float\-\_\-image}!clear\-\_\-mem@{clear\-\_\-mem}}
+\index{clear\-\_\-mem@{clear\-\_\-mem}!float_image@{float\-\_\-image}}
+\subsubsection[{clear\-\_\-mem}]{\setlength{\rightskip}{0pt plus 5cm}void float\-\_\-image\-::clear\-\_\-mem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfloat__image_a3ef2df1d69f6791d2bef54636b625f82}
+Free memory associated with the image. This is not done when the destructor is called. \hypertarget{classfloat__image_a9cead12d50823ca313f6b7b16a57b092}{\index{float\-\_\-image@{float\-\_\-image}!copy\-\_\-data\-\_\-to@{copy\-\_\-data\-\_\-to}}
+\index{copy\-\_\-data\-\_\-to@{copy\-\_\-data\-\_\-to}!float_image@{float\-\_\-image}}
+\subsubsection[{copy\-\_\-data\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}bool float\-\_\-image\-::copy\-\_\-data\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{{\bf float\-\_\-image} $\ast$}]{img}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfloat__image_a9cead12d50823ca313f6b7b16a57b092}
+Copies the data from this image into the given image. Both images need to have the same dimensions. 
+\begin{DoxyParams}{Parameters}
+{\em img} & Data from this image is copied into img. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false if not. 
+\end{DoxyReturn}
+\hypertarget{classfloat__image_ab6dbf1f20614ba84f7b8f2c01b7aa3da}{\index{float\-\_\-image@{float\-\_\-image}!get\-\_\-data\-\_\-pointer@{get\-\_\-data\-\_\-pointer}}
+\index{get\-\_\-data\-\_\-pointer@{get\-\_\-data\-\_\-pointer}!float_image@{float\-\_\-image}}
+\subsubsection[{get\-\_\-data\-\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ float\-\_\-image\-::get\-\_\-data\-\_\-pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfloat__image_ab6dbf1f20614ba84f7b8f2c01b7aa3da}
+\begin{DoxyReturn}{Returns}
+pointer to data array 
+\end{DoxyReturn}
+\hypertarget{classfloat__image_aeab41642909a0ee8d6e0ffcc2e7287b1}{\index{float\-\_\-image@{float\-\_\-image}!get\-\_\-height@{get\-\_\-height}}
+\index{get\-\_\-height@{get\-\_\-height}!float_image@{float\-\_\-image}}
+\subsubsection[{get\-\_\-height}]{\setlength{\rightskip}{0pt plus 5cm}long float\-\_\-image\-::get\-\_\-height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfloat__image_aeab41642909a0ee8d6e0ffcc2e7287b1}
+\begin{DoxyReturn}{Returns}
+image height 
+\end{DoxyReturn}
+\hypertarget{classfloat__image_a53701b38abc94f8a707e8ceb2e6e71da}{\index{float\-\_\-image@{float\-\_\-image}!get\-\_\-pixel@{get\-\_\-pixel}}
+\index{get\-\_\-pixel@{get\-\_\-pixel}!float_image@{float\-\_\-image}}
+\subsubsection[{get\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}float float\-\_\-image\-::get\-\_\-pixel (
+\begin{DoxyParamCaption}
+\item[{long}]{iw, }
+\item[{long}]{ih}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfloat__image_a53701b38abc94f8a707e8ceb2e6e71da}
+Get Pixel value at specified position. 
+\begin{DoxyParams}{Parameters}
+{\em iw} & \\
+\hline
+{\em ih} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classfloat__image_a08ba5e995f656dfebc5aaad0a9be390c}{\index{float\-\_\-image@{float\-\_\-image}!get\-\_\-width@{get\-\_\-width}}
+\index{get\-\_\-width@{get\-\_\-width}!float_image@{float\-\_\-image}}
+\subsubsection[{get\-\_\-width}]{\setlength{\rightskip}{0pt plus 5cm}long float\-\_\-image\-::get\-\_\-width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfloat__image_a08ba5e995f656dfebc5aaad0a9be390c}
+\begin{DoxyReturn}{Returns}
+image width 
+\end{DoxyReturn}
+\hypertarget{classfloat__image_a62e1446efb51fadcfeebf50568f9d1e9}{\index{float\-\_\-image@{float\-\_\-image}!operator()@{operator()}}
+\index{operator()@{operator()}!float_image@{float\-\_\-image}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual float\& float\-\_\-image\-::operator() (
+\begin{DoxyParamCaption}
+\item[{long}]{w, }
+\item[{long}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classfloat__image_a62e1446efb51fadcfeebf50568f9d1e9}
+Return element at position width = w, height = h, starting with (0,0) in upper left corner of the image. Implemented in child classes, see e.\-g. \hyperlink{classrow__major__float__image}{row\-\_\-major\-\_\-float\-\_\-image}. 
+
+Implemented in \hyperlink{classcol__major__float__image_a45315790d78a3d27559946f198129708}{col\-\_\-major\-\_\-float\-\_\-image}, and \hyperlink{classrow__major__float__image_a04b9b253a3771e0963c839a9a85ccd99}{row\-\_\-major\-\_\-float\-\_\-image}.
+
+\hypertarget{classfloat__image_a97b520fc634fc4eb1930491b74d1f79b}{\index{float\-\_\-image@{float\-\_\-image}!set\-\_\-pixel@{set\-\_\-pixel}}
+\index{set\-\_\-pixel@{set\-\_\-pixel}!float_image@{float\-\_\-image}}
+\subsubsection[{set\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}void float\-\_\-image\-::set\-\_\-pixel (
+\begin{DoxyParamCaption}
+\item[{long}]{iw, }
+\item[{long}]{ih, }
+\item[{float}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfloat__image_a97b520fc634fc4eb1930491b74d1f79b}
+Set Pixel value at specified position. 
+\begin{DoxyParams}{Parameters}
+{\em iw} & \\
+\hline
+{\em ih} & \\
+\hline
+{\em val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classfloat__image_adffd8782a04ea4d764865aace1e43c93}{\index{float\-\_\-image@{float\-\_\-image}!zero\-\_\-fill@{zero\-\_\-fill}}
+\index{zero\-\_\-fill@{zero\-\_\-fill}!float_image@{float\-\_\-image}}
+\subsubsection[{zero\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}void float\-\_\-image\-::zero\-\_\-fill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfloat__image_adffd8782a04ea4d764865aace1e43c93}
+Fill image with zeroes. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/float\-\_\-image.\-h\item 
+src/float\-\_\-image.\-cpp\end{DoxyCompactItemize}

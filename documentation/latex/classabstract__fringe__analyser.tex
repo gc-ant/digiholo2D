@@ -1,0 +1,47 @@
+\hypertarget{classabstract__fringe__analyser}{\section{abstract\-\_\-fringe\-\_\-analyser Class Reference}
+\label{classabstract__fringe__analyser}\index{abstract\-\_\-fringe\-\_\-analyser@{abstract\-\_\-fringe\-\_\-analyser}}
+}
+Inheritance diagram for abstract\-\_\-fringe\-\_\-analyser\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classabstract__fringe__analyser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classabstract__fringe__analyser_a48f796b6b3d8dbf9dd66f5e5eaf98153}{calc\-\_\-wrapped\-\_\-phase\-\_\-map} (\hyperlink{classfloat__image}{float\-\_\-image} $\ast$fringe\-\_\-pattern, \hyperlink{classfloat__image}{float\-\_\-image} $\ast$wrapped\-\_\-phase\-\_\-map)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+abstrahiert die Funktionalität aus einem Interferenzbild die (gewrappte!) Phase zu berechnen. Abgeleiteten Klassen sollen alle nötigen Parameter im Konstruktor übergeben werden. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract__fringe__analyser_a48f796b6b3d8dbf9dd66f5e5eaf98153}{\index{abstract\-\_\-fringe\-\_\-analyser@{abstract\-\_\-fringe\-\_\-analyser}!calc\-\_\-wrapped\-\_\-phase\-\_\-map@{calc\-\_\-wrapped\-\_\-phase\-\_\-map}}
+\index{calc\-\_\-wrapped\-\_\-phase\-\_\-map@{calc\-\_\-wrapped\-\_\-phase\-\_\-map}!abstract_fringe_analyser@{abstract\-\_\-fringe\-\_\-analyser}}
+\subsubsection[{calc\-\_\-wrapped\-\_\-phase\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool abstract\-\_\-fringe\-\_\-analyser\-::calc\-\_\-wrapped\-\_\-phase\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{{\bf float\-\_\-image} $\ast$}]{fringe\-\_\-pattern, }
+\item[{{\bf float\-\_\-image} $\ast$}]{wrapped\-\_\-phase\-\_\-map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract__fringe__analyser_a48f796b6b3d8dbf9dd66f5e5eaf98153}
+Berechnet eine wrapped Phase map aus einem Fringe Image aus float Daten. 
+\begin{DoxyParams}{Parameters}
+{\em fringe\-\_\-pattern} & Das Interferenzbild. \\
+\hline
+{\em wrapped\-\_\-phase\-\_\-map} & Pointer mit Platz für die berechnete wrapped phase map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if everything went well, false if not 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_takeda___f_f_t_w__fringe__analyser_a0213cf26993557bf87b5c14d8b354582}{Takeda\-\_\-\-F\-F\-T\-W\-\_\-fringe\-\_\-analyser}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/abstract\-\_\-fringe\-\_\-analyser.\-h\end{DoxyCompactItemize}

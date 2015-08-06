@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="algorithm" projectFiles="true">
+        <itemPath>include/algorithm/abstract_gradient_calculator.h</itemPath>
+        <itemPath>include/algorithm/abstract_reliability_calculator.h</itemPath>
+        <itemPath>include/algorithm/abstract_tile_merger.h</itemPath>
+        <itemPath>include/algorithm/abstract_tile_unwrapper.h</itemPath>
+        <itemPath>include/algorithm/abstract_unwrapper.h</itemPath>
+        <itemPath>include/algorithm/grad_fit_tile_unwrapper.h</itemPath>
+        <itemPath>include/algorithm/least_squares_grad_unwrapper.h</itemPath>
+        <itemPath>include/algorithm/px_floodfill_sim_ann_unwrapper.h</itemPath>
+        <itemPath>include/algorithm/reliability_calculator_mean_difference.h</itemPath>
+        <itemPath>include/algorithm/reliability_calculator_random.h</itemPath>
+        <itemPath>include/algorithm/reliability_calculator_variance.h</itemPath>
+        <itemPath>include/algorithm/reliability_calculator_variance_second.h</itemPath>
+        <itemPath>include/algorithm/second_order_gradient.h</itemPath>
+        <itemPath>include/algorithm/simple1d_tile_merger.h</itemPath>
+        <itemPath>include/algorithm/simulated_annealing_floodfill_merger.h</itemPath>
+        <itemPath>include/algorithm/simulated_annealing_merger.h</itemPath>
+        <itemPath>include/algorithm/srncp_tile_merger.h</itemPath>
+        <itemPath>include/algorithm/strand_tile_merger.h</itemPath>
+        <itemPath>include/algorithm/strand_tile_unwrapper.h</itemPath>
+        <itemPath>include/algorithm/wrap.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="analyse" projectFiles="true">
+        <itemPath>include/analyse/measure_pixel_energy.h</itemPath>
+        <itemPath>include/analyse/measure_psnr.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="debug" projectFiles="true">
+        <itemPath>include/debug/debug_file_io.h</itemPath>
+        <itemPath>include/debug/debug_out.h</itemPath>
+        <itemPath>include/debug/debug_time.h</itemPath>
+        <itemPath>include/debug/test_memory_leak.h</itemPath>
+        <itemPath>include/debug/test_memory_leak_a.h</itemPath>
+        <itemPath>include/debug/test_memory_leak_b.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f6" displayName="image" projectFiles="true">
+        <itemPath>include/image/col_major_image.h</itemPath>
+        <itemPath>include/image/float_image.h</itemPath>
+        <itemPath>include/image/in_out.h</itemPath>
+        <itemPath>include/image/row_major_float_image.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f8" displayName="model" projectFiles="true">
+        <itemPath>include/model/abstract_function.h</itemPath>
+        <itemPath>include/model/abstract_gradient.h</itemPath>
+        <itemPath>include/model/model_function.h</itemPath>
+        <itemPath>include/model/monomial_function.h</itemPath>
+        <itemPath>include/model/monomial_gradient.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f7" displayName="tiles" projectFiles="true">
+        <itemPath>include/tiles/abstract_coordinate_system.h</itemPath>
+        <itemPath>include/tiles/tile.h</itemPath>
+        <itemPath>include/tiles/tile_dimension_exception.h</itemPath>
+        <itemPath>include/tiles/tile_junction.h</itemPath>
+        <itemPath>include/tiles/tiled_image.h</itemPath>
+        <itemPath>include/tiles/tilegroup.h</itemPath>
+        <itemPath>include/tiles/unit_cartesian_coordinate_system.h</itemPath>
+      </logicalFolder>
+      <itemPath>include/basic_includes.h</itemPath>
+      <itemPath>include/command_line.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="algorithm" projectFiles="true">
+        <itemPath>src/algorithm/abstract_gradient_calculator.cpp</itemPath>
+        <itemPath>src/algorithm/grad_fit_tile_unwrapper.cpp</itemPath>
+        <itemPath>src/algorithm/least_squares_grad_unwrapper.cpp</itemPath>
+        <itemPath>src/algorithm/reliability_calculator_mean_difference.cpp</itemPath>
+        <itemPath>src/algorithm/reliability_calculator_random.cpp</itemPath>
+        <itemPath>src/algorithm/reliability_calculator_variance.cpp</itemPath>
+        <itemPath>src/algorithm/reliability_calculator_variance_second.cpp</itemPath>
+        <itemPath>src/algorithm/second_order_gradient.cpp</itemPath>
+        <itemPath>src/algorithm/simple1d_tile_merger.cpp</itemPath>
+        <itemPath>src/algorithm/simulated_annealing_floodfill_merger.cpp</itemPath>
+        <itemPath>src/algorithm/simulated_annealing_merger.cpp</itemPath>
+        <itemPath>src/algorithm/srncp_tile_merger.cpp</itemPath>
+        <itemPath>src/algorithm/strand_tile_merger.cpp</itemPath>
+        <itemPath>src/algorithm/strand_tile_unwrapper.cpp</itemPath>
+        <itemPath>src/algorithm/wrap.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="analyse" projectFiles="true">
+        <itemPath>src/analyse/measure_pixel_energy.cpp</itemPath>
+        <itemPath>src/analyse/measure_psnr.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="debug" projectFiles="true">
+        <itemPath>src/debug/debug_file_io.cpp</itemPath>
+        <itemPath>src/debug/test_memory_leak.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f6" displayName="image" projectFiles="true">
+        <itemPath>src/image/float_image.cpp</itemPath>
+        <itemPath>src/image/in_out.cpp</itemPath>
+        <itemPath>src/image/row_major_float_image.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f8" displayName="model" projectFiles="true">
+        <itemPath>src/model/model_function.cpp</itemPath>
+        <itemPath>src/model/model_gradient.cpp</itemPath>
+        <itemPath>src/model/monomial_function.cpp</itemPath>
+        <itemPath>src/model/monomial_gradient.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f7" displayName="tiles" projectFiles="true">
+        <itemPath>src/tiles/tile.cpp</itemPath>
+        <itemPath>src/tiles/tile_dimension_exception.cpp</itemPath>
+        <itemPath>src/tiles/tile_junction.cpp</itemPath>
+        <itemPath>src/tiles/tiled_image.cpp</itemPath>
+        <itemPath>src/tiles/tilegroup.cpp</itemPath>
+        <itemPath>src/tiles/unit_cartesian_coordinate_system.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>src/command_line.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <architecture>2</architecture>
+          <standard>8</standard>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>C:/Software/Octave3.6.4_gcc4.6.2/Octave3.6.4_gcc4.6.2/include/octave-3.6.4</pElem>
+            <pElem>C:/Software/boost_1_56_0</pElem>
+            <pElem>C:/Software/eigen</pElem>
+          </incDir>
+          <commandLine>-static -static-libgcc -static-libstdc++ -O2 -Wno-unused-local-typedefs</commandLine>
+          <preprocessorList>
+            <Elem>DEBUG</Elem>
+          </preprocessorList>
+          <warningLevel>2</warningLevel>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/digiholo2d_v2</output>
+          <linkerLibItems>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-1_56.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-1_56.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-d-1_56.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-d-1_56.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-mt-1_56.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-mt-1_56.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-mt-d-1_56.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-mt-d-1_56.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-mt-s-1_56.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-mt-sd-1_56.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-s-1_56.a</linkerLibFileItem>
+            <linkerLibFileItem>C:/Software/boost_1_56_0/stage/lib/libboost_program_options-mgw48-sd-1_56.a</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="include/algorithm/abstract_gradient_calculator.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/abstract_reliability_calculator.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/abstract_tile_merger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/abstract_tile_unwrapper.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/abstract_unwrapper.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/grad_fit_tile_unwrapper.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/least_squares_grad_unwrapper.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/px_floodfill_sim_ann_unwrapper.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/reliability_calculator_mean_difference.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/reliability_calculator_random.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/reliability_calculator_variance.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/reliability_calculator_variance_second.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/second_order_gradient.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/simple1d_tile_merger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/simulated_annealing_floodfill_merger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/simulated_annealing_merger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/srncp_tile_merger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/strand_tile_merger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/strand_tile_unwrapper.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/algorithm/wrap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/analyse/measure_pixel_energy.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/analyse/measure_psnr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/basic_includes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/command_line.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/debug/debug_file_io.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/debug/debug_out.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/debug/debug_time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/debug/test_memory_leak.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/debug/test_memory_leak_a.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/debug/test_memory_leak_b.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/image/col_major_image.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/image/float_image.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/image/in_out.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/image/row_major_float_image.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/model/abstract_function.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/model/abstract_gradient.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/model/model_function.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/model/monomial_function.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/model/monomial_gradient.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/tiles/abstract_coordinate_system.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/tiles/tile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/tiles/tile_dimension_exception.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/tiles/tile_junction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/tiles/tiled_image.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/tiles/tilegroup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/tiles/unit_cartesian_coordinate_system.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/algorithm/abstract_gradient_calculator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/grad_fit_tile_unwrapper.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/least_squares_grad_unwrapper.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/reliability_calculator_mean_difference.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/reliability_calculator_random.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/reliability_calculator_variance.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/reliability_calculator_variance_second.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/second_order_gradient.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/simple1d_tile_merger.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/simulated_annealing_floodfill_merger.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/simulated_annealing_merger.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/srncp_tile_merger.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/strand_tile_merger.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/strand_tile_unwrapper.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/algorithm/wrap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/analyse/measure_pixel_energy.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/analyse/measure_psnr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/command_line.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/debug/debug_file_io.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/debug/test_memory_leak.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/image/float_image.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/image/in_out.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/image/row_major_float_image.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/model/model_function.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/model/model_gradient.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/model/monomial_function.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/model/monomial_gradient.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tiles/tile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tiles/tile_dimension_exception.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/tiles/tile_junction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tiles/tiled_image.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tiles/tilegroup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tiles/unit_cartesian_coordinate_system.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

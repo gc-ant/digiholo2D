@@ -1,0 +1,203 @@
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}abstract\discretionary {-}{}{}\_\discretionary {-}{}{}fringe\discretionary {-}{}{}\_\discretionary {-}{}{}analyser Class Reference}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Member Function Documentation}{5}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}calc\discretionary {-}{}{}\_\discretionary {-}{}{}wrapped\discretionary {-}{}{}\_\discretionary {-}{}{}phase\discretionary {-}{}{}\_\discretionary {-}{}{}map}{5}{subsubsection.3.1.2.1}
+\contentsline {section}{\numberline {3.2}abstract\discretionary {-}{}{}\_\discretionary {-}{}{}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{6}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{6}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Constructor \& Destructor Documentation}{6}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}abstract\discretionary {-}{}{}\_\discretionary {-}{}{}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper}{6}{subsubsection.3.2.2.1}
+\contentsline {subsection}{\numberline {3.2.3}Member Function Documentation}{6}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}unwrap}{6}{subsubsection.3.2.3.1}
+\contentsline {section}{\numberline {3.3}abstract\discretionary {-}{}{}\_\discretionary {-}{}{}smart\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{6}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{6}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Member Function Documentation}{7}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}unwrap}{7}{subsubsection.3.3.2.1}
+\contentsline {section}{\numberline {3.4}abstract\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}merger Class Reference}{8}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{8}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Member Function Documentation}{8}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}merge\discretionary {-}{}{}\_\discretionary {-}{}{}tiles}{8}{subsubsection.3.4.2.1}
+\contentsline {section}{\numberline {3.5}abstract\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{8}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{9}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Constructor \& Destructor Documentation}{9}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}abstract\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper}{9}{subsubsection.3.5.2.1}
+\contentsline {subsection}{\numberline {3.5.3}Member Function Documentation}{9}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.1}unwrap}{9}{subsubsection.3.5.3.1}
+\contentsline {section}{\numberline {3.6}abstract\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{9}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{10}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Member Function Documentation}{10}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}unwrap}{10}{subsubsection.3.6.2.1}
+\contentsline {section}{\numberline {3.7}col\discretionary {-}{}{}\_\discretionary {-}{}{}major\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}\_\discretionary {-}{}{}image Class Reference}{10}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Constructor \& Destructor Documentation}{10}{subsection.3.7.1}
+\contentsline {subsubsection}{\numberline {3.7.1.1}col\discretionary {-}{}{}\_\discretionary {-}{}{}major\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}\_\discretionary {-}{}{}image}{10}{subsubsection.3.7.1.1}
+\contentsline {subsection}{\numberline {3.7.2}Member Function Documentation}{11}{subsection.3.7.2}
+\contentsline {subsubsection}{\numberline {3.7.2.1}operator()}{11}{subsubsection.3.7.2.1}
+\contentsline {section}{\numberline {3.8}Ui\discretionary {-}{}{}:\discretionary {-}{}{}:digiholo\discretionary {-}{}{}Main\discretionary {-}{}{}Gui Class Reference}{11}{section.3.8}
+\contentsline {section}{\numberline {3.9}digiholo\discretionary {-}{}{}Main\discretionary {-}{}{}Gui Class Reference}{11}{section.3.9}
+\contentsline {section}{\numberline {3.10}E\discretionary {-}{}{}D\discretionary {-}{}{}G\discretionary {-}{}{}E Struct Reference}{12}{section.3.10}
+\contentsline {section}{\numberline {3.11}float\discretionary {-}{}{}\_\discretionary {-}{}{}image Class Reference}{12}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{12}{subsection.3.11.1}
+\contentsline {subsection}{\numberline {3.11.2}Constructor \& Destructor Documentation}{13}{subsection.3.11.2}
+\contentsline {subsubsection}{\numberline {3.11.2.1}float\discretionary {-}{}{}\_\discretionary {-}{}{}image}{13}{subsubsection.3.11.2.1}
+\contentsline {subsubsection}{\numberline {3.11.2.2}float\discretionary {-}{}{}\_\discretionary {-}{}{}image}{14}{subsubsection.3.11.2.2}
+\contentsline {subsection}{\numberline {3.11.3}Member Function Documentation}{14}{subsection.3.11.3}
+\contentsline {subsubsection}{\numberline {3.11.3.1}clear\discretionary {-}{}{}\_\discretionary {-}{}{}mem}{14}{subsubsection.3.11.3.1}
+\contentsline {subsubsection}{\numberline {3.11.3.2}copy\discretionary {-}{}{}\_\discretionary {-}{}{}data\discretionary {-}{}{}\_\discretionary {-}{}{}to}{14}{subsubsection.3.11.3.2}
+\contentsline {subsubsection}{\numberline {3.11.3.3}get\discretionary {-}{}{}\_\discretionary {-}{}{}data\discretionary {-}{}{}\_\discretionary {-}{}{}pointer}{14}{subsubsection.3.11.3.3}
+\contentsline {subsubsection}{\numberline {3.11.3.4}get\discretionary {-}{}{}\_\discretionary {-}{}{}height}{14}{subsubsection.3.11.3.4}
+\contentsline {subsubsection}{\numberline {3.11.3.5}get\discretionary {-}{}{}\_\discretionary {-}{}{}pixel}{14}{subsubsection.3.11.3.5}
+\contentsline {subsubsection}{\numberline {3.11.3.6}get\discretionary {-}{}{}\_\discretionary {-}{}{}width}{15}{subsubsection.3.11.3.6}
+\contentsline {subsubsection}{\numberline {3.11.3.7}operator()}{15}{subsubsection.3.11.3.7}
+\contentsline {subsubsection}{\numberline {3.11.3.8}set\discretionary {-}{}{}\_\discretionary {-}{}{}pixel}{15}{subsubsection.3.11.3.8}
+\contentsline {subsubsection}{\numberline {3.11.3.9}zero\discretionary {-}{}{}\_\discretionary {-}{}{}fill}{15}{subsubsection.3.11.3.9}
+\contentsline {section}{\numberline {3.12}grad\discretionary {-}{}{}\_\discretionary {-}{}{}fit\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{15}{section.3.12}
+\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{16}{subsection.3.12.1}
+\contentsline {subsection}{\numberline {3.12.2}Member Function Documentation}{16}{subsection.3.12.2}
+\contentsline {subsubsection}{\numberline {3.12.2.1}unwrap}{16}{subsubsection.3.12.2.1}
+\contentsline {section}{\numberline {3.13}minimization\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{16}{section.3.13}
+\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{16}{subsection.3.13.1}
+\contentsline {subsection}{\numberline {3.13.2}Constructor \& Destructor Documentation}{17}{subsection.3.13.2}
+\contentsline {subsubsection}{\numberline {3.13.2.1}minimization\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper}{17}{subsubsection.3.13.2.1}
+\contentsline {subsubsection}{\numberline {3.13.2.2}$\sim $minimization\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper}{18}{subsubsection.3.13.2.2}
+\contentsline {subsection}{\numberline {3.13.3}Member Function Documentation}{18}{subsection.3.13.3}
+\contentsline {subsubsection}{\numberline {3.13.3.1}unwrap}{18}{subsubsection.3.13.3.1}
+\contentsline {section}{\numberline {3.14}P\discretionary {-}{}{}I\discretionary {-}{}{}X\discretionary {-}{}{}E\discretionary {-}{}{}L Struct Reference}{18}{section.3.14}
+\contentsline {section}{\numberline {3.15}qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}digiholo\discretionary {-}{}{}Main\discretionary {-}{}{}Gui\discretionary {-}{}{}\_\discretionary {-}{}{}t Struct Reference}{18}{section.3.15}
+\contentsline {section}{\numberline {3.16}qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Reconstruction\discretionary {-}{}{}Thread\discretionary {-}{}{}\_\discretionary {-}{}{}t Struct Reference}{19}{section.3.16}
+\contentsline {section}{\numberline {3.17}Reconstruction\discretionary {-}{}{}Thread Class Reference}{19}{section.3.17}
+\contentsline {subsection}{\numberline {3.17.1}Member Function Documentation}{19}{subsection.3.17.1}
+\contentsline {subsubsection}{\numberline {3.17.1.1}init}{19}{subsubsection.3.17.1.1}
+\contentsline {subsubsection}{\numberline {3.17.1.2}progress\discretionary {-}{}{}Info}{20}{subsubsection.3.17.1.2}
+\contentsline {subsubsection}{\numberline {3.17.1.3}progress\discretionary {-}{}{}Update}{20}{subsubsection.3.17.1.3}
+\contentsline {subsubsection}{\numberline {3.17.1.4}request\discretionary {-}{}{}\_\discretionary {-}{}{}termination}{20}{subsubsection.3.17.1.4}
+\contentsline {section}{\numberline {3.18}row\discretionary {-}{}{}\_\discretionary {-}{}{}major\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}\_\discretionary {-}{}{}image Class Reference}{20}{section.3.18}
+\contentsline {subsection}{\numberline {3.18.1}Constructor \& Destructor Documentation}{21}{subsection.3.18.1}
+\contentsline {subsubsection}{\numberline {3.18.1.1}row\discretionary {-}{}{}\_\discretionary {-}{}{}major\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}\_\discretionary {-}{}{}image}{21}{subsubsection.3.18.1.1}
+\contentsline {subsection}{\numberline {3.18.2}Member Function Documentation}{21}{subsection.3.18.2}
+\contentsline {subsubsection}{\numberline {3.18.2.1}operator()}{21}{subsubsection.3.18.2.1}
+\contentsline {section}{\numberline {3.19}simple1d\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}merger Class Reference}{21}{section.3.19}
+\contentsline {subsection}{\numberline {3.19.1}Constructor \& Destructor Documentation}{21}{subsection.3.19.1}
+\contentsline {subsubsection}{\numberline {3.19.1.1}simple1d\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}merger}{21}{subsubsection.3.19.1.1}
+\contentsline {subsection}{\numberline {3.19.2}Member Function Documentation}{22}{subsection.3.19.2}
+\contentsline {subsubsection}{\numberline {3.19.2.1}merge\discretionary {-}{}{}\_\discretionary {-}{}{}tiles}{22}{subsubsection.3.19.2.1}
+\contentsline {section}{\numberline {3.20}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tile Class Reference}{22}{section.3.20}
+\contentsline {subsection}{\numberline {3.20.1}Constructor \& Destructor Documentation}{23}{subsection.3.20.1}
+\contentsline {subsubsection}{\numberline {3.20.1.1}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tile}{23}{subsubsection.3.20.1.1}
+\contentsline {subsubsection}{\numberline {3.20.1.2}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tile}{23}{subsubsection.3.20.1.2}
+\contentsline {subsubsection}{\numberline {3.20.1.3}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tile}{23}{subsubsection.3.20.1.3}
+\contentsline {subsection}{\numberline {3.20.2}Member Function Documentation}{23}{subsection.3.20.2}
+\contentsline {subsubsection}{\numberline {3.20.2.1}get\discretionary {-}{}{}\_\discretionary {-}{}{}tilegroup}{23}{subsubsection.3.20.2.1}
+\contentsline {subsubsection}{\numberline {3.20.2.2}has\discretionary {-}{}{}\_\discretionary {-}{}{}tilegroup}{23}{subsubsection.3.20.2.2}
+\contentsline {subsubsection}{\numberline {3.20.2.3}operator=}{24}{subsubsection.3.20.2.3}
+\contentsline {subsubsection}{\numberline {3.20.2.4}rewrap}{24}{subsubsection.3.20.2.4}
+\contentsline {subsection}{\numberline {3.20.3}Friends And Related Function Documentation}{24}{subsection.3.20.3}
+\contentsline {subsubsection}{\numberline {3.20.3.1}add\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}to\discretionary {-}{}{}\_\discretionary {-}{}{}group}{24}{subsubsection.3.20.3.1}
+\contentsline {subsubsection}{\numberline {3.20.3.2}merge\discretionary {-}{}{}\_\discretionary {-}{}{}tilegroups}{24}{subsubsection.3.20.3.2}
+\contentsline {section}{\numberline {3.21}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}junction Class Reference}{25}{section.3.21}
+\contentsline {subsection}{\numberline {3.21.1}Detailed Description}{25}{subsection.3.21.1}
+\contentsline {subsection}{\numberline {3.21.2}Member Enumeration Documentation}{25}{subsection.3.21.2}
+\contentsline {subsubsection}{\numberline {3.21.2.1}rel\discretionary {-}{}{}\_\discretionary {-}{}{}position}{25}{subsubsection.3.21.2.1}
+\contentsline {subsection}{\numberline {3.21.3}Constructor \& Destructor Documentation}{25}{subsection.3.21.3}
+\contentsline {subsubsection}{\numberline {3.21.3.1}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}junction}{25}{subsubsection.3.21.3.1}
+\contentsline {subsection}{\numberline {3.21.4}Member Function Documentation}{25}{subsection.3.21.4}
+\contentsline {subsubsection}{\numberline {3.21.4.1}get\discretionary {-}{}{}\_\discretionary {-}{}{}relative\discretionary {-}{}{}\_\discretionary {-}{}{}position}{25}{subsubsection.3.21.4.1}
+\contentsline {section}{\numberline {3.22}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tiled\discretionary {-}{}{}\_\discretionary {-}{}{}image Class Reference}{26}{section.3.22}
+\contentsline {subsection}{\numberline {3.22.1}Detailed Description}{26}{subsection.3.22.1}
+\contentsline {subsection}{\numberline {3.22.2}Constructor \& Destructor Documentation}{26}{subsection.3.22.2}
+\contentsline {subsubsection}{\numberline {3.22.2.1}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tiled\discretionary {-}{}{}\_\discretionary {-}{}{}image}{26}{subsubsection.3.22.2.1}
+\contentsline {subsubsection}{\numberline {3.22.2.2}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tiled\discretionary {-}{}{}\_\discretionary {-}{}{}image}{26}{subsubsection.3.22.2.2}
+\contentsline {subsubsection}{\numberline {3.22.2.3}$\sim $smart\discretionary {-}{}{}\_\discretionary {-}{}{}tiled\discretionary {-}{}{}\_\discretionary {-}{}{}image}{27}{subsubsection.3.22.2.3}
+\contentsline {subsection}{\numberline {3.22.3}Member Function Documentation}{27}{subsection.3.22.3}
+\contentsline {subsubsection}{\numberline {3.22.3.1}convert\discretionary {-}{}{}\_\discretionary {-}{}{}to\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}\_\discretionary {-}{}{}image}{27}{subsubsection.3.22.3.1}
+\contentsline {subsubsection}{\numberline {3.22.3.2}unwrap\discretionary {-}{}{}\_\discretionary {-}{}{}tiles}{27}{subsubsection.3.22.3.2}
+\contentsline {section}{\numberline {3.23}smart\discretionary {-}{}{}\_\discretionary {-}{}{}tilegroup Class Reference}{27}{section.3.23}
+\contentsline {subsection}{\numberline {3.23.1}Detailed Description}{28}{subsection.3.23.1}
+\contentsline {subsection}{\numberline {3.23.2}Member Function Documentation}{28}{subsection.3.23.2}
+\contentsline {subsubsection}{\numberline {3.23.2.1}add\discretionary {-}{}{}\_\discretionary {-}{}{}value}{28}{subsubsection.3.23.2.1}
+\contentsline {subsubsection}{\numberline {3.23.2.2}create\discretionary {-}{}{}\_\discretionary {-}{}{}new}{28}{subsubsection.3.23.2.2}
+\contentsline {subsubsection}{\numberline {3.23.2.3}size}{28}{subsubsection.3.23.2.3}
+\contentsline {subsection}{\numberline {3.23.3}Friends And Related Function Documentation}{28}{subsection.3.23.3}
+\contentsline {subsubsection}{\numberline {3.23.3.1}add\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}to\discretionary {-}{}{}\_\discretionary {-}{}{}group}{28}{subsubsection.3.23.3.1}
+\contentsline {subsubsection}{\numberline {3.23.3.2}merge\discretionary {-}{}{}\_\discretionary {-}{}{}tilegroups}{29}{subsubsection.3.23.3.2}
+\contentsline {section}{\numberline {3.24}srncp\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}merger Class Reference}{29}{section.3.24}
+\contentsline {subsection}{\numberline {3.24.1}Detailed Description}{29}{subsection.3.24.1}
+\contentsline {subsection}{\numberline {3.24.2}Member Function Documentation}{29}{subsection.3.24.2}
+\contentsline {subsubsection}{\numberline {3.24.2.1}calc\discretionary {-}{}{}\_\discretionary {-}{}{}junction\discretionary {-}{}{}\_\discretionary {-}{}{}reliability}{29}{subsubsection.3.24.2.1}
+\contentsline {subsubsection}{\numberline {3.24.2.2}merge\discretionary {-}{}{}\_\discretionary {-}{}{}tiles}{30}{subsubsection.3.24.2.2}
+\contentsline {section}{\numberline {3.25}srncp\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{30}{section.3.25}
+\contentsline {subsection}{\numberline {3.25.1}Detailed Description}{30}{subsection.3.25.1}
+\contentsline {subsection}{\numberline {3.25.2}Member Function Documentation}{30}{subsection.3.25.2}
+\contentsline {subsubsection}{\numberline {3.25.2.1}unwrap}{30}{subsubsection.3.25.2.1}
+\contentsline {section}{\numberline {3.26}Strand\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{31}{section.3.26}
+\contentsline {subsection}{\numberline {3.26.1}Detailed Description}{31}{subsection.3.26.1}
+\contentsline {subsection}{\numberline {3.26.2}Member Function Documentation}{31}{subsection.3.26.2}
+\contentsline {subsubsection}{\numberline {3.26.2.1}unwrap}{31}{subsubsection.3.26.2.1}
+\contentsline {section}{\numberline {3.27}Takeda\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}F\discretionary {-}{}{}T\discretionary {-}{}{}W\discretionary {-}{}{}\_\discretionary {-}{}{}fringe\discretionary {-}{}{}\_\discretionary {-}{}{}analyser Class Reference}{31}{section.3.27}
+\contentsline {subsection}{\numberline {3.27.1}Detailed Description}{32}{subsection.3.27.1}
+\contentsline {subsection}{\numberline {3.27.2}Constructor \& Destructor Documentation}{32}{subsection.3.27.2}
+\contentsline {subsubsection}{\numberline {3.27.2.1}Takeda\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}F\discretionary {-}{}{}T\discretionary {-}{}{}W\discretionary {-}{}{}\_\discretionary {-}{}{}fringe\discretionary {-}{}{}\_\discretionary {-}{}{}analyser}{32}{subsubsection.3.27.2.1}
+\contentsline {subsection}{\numberline {3.27.3}Member Function Documentation}{32}{subsection.3.27.3}
+\contentsline {subsubsection}{\numberline {3.27.3.1}calc\discretionary {-}{}{}\_\discretionary {-}{}{}wrapped\discretionary {-}{}{}\_\discretionary {-}{}{}phase\discretionary {-}{}{}\_\discretionary {-}{}{}map}{32}{subsubsection.3.27.3.1}
+\contentsline {section}{\numberline {3.28}tesselated\discretionary {-}{}{}\_\discretionary {-}{}{}image Class Reference}{33}{section.3.28}
+\contentsline {subsection}{\numberline {3.28.1}Constructor \& Destructor Documentation}{33}{subsection.3.28.1}
+\contentsline {subsubsection}{\numberline {3.28.1.1}tesselated\discretionary {-}{}{}\_\discretionary {-}{}{}image}{33}{subsubsection.3.28.1.1}
+\contentsline {subsubsection}{\numberline {3.28.1.2}tesselated\discretionary {-}{}{}\_\discretionary {-}{}{}image}{33}{subsubsection.3.28.1.2}
+\contentsline {subsubsection}{\numberline {3.28.1.3}$\sim $tesselated\discretionary {-}{}{}\_\discretionary {-}{}{}image}{33}{subsubsection.3.28.1.3}
+\contentsline {subsection}{\numberline {3.28.2}Member Function Documentation}{33}{subsection.3.28.2}
+\contentsline {subsubsection}{\numberline {3.28.2.1}get\discretionary {-}{}{}\_\discretionary {-}{}{}image\discretionary {-}{}{}\_\discretionary {-}{}{}height}{33}{subsubsection.3.28.2.1}
+\contentsline {subsubsection}{\numberline {3.28.2.2}get\discretionary {-}{}{}\_\discretionary {-}{}{}image\discretionary {-}{}{}\_\discretionary {-}{}{}width}{34}{subsubsection.3.28.2.2}
+\contentsline {subsubsection}{\numberline {3.28.2.3}get\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}count\discretionary {-}{}{}\_\discretionary {-}{}{}height}{34}{subsubsection.3.28.2.3}
+\contentsline {subsubsection}{\numberline {3.28.2.4}get\discretionary {-}{}{}\_\discretionary {-}{}{}tile\discretionary {-}{}{}\_\discretionary {-}{}{}count\discretionary {-}{}{}\_\discretionary {-}{}{}width}{34}{subsubsection.3.28.2.4}
+\contentsline {subsubsection}{\numberline {3.28.2.5}operator=}{34}{subsubsection.3.28.2.5}
+\contentsline {subsubsection}{\numberline {3.28.2.6}unwrap\discretionary {-}{}{}\_\discretionary {-}{}{}tiles}{34}{subsubsection.3.28.2.6}
+\contentsline {section}{\numberline {3.29}tile Class Reference}{34}{section.3.29}
+\contentsline {subsection}{\numberline {3.29.1}Detailed Description}{35}{subsection.3.29.1}
+\contentsline {subsection}{\numberline {3.29.2}Constructor \& Destructor Documentation}{35}{subsection.3.29.2}
+\contentsline {subsubsection}{\numberline {3.29.2.1}tile}{35}{subsubsection.3.29.2.1}
+\contentsline {subsubsection}{\numberline {3.29.2.2}$\sim $tile}{35}{subsubsection.3.29.2.2}
+\contentsline {subsection}{\numberline {3.29.3}Member Function Documentation}{35}{subsection.3.29.3}
+\contentsline {subsubsection}{\numberline {3.29.3.1}add\discretionary {-}{}{}\_\discretionary {-}{}{}value}{35}{subsubsection.3.29.3.1}
+\contentsline {subsubsection}{\numberline {3.29.3.2}calc\discretionary {-}{}{}\_\discretionary {-}{}{}mean}{35}{subsubsection.3.29.3.2}
+\contentsline {subsubsection}{\numberline {3.29.3.3}clear\discretionary {-}{}{}\_\discretionary {-}{}{}mem}{35}{subsubsection.3.29.3.3}
+\contentsline {subsubsection}{\numberline {3.29.3.4}copy\discretionary {-}{}{}\_\discretionary {-}{}{}data}{36}{subsubsection.3.29.3.4}
+\contentsline {subsubsection}{\numberline {3.29.3.5}generate\discretionary {-}{}{}\_\discretionary {-}{}{}from\discretionary {-}{}{}\_\discretionary {-}{}{}image}{36}{subsubsection.3.29.3.5}
+\contentsline {subsubsection}{\numberline {3.29.3.6}get\discretionary {-}{}{}\_\discretionary {-}{}{}height}{36}{subsubsection.3.29.3.6}
+\contentsline {subsubsection}{\numberline {3.29.3.7}get\discretionary {-}{}{}\_\discretionary {-}{}{}tilegroup}{36}{subsubsection.3.29.3.7}
+\contentsline {subsubsection}{\numberline {3.29.3.8}get\discretionary {-}{}{}\_\discretionary {-}{}{}width}{36}{subsubsection.3.29.3.8}
+\contentsline {subsubsection}{\numberline {3.29.3.9}has\discretionary {-}{}{}\_\discretionary {-}{}{}group}{36}{subsubsection.3.29.3.9}
+\contentsline {subsubsection}{\numberline {3.29.3.10}multiply}{36}{subsubsection.3.29.3.10}
+\contentsline {subsubsection}{\numberline {3.29.3.11}rewrap}{37}{subsubsection.3.29.3.11}
+\contentsline {subsubsection}{\numberline {3.29.3.12}wrap}{37}{subsubsection.3.29.3.12}
+\contentsline {section}{\numberline {3.30}tile\discretionary {-}{}{}\_\discretionary {-}{}{}image Class Reference}{37}{section.3.30}
+\contentsline {subsection}{\numberline {3.30.1}Detailed Description}{37}{subsection.3.30.1}
+\contentsline {section}{\numberline {3.31}tile\discretionary {-}{}{}\_\discretionary {-}{}{}junction Class Reference}{37}{section.3.31}
+\contentsline {subsection}{\numberline {3.31.1}Detailed Description}{38}{subsection.3.31.1}
+\contentsline {subsection}{\numberline {3.31.2}Member Enumeration Documentation}{38}{subsection.3.31.2}
+\contentsline {subsubsection}{\numberline {3.31.2.1}rel\discretionary {-}{}{}\_\discretionary {-}{}{}position}{38}{subsubsection.3.31.2.1}
+\contentsline {subsection}{\numberline {3.31.3}Constructor \& Destructor Documentation}{38}{subsection.3.31.3}
+\contentsline {subsubsection}{\numberline {3.31.3.1}tile\discretionary {-}{}{}\_\discretionary {-}{}{}junction}{38}{subsubsection.3.31.3.1}
+\contentsline {subsection}{\numberline {3.31.4}Member Function Documentation}{38}{subsection.3.31.4}
+\contentsline {subsubsection}{\numberline {3.31.4.1}get\discretionary {-}{}{}\_\discretionary {-}{}{}relative\discretionary {-}{}{}\_\discretionary {-}{}{}position}{38}{subsubsection.3.31.4.1}
+\contentsline {section}{\numberline {3.32}tile\discretionary {-}{}{}\_\discretionary {-}{}{}merge\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper Class Reference}{38}{section.3.32}
+\contentsline {subsection}{\numberline {3.32.1}Detailed Description}{39}{subsection.3.32.1}
+\contentsline {subsection}{\numberline {3.32.2}Constructor \& Destructor Documentation}{39}{subsection.3.32.2}
+\contentsline {subsubsection}{\numberline {3.32.2.1}tile\discretionary {-}{}{}\_\discretionary {-}{}{}merge\discretionary {-}{}{}\_\discretionary {-}{}{}unwrapper}{39}{subsubsection.3.32.2.1}
+\contentsline {subsection}{\numberline {3.32.3}Member Function Documentation}{39}{subsection.3.32.3}
+\contentsline {subsubsection}{\numberline {3.32.3.1}unwrap}{39}{subsubsection.3.32.3.1}
+\contentsline {section}{\numberline {3.33}tilegroup Class Reference}{40}{section.3.33}
+\contentsline {subsection}{\numberline {3.33.1}Detailed Description}{40}{subsection.3.33.1}
+\contentsline {subsection}{\numberline {3.33.2}Constructor \& Destructor Documentation}{40}{subsection.3.33.2}
+\contentsline {subsubsection}{\numberline {3.33.2.1}$\sim $tilegroup}{40}{subsubsection.3.33.2.1}
+\contentsline {subsection}{\numberline {3.33.3}Member Function Documentation}{40}{subsection.3.33.3}
+\contentsline {subsubsection}{\numberline {3.33.3.1}add\discretionary {-}{}{}\_\discretionary {-}{}{}tile}{40}{subsubsection.3.33.3.1}
+\contentsline {subsubsection}{\numberline {3.33.3.2}add\discretionary {-}{}{}\_\discretionary {-}{}{}value}{40}{subsubsection.3.33.3.2}
+\contentsline {subsubsection}{\numberline {3.33.3.3}create\discretionary {-}{}{}\_\discretionary {-}{}{}new}{41}{subsubsection.3.33.3.3}
+\contentsline {subsubsection}{\numberline {3.33.3.4}size}{41}{subsubsection.3.33.3.4}
+\contentsline {subsection}{\numberline {3.33.4}Friends And Related Function Documentation}{41}{subsection.3.33.4}
+\contentsline {subsubsection}{\numberline {3.33.4.1}merge\discretionary {-}{}{}\_\discretionary {-}{}{}tilegroups}{41}{subsubsection.3.33.4.1}
+\contentsline {section}{\numberline {3.34}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}digiholo\discretionary {-}{}{}Main\discretionary {-}{}{}Gui Class Reference}{41}{section.3.34}
+\contentsline {chapter}{Index}{43}{section*.51}

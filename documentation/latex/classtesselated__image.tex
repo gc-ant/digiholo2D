@@ -1,0 +1,141 @@
+\hypertarget{classtesselated__image}{\section{tesselated\-\_\-image Class Reference}
+\label{classtesselated__image}\index{tesselated\-\_\-image@{tesselated\-\_\-image}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesselated__image_a1046281f75fe41cd2395a26501c66c58}{tesselated\-\_\-image} ()
+\item 
+\hyperlink{classtesselated__image_a5ef32c85dbef869e3900a1d392c75662}{tesselated\-\_\-image} (\hyperlink{classfloat__image}{float\-\_\-image} $\ast$img, long tilecount\-\_\-width, long tilecount\-\_\-height)
+\item 
+\hyperlink{classtesselated__image}{tesselated\-\_\-image} \& \hyperlink{classtesselated__image_a253d97eb08831fdd271ba9c17d4da839}{operator=} (const \hyperlink{classtesselated__image}{tesselated\-\_\-image} \&t)
+\item 
+virtual \hyperlink{classtesselated__image_a0a5a7d1c9308ff5a381318e9be86944b}{$\sim$tesselated\-\_\-image} ()
+\item 
+\hypertarget{classtesselated__image_a61c89b7273500466cd229fc661262f3c}{\hyperlink{classtile}{tile} $\ast$ {\bfseries get\-\_\-tile\-\_\-ptr} (long w, long h)}\label{classtesselated__image_a61c89b7273500466cd229fc661262f3c}
+
+\item 
+long \hyperlink{classtesselated__image_a1a7dc52ce1d15494037c66fce2aea0a6}{get\-\_\-tile\-\_\-count\-\_\-width} () const 
+\item 
+long \hyperlink{classtesselated__image_ad7a9bc565d36ca41b7f373b3961ec8ce}{get\-\_\-tile\-\_\-count\-\_\-height} () const 
+\item 
+long \hyperlink{classtesselated__image_a091cf518fa74ff390f42e478253c6bf1}{get\-\_\-image\-\_\-width} () const 
+\item 
+long \hyperlink{classtesselated__image_a3316c95c95608fc1877225fac2db0c96}{get\-\_\-image\-\_\-height} () const 
+\item 
+void \hyperlink{classtesselated__image_a07e8990c014aea7fbb3e0ee7d3a7ebd2}{unwrap\-\_\-tiles} (\hyperlink{classabstract__tile__unwrapper}{abstract\-\_\-tile\-\_\-unwrapper} $\ast$u)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtesselated__image_acc73733d08ac31133e707f1450e2933b}{\hyperlink{classtile}{tile} $\ast$$\ast$ {\bfseries image\-\_\-tiles}}\label{classtesselated__image_acc73733d08ac31133e707f1450e2933b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtesselated__image_a1046281f75fe41cd2395a26501c66c58}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!tesselated\-\_\-image@{tesselated\-\_\-image}}
+\index{tesselated\-\_\-image@{tesselated\-\_\-image}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{tesselated\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}tesselated\-\_\-image\-::tesselated\-\_\-image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtesselated__image_a1046281f75fe41cd2395a26501c66c58}
+Standard constructor creates an empty tesselated images with all pointers set to N\-U\-L\-L and tilecount\-\_\-width and tilecount\-\_\-height of 0. \hypertarget{classtesselated__image_a5ef32c85dbef869e3900a1d392c75662}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!tesselated\-\_\-image@{tesselated\-\_\-image}}
+\index{tesselated\-\_\-image@{tesselated\-\_\-image}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{tesselated\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}tesselated\-\_\-image\-::tesselated\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{{\bf float\-\_\-image} $\ast$}]{img, }
+\item[{long}]{tilecount\-\_\-width, }
+\item[{long}]{tilecount\-\_\-height}
+\end{DoxyParamCaption}
+)}}\label{classtesselated__image_a5ef32c85dbef869e3900a1d392c75662}
+Create a tiled image from an existing image. The tesselated image operates on the same memory as the original image. 
+\begin{DoxyParams}{Parameters}
+{\em img} & The image to be tesselated into tiles \\
+\hline
+{\em tilecount\-\_\-width} & Number if tiles in width direction. This number is not exactly adhered to, but the real number of tiles will be close. \\
+\hline
+{\em tilecount\-\_\-height} & Number of tiles in height direction. This number is not exactly adhered to, but the real number of tiles will be close. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtesselated__image_a0a5a7d1c9308ff5a381318e9be86944b}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!$\sim$tesselated\-\_\-image@{$\sim$tesselated\-\_\-image}}
+\index{$\sim$tesselated\-\_\-image@{$\sim$tesselated\-\_\-image}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{$\sim$tesselated\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}tesselated\-\_\-image\-::$\sim$tesselated\-\_\-image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classtesselated__image_a0a5a7d1c9308ff5a381318e9be86944b}
+Frees the memory associated with this image's tiles but does destroy the \hyperlink{classfloat__image}{float\-\_\-image} that this image operates on.
+
+Free the memory opccupied by this object but not the underlying image. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classtesselated__image_a3316c95c95608fc1877225fac2db0c96}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!get\-\_\-image\-\_\-height@{get\-\_\-image\-\_\-height}}
+\index{get\-\_\-image\-\_\-height@{get\-\_\-image\-\_\-height}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{get\-\_\-image\-\_\-height}]{\setlength{\rightskip}{0pt plus 5cm}long tesselated\-\_\-image\-::get\-\_\-image\-\_\-height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtesselated__image_a3316c95c95608fc1877225fac2db0c96}
+\begin{DoxyReturn}{Returns}
+Image height in pixels 
+\end{DoxyReturn}
+\hypertarget{classtesselated__image_a091cf518fa74ff390f42e478253c6bf1}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!get\-\_\-image\-\_\-width@{get\-\_\-image\-\_\-width}}
+\index{get\-\_\-image\-\_\-width@{get\-\_\-image\-\_\-width}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{get\-\_\-image\-\_\-width}]{\setlength{\rightskip}{0pt plus 5cm}long tesselated\-\_\-image\-::get\-\_\-image\-\_\-width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtesselated__image_a091cf518fa74ff390f42e478253c6bf1}
+\begin{DoxyReturn}{Returns}
+Image width in pixels 
+\end{DoxyReturn}
+\hypertarget{classtesselated__image_ad7a9bc565d36ca41b7f373b3961ec8ce}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!get\-\_\-tile\-\_\-count\-\_\-height@{get\-\_\-tile\-\_\-count\-\_\-height}}
+\index{get\-\_\-tile\-\_\-count\-\_\-height@{get\-\_\-tile\-\_\-count\-\_\-height}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{get\-\_\-tile\-\_\-count\-\_\-height}]{\setlength{\rightskip}{0pt plus 5cm}long tesselated\-\_\-image\-::get\-\_\-tile\-\_\-count\-\_\-height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtesselated__image_ad7a9bc565d36ca41b7f373b3961ec8ce}
+\begin{DoxyReturn}{Returns}
+Number of tiles in height direction. 
+\end{DoxyReturn}
+\hypertarget{classtesselated__image_a1a7dc52ce1d15494037c66fce2aea0a6}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!get\-\_\-tile\-\_\-count\-\_\-width@{get\-\_\-tile\-\_\-count\-\_\-width}}
+\index{get\-\_\-tile\-\_\-count\-\_\-width@{get\-\_\-tile\-\_\-count\-\_\-width}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{get\-\_\-tile\-\_\-count\-\_\-width}]{\setlength{\rightskip}{0pt plus 5cm}long tesselated\-\_\-image\-::get\-\_\-tile\-\_\-count\-\_\-width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtesselated__image_a1a7dc52ce1d15494037c66fce2aea0a6}
+\begin{DoxyReturn}{Returns}
+Number of tiles in width-\/direction. 
+\end{DoxyReturn}
+\hypertarget{classtesselated__image_a253d97eb08831fdd271ba9c17d4da839}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!operator=@{operator=}}
+\index{operator=@{operator=}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tesselated\-\_\-image} \& tesselated\-\_\-image\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf tesselated\-\_\-image} \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{classtesselated__image_a253d97eb08831fdd271ba9c17d4da839}
+Makes the L-\/value point to the same \hyperlink{classfloat__image}{float\-\_\-image} as the R-\/value but generates a new set of tiles for this image that are independent of the R-\/value's tiles. 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classtesselated__image_a07e8990c014aea7fbb3e0ee7d3a7ebd2}{\index{tesselated\-\_\-image@{tesselated\-\_\-image}!unwrap\-\_\-tiles@{unwrap\-\_\-tiles}}
+\index{unwrap\-\_\-tiles@{unwrap\-\_\-tiles}!tesselated_image@{tesselated\-\_\-image}}
+\subsubsection[{unwrap\-\_\-tiles}]{\setlength{\rightskip}{0pt plus 5cm}void tesselated\-\_\-image\-::unwrap\-\_\-tiles (
+\begin{DoxyParamCaption}
+\item[{{\bf abstract\-\_\-tile\-\_\-unwrapper} $\ast$}]{u}
+\end{DoxyParamCaption}
+)}}\label{classtesselated__image_a07e8990c014aea7fbb3e0ee7d3a7ebd2}
+Unwraps all tiles using the unwrap method given by the instance of the \hyperlink{classabstract__tile__unwrapper}{abstract\-\_\-tile\-\_\-unwrapper} 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/block\-\_\-srncp/tesselated\-\_\-image.\-h\item 
+src/block\-\_\-srncp/tesselated\-\_\-image.\-cpp\end{DoxyCompactItemize}
