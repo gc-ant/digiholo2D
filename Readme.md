@@ -10,9 +10,14 @@ For tile-based phase unwrapping, a phase map is tesselated into rectangular tile
 1. Unwrapping of individual tiles by a tile unwrapping algorithm (tile_unwrapper).
 2. Merging of unwrapped tiles to a continuous surface (tile_merger).
 
-Combining a tile_unwrapper and a tile_merger yields a tile-based phase unwrapping algorithm. Various implementations of tile unwrapping and merging algorithms are provided, see the documentation and [1] for additional information.
+Combining a tile_unwrapper and a tile_merger yields a tile-based phase unwrapping algorithm. Various implementations of tile unwrapping and merging algorithms are provided, see the documentation and corresponding publication [1] for additional information.
 
 ##Usage##
+
+If you use this software please cite reference [1]:
+
+G. Antonopoulos, B. Steltner, A. Heisterkamp, T. Ripken, H. Meyer: "Tile-based two-dimensional phase unwrapping for digital holography using a modular framework", PLoS ONE 10(11): e0143186. (2015), 
+
 
 ###FIJI (ImageJ) plugin (win64)###
 An FIJI (ImageJ) plugin is included in the **imagej** directory. The plugin provides a graphical user interface for the command line tool. It comes packaged with the command line tool as well as a one-click installer. Navigate to the **imagej** directory for more information.
@@ -27,7 +32,7 @@ The source code is provided as a [NetBeans](https://netbeans.org/) project file.
 The source code in a [doxygen](https://www.stack.nl/~dimitri/doxygen/) compatible format. Doxygen output in HTML and LaTeX is found in the **documentation** directory.
 
 ##References##
-[1] G. Antonopoulos, B. Steltner, A. Heisterkamp, T. Ripken, H. Meyer: "Tile-based two-dimensional phase unwrapping for digital holography using a modular framework", *submitted* (2015)
+[1] G. Antonopoulos, B. Steltner, A. Heisterkamp, T. Ripken, H. Meyer: "Tile-based two-dimensional phase unwrapping for digital holography using a modular framework", PLoS ONE 10(11): e0143186. (2015), doi: [10.1371/journal.pone.0143186](http://dx.doi.org/10.1371/journal.pone.0143186) 
 
 [2] J. Strand, T. Taxt, A. K. Jain: "Two-dimensional phase unwrapping using a block least-squares method", IEEE transactions on image processing (1999), doi: [10.1109/83.748892](http://dx.doi.org/10.1109/83.748892)
 
