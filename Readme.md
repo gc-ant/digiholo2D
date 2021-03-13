@@ -9,7 +9,7 @@ If you are interested in the approach from the paper for other reasons, I advise
 ## My Thoughts on the Code
 The code is bad. Without being too harsh on past me, it is clearly visible that I was an okay Java programmer pretending to be a C++ programmer. Overall structure is very Java like and takes little to no advantage of modern C++ features, plus it is ripe with beginner memory management mistakes (only some of which I corrected in this update).
 
-Furthermore, the code is (in some places) still littered with hardcoded windows file paths. I have cleaned up the code for the standard usecases but there is still loads of hardcoded nastiness in there.
+Furthermore, the code is (in some places) still littered with hardcoded windows file paths. I have cleaned up the code for the standard usecases but there is still loads of hardcoded nastiness in there. Also, there is not a single unit or integration test to be found.
 
 Well, the nice thing is probably that I am a vastly superior software dev and architect now than I was back then (shameless plug for [my devblog here](https://geo-ant.github.io/blog/)).
 
