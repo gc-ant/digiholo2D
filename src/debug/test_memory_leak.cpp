@@ -27,6 +27,6 @@ test_memory_leak::test_memory_leak() {
       this->vc_leak_b.push_back(temp_b);
       //      this->vc_leak_a.push_back(new test_memory_leak_a((long long)i));
    }
-      DEBUG_PRINTLN("Done");
+      PRINTLN("Done");
 }
 

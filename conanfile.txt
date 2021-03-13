@@ -1,0 +1,6 @@
+[requires]
+eigen/3.3.9
+boost/1.74.0
+
+[generators]
+cmake

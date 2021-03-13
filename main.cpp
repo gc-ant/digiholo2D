@@ -118,65 +118,65 @@ int main(int argc, char** argv) {
       boost::program_options::variables_map vm;
       boost::program_options::store(boost::program_options::command_line_parser(argc, argv).options(descriptions).positional(pos_optional).run(), vm);
       boost::program_options::notify(vm);
-      DEBUG_PRINTLN("");
+      PRINTLN("");
       if (vm.count("help") == 1) {
-         DEBUG_PRINTLN(descriptions);
+         PRINTLN(descriptions);
          return 1;
       }
       if (vm.count("method") == 1) {
-         DEBUG_PRINTLN("-p: " << method);
+         PRINTLN("-p: " << method);
       } else {
-         DEBUG_PRINTLN("-p  not given. Nothing to do. Aborting program...");
+         PRINTLN("-p  not given. Nothing to do. Aborting program...");
          return 0;
       }
       if (vm.count("path") == 0) {
-         DEBUG_PRINTLN("-i  not given. No input-path. Using .\\ to process. (May not be implemented yet..");
+         PRINTLN("-i  not given. No input-path. Using ./ to process. (May not be implemented yet..");
          //         return 0;
       }
       if (vm.count("file") == 0) {
-         DEBUG_PRINTLN("-f  not given. No file to process. Aborting programm");
+         PRINTLN("-f  not given. No file to process. Aborting programm");
          //         return 0; 
       } else {
-         DEBUG_PRINTLN("-f  given with " << input_file.size() << " argument(s).");
+         PRINTLN("-f  given with " << input_file.size() << " argument(s).");
       }
       if (vm.count("tilecount") == 1) {
          if (tilecount.size() == 2) {
-            DEBUG_PRINTLN("-t: " << tilecount.at(0) << " " << tilecount.at(1));
+            PRINTLN("-t: " << tilecount.at(0) << " " << tilecount.at(1));
          } else if(tilecount.size() == 1) {
-            DEBUG_PRINTLN("-t: " << tilecount.at(0)); 
+            PRINTLN("-t: " << tilecount.at(0));
          } else   {
-            DEBUG_PRINTLN("-t  option called with too many arguments: "<<tilecount.size() << ". 1 or 2 supported");
+            PRINTLN("-t  option called with too many arguments: " << tilecount.size() << ". 1 or 2 supported");
          }
       }
       if (vm.count("width") == 1) {
-         DEBUG_PRINTLN("-x: " << dimx);
+         PRINTLN("-x: " << dimx);
       }
       if (vm.count("height") == 1) {
-         DEBUG_PRINTLN("-y: " << dimy);
+         PRINTLN("-y: " << dimy);
       }
       //output, width, height not neccessary
       if (vm.count("unwrapper") == 1) {
-         DEBUG_PRINTLN("-u: " << unwrapper);
+         PRINTLN("-u: " << unwrapper);
          if (vm.count("usettings") == 1) {
-            DEBUG_PRINTLN("-v  given with " << usettings.size() << " argument(s)");
+            PRINTLN("-v  given with " << usettings.size() << " argument(s)");
          }
       }
       if (vm.count("merger") == 1) {
-         DEBUG_PRINTLN("-m: " << merger);
+         PRINTLN("-m: " << merger);
          if (vm.count("msettings") == 1) {
-            DEBUG_PRINTLN("-n  given with  " << msettings.size() << " argument(s)");
+            PRINTLN("-n  given with  " << msettings.size() << " argument(s)");
          }
       }
-      DEBUG_PRINTLN("");
+      PRINTLN("");
       /* This is where the whole programm will start */
       command_line * cla = new command_line();
       cla->execute(method, unwrapper, usettings, merger, msettings, input_path, input_file, output, dimx, dimy, tilecount);
       delete cla;
       /* End */
    } catch (std::exception& e) {
-      DEBUG_PRINTLN("Error: " << e.what());
+      PRINTLN("Error: " << e.what());
    } catch (...) {
-      DEBUG_PRINTLN("Exception of unknown type");
+      PRINTLN("Exception of unknown type");
    }
    return 0;
 }

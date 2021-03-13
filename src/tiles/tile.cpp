@@ -86,7 +86,7 @@ tile::tile(sharedptr<row_major_float_image> img, long grid_width, long grid_heig
       height = 0;
    }
 
-   //DEBUG_PRINTLN("tile: width = "<< this->width << " height="<< this->height);
+   //PRINTLN("tile: width = "<< this->width << " height="<< this->height);
 
    //2. Jetzt den Speicher reservieren und die Werte aus dem Bild in die Tile schreiben
 
@@ -100,7 +100,7 @@ tile::tile(sharedptr<row_major_float_image> img, long grid_width, long grid_heig
    }
    else
    {
-       DEBUG_PRINTLN("PROBLEM: Tile with width 0 was created in file: " << __FILE__ << " at line: " << __LINE__);
+       PRINTLN("PROBLEM: Tile with width 0 was created in file: " << __FILE__ << " at line: " << __LINE__);
    }
    this->posH = index_h;
    this->posW = index_w;
@@ -254,6 +254,6 @@ float tile::calc_mean() {
    } else {
       //todo throw exception
       return -1.f; 
-      DEBUG_PRINTLN("ERROR: Called calc_mean for tile without elements!! Results will be BS!");
+      PRINTLN("ERROR: Called calc_mean for tile without elements!! Results will be BS!");
    }
 }

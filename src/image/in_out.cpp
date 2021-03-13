@@ -30,14 +30,14 @@ bool read_float_image(char *inputfile, float_image * img)
 }
 
 
-bool write_image(char *outputfile, float_image * img)
+bool write_image(std::string outputfile, float_image * img)
 {
     long imsize = img->get_width()*img->get_height();
     
-    DEBUG_PRINTLN("Writing image to disk (" << outputfile << ")");
+    PRINTLN("Writing image to disk (" << outputfile << ")");
     
     FILE *pFile;
-    pFile = fopen(outputfile,"wb");
+    pFile = fopen(outputfile.c_str(),"wb");
     if(pFile == NULL)
     {
         return false;
@@ -49,7 +49,7 @@ bool write_image(char *outputfile, float_image * img)
         
         if(ferror(pFile))
         {
-            DEBUG_PRINTLN("Error writing image to disk!");
+            PRINTLN("Error writing image to disk!");
             return false;
         }
         else
@@ -59,12 +59,12 @@ bool write_image(char *outputfile, float_image * img)
     }
 }
 
-bool write_image(char *outputfile, sharedptr<row_major_float_image> img)
+bool write_image(std::string outputfile, sharedptr<row_major_float_image> img)
 {
     long imsize = img->get_width()*img->get_height();
 
     FILE *pFile;
-    pFile = fopen(outputfile,"wb");
+    pFile = fopen(outputfile.c_str(),"wb");
     if(pFile == NULL)
     {
         return false;

@@ -45,37 +45,37 @@ srncp_tile_merger::srncp_tile_merger(std::vector<std::string> msettings) {
             this->rc = rc; 
             this->name_extend = "var2"; 
         } else if (option.compare("series") == 0) {
-            DEBUG_PRINTLN("Series-option was selected. DEFAULT printout is to C:\\ImageSeries\\SRNCP\\ . Please make sure this directory exists...")
+            PRINTLN("Series-option was selected. DEFAULT printout is to C:\\ImageSeries\\SRNCP\\ . Please make sure this directory exists...")
             if (!value.empty()) {
                 //value should look like: x or x-y-z
-                //                DEBUG_PRINTLN("value: " << value);
+                //                PRINTLN("value: " << value);
                 if (value.find_first_of('-') != value.find_last_of('-') && value.find_last_of('-') != std::string::npos) { //there are (technically more than) 2 '-' and the last one doesnt return npos
                     try {
                         this->series_start = boost::lexical_cast<int>(value.substr(0, value.find_first_of('-'))); // = x;
                         value = value.substr(value.find_first_of('-') + 1);
-                        //                    DEBUG_PRINTLN("value: " << value);
+                        //                    PRINTLN("value: " << value);
                         this->series_stop = boost::lexical_cast<int>(value.substr(0, value.find_first_of('-'))); // = y;
                         value = value.substr(value.find_first_of('-') + 1);
-                        //                    DEBUG_PRINTLN("value: " << value);
+                        //                    PRINTLN("value: " << value);
                         this->series_steps = boost::lexical_cast<int>(value); // = z;
-                        DEBUG_PRINTLN(series_start << " " << series_stop << " " << series_steps << " ");
+                        PRINTLN(series_start << " " << series_stop << " " << series_steps << " ");
                     } catch (boost::bad_lexical_cast const& e) {
-                        DEBUG_PRINTLN("Error: " << e.what());
-                        DEBUG_PRINTLN("Please make sure your syntax is series-x OR series-x-y-z (x,y,z arbitrary positive integer values)");
+                        PRINTLN("Error: " << e.what());
+                        PRINTLN("Please make sure your syntax is series-x OR series-x-y-z (x,y,z arbitrary positive integer values)");
                     }
                 } else {
                     this->series_steps = boost::lexical_cast<int>(value); // = x;
                 }
             } else {
                 this->series_steps = -1;
-                DEBUG_PRINTLN("Option series-x with no integer x commited. Setting steps to " << this->series_steps << "and preventing output...");
+                PRINTLN("Option series-x with no integer x commited. Setting steps to " << this->series_steps << "and preventing output...");
             }
         } else {
-            DEBUG_PRINTLN("Error: Option " << option << " is not valid. Use variance or series");
+            PRINTLN("Error: Option " << option << " is not valid. Use variance or series");
         }
     }
     if (!this->rc) { //boost pointer returns false => not assigned
-        DEBUG_PRINTLN("No reliabilty calculator chosen. Taking rc_variance...")
+        PRINTLN("No reliabilty calculator chosen. Taking rc_variance...")
         sharedptr<abstract_reliability_calculator> rc(new reliability_calculator_variance());
         this->rc = rc;
     }
@@ -107,7 +107,7 @@ void srncp_tile_merger::initialise_merger(sharedptr<tiled_image> ti, sharedptr<s
     for (long i = 0; i < junc_arr_size; i++) { //No iterator, because sti returns only single elements, no iterator nor complete vector
         temp_junc = ti->get_junction_at(i);
         junc_rel->insert(std::make_pair(this->rc->calculate_reliability(ti, temp_junc), temp_junc));
-//        DEBUG_PRINTLN(this->rc->calculate_reliability(ti, temp_junc)); 
+//        PRINTLN(this->rc->calculate_reliability(ti, temp_junc));
 //        if(i == 100) exit(0); 
     }
 }
@@ -186,15 +186,15 @@ void srncp_tile_merger::merge_tiles(sharedptr<tiled_image> ti) {
             }
         }
     }
-    //   DEBUG_PRINTLN("#tilegroups: " << save_tilegroups.size());
+    //   PRINTLN("#tilegroups: " << save_tilegroups.size());
 }
 
 void srncp_tile_merger::write_intermediate(sharedptr<tiled_image> ti, std::string name) {
     sharedptr<row_major_float_image> unwrapped_img = ti->convert_to_float_image();
     std::string output_filename = "C:\\ImageSeries\\SRNCP\\" + name + ".raw";
-    if (!write_image(&output_filename[0], unwrapped_img)) {
-        DEBUG_PRINTLN("Error: Could not save file. \n Note: This programm has no cross-platform creation of folders (yet) supported.");
-        DEBUG_PRINTLN("If you see this error message, please check if the specified output (or .\\Unwrapped\\ when no -o option called) is an EXISTING FOLDER.");
+    if (!write_image(output_filename, unwrapped_img)) {
+        PRINTLN("Error: Could not save file. \n Note: This programm has no cross-platform creation of folders (yet) supported.");
+        PRINTLN("If you see this error message, please check if the specified output (or .\\Unwrapped\\ when no -o option called) is an EXISTING FOLDER.");
         return;
     }
 }
@@ -205,13 +205,13 @@ std::string srncp_tile_merger::get_name() {
 }
 
 void srncp_tile_merger::usage_help() {
-    DEBUG_PRINTLN("*------------------------------------------------------------*");
-    DEBUG_PRINTLN("Usage of the srncp tile merger...");
-    DEBUG_PRINTLN("Options:");
-    DEBUG_PRINTLN("variance     :  Variance reliabilty calculator will be used (default)");
-    DEBUG_PRINTLN("series-z     : Every z-th step the image will be saved to harddrive");
-    DEBUG_PRINTLN("  OR  ");
-    DEBUG_PRINTLN("series-x-y-z : Like above, but for a range:");
-    DEBUG_PRINTLN("             : Start saving at image x. Stop saving before image y. Save every z-th step!");
-    DEBUG_PRINTLN("*------------------------------------------------------------*");
+    PRINTLN("*------------------------------------------------------------*");
+    PRINTLN("Usage of the srncp tile merger...");
+    PRINTLN("Options:");
+    PRINTLN("variance     :  Variance reliabilty calculator will be used (default)");
+    PRINTLN("series-z     : Every z-th step the image will be saved to harddrive");
+    PRINTLN("  OR  ");
+    PRINTLN("series-x-y-z : Like above, but for a range:");
+    PRINTLN("             : Start saving at image x. Stop saving before image y. Save every z-th step!");
+    PRINTLN("*------------------------------------------------------------*");
 }

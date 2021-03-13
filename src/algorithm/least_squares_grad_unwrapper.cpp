@@ -45,7 +45,7 @@ void least_squares_grad_unwrapper::unwrap(boost::shared_ptr<tile> t) {
    if (!A) { // if the pointer to A is empty, it must be recalculated
       this->calc_A_and_SVD(t);
    } else if ((A->rows() != 2 * t->get_height() * t->get_width()) || (A->cols() != this->model->get_base_size())) { // if the number of rows is not 2*WIDTH*HEIGHT or the number of base functions is != number of cols, the matrix has to be recalculated
-      DEBUG_PRINTLN("----- Recalculation of design matrix A necessary. This takes additional time and slows down the algorithm. Prevent it by choosing the tilecount as a factor of the dimension -----");
+      PRINTLN("----- Recalculation of design matrix A necessary. This takes additional time and slows down the algorithm. Prevent it by choosing the tilecount as a factor of the dimension -----");
       this->calc_A_and_SVD(t);
    } else {  // no recalculation necessary. Number of elements or base functions has not changed since last unwrapped tile.
    }
@@ -75,7 +75,7 @@ void least_squares_grad_unwrapper::unwrap(boost::shared_ptr<tile> t) {
     *   sharedptr<abstr....unwrapper> stu
     *  this->model->subtract_wrap_add_function(t, sharedptr<abstract_tile_unwrapper> strand_bla);
     */
-   //   DEBUG_PRINTLN("Unwrap took: ");
+   //   PRINTLN("Unwrap took: ");
    //   delete time; 
 }
 
@@ -156,21 +156,21 @@ void least_squares_grad_unwrapper::calc_A_and_SVD(sharedptr<tile> t) {
    this->svd_of_A.reset(new Eigen::JacobiSVD<Eigen::MatrixXf> (*A, Eigen::ComputeThinU | Eigen::ComputeThinV));
    
    time->get_time();
-   DEBUG_PRINTLN("Calculating A took: ");
+   PRINTLN("Calculating A took: ");
    delete time;
 }
 
 sharedptr<Eigen::VectorXf> least_squares_grad_unwrapper::calc_and_get_b(sharedptr<tile> t) {
    //   debug_time * time = new debug_time();
    second_order_gradient sec_o_grad(this->model->get_coordinate_system());
-   //   DEBUG_PRINTLN("Calculating b took:" ); 
+   //   PRINTLN("Calculating b took:" );
    //   delete time; 
    return sec_o_grad.get_gradient_eigen_vector(t);
 }
 
 void least_squares_grad_unwrapper::init(std::vector<std::string> usettings) {
    if (usettings.empty()) {
-      DEBUG_PRINTLN("Error: MLSQU unwrapper needs a model input...")
+      PRINTLN("Error: MLSQU unwrapper needs a model input...")
       usage_help();
       exit(0);
    }
@@ -202,14 +202,14 @@ void least_squares_grad_unwrapper::init(std::vector<std::string> usettings) {
       } else if (name.compare("steps") == 0) {
          if (!options.empty()) {
             this->strand_steps = boost::lexical_cast<int>(options);
-            DEBUG_PRINTLN("Using " << this->strand_steps << " steps for evaluating best offset");
+            PRINTLN("Using " << this->strand_steps << " steps for evaluating best offset");
          } else {
             this->strand_steps = 10;
-            DEBUG_PRINTLN("-v steps-x needs an integer x - otherwise set to " << this->strand_steps << " (default)");
+            PRINTLN("-v steps-x needs an integer x - otherwise set to " << this->strand_steps << " (default)");
          }
       } else {
-         DEBUG_PRINTLN("")
-         DEBUG_PRINTLN("Unknown option for MLSQU unwrapper: " << name);
+         PRINTLN("")
+         PRINTLN("Unknown option for MLSQU unwrapper: " << name);
          usage_help();
          exit(0);
       }
@@ -224,12 +224,12 @@ std::string least_squares_grad_unwrapper::get_name() {
 }
 
 void least_squares_grad_unwrapper::usage_help() {
-   DEBUG_PRINTLN("*--------------------------------------------------------------------------*");
-   DEBUG_PRINTLN("Usage of the MLSQU uwnrapper...");
-   DEBUG_PRINTLN("Option(s)");
-   DEBUG_PRINTLN("polynom-i-j :  Design polynom of leading order x^i * y^j.");
-   DEBUG_PRINTLN("               Eg. polynom-3-3 leads to the following polynom: ");
-   DEBUG_PRINTLN("               f(x) = const + x + y + xy + x^2 + ... + x^2y^2 + ... + x^3y^3");
-   DEBUG_PRINTLN("steps-x     :  Number of steps for the integrated strand unwrapper");
-   DEBUG_PRINTLN("*--------------------------------------------------------------------------*");
+   PRINTLN("*--------------------------------------------------------------------------*");
+   PRINTLN("Usage of the MLSQU uwnrapper...");
+   PRINTLN("Option(s)");
+   PRINTLN("polynom-i-j :  Design polynom of leading order x^i * y^j.");
+   PRINTLN("               Eg. polynom-3-3 leads to the following polynom: ");
+   PRINTLN("               f(x) = const + x + y + xy + x^2 + ... + x^2y^2 + ... + x^3y^3");
+   PRINTLN("steps-x     :  Number of steps for the integrated strand unwrapper");
+   PRINTLN("*--------------------------------------------------------------------------*");
 }

@@ -35,7 +35,7 @@ public:
     }
 
     ~test_memory_leak_b() {
-//        DEBUG_PRINTLN("B zerstört");
+//        PRINTLN("B zerstört");
         delete variable_deleted; 
 //        variable--;     //Unsinniger Kram, hauptsache optimizer macht das nicht weg (?)
         

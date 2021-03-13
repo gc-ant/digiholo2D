@@ -34,67 +34,67 @@ simulated_annealing_merger::simulated_annealing_merger(std::vector<std::string> 
         value = it->substr(it->find_first_of('-') + 1);
         if (option.compare("temp") == 0) {
             this->temperature = (!value.empty() ? boost::lexical_cast<float>(value) : 0.f);
-            DEBUG_PRINTLN("temperature set to: " << this->temperature);
+            PRINTLN("temperature set to: " << this->temperature);
         } else if (option.compare("conv") == 0) {
             this->convergence_criterion = (!value.empty() ? boost::lexical_cast<float>(value) : 0.f);
-            DEBUG_PRINTLN("convergence set to: " << this->convergence_criterion);
+            PRINTLN("convergence set to: " << this->convergence_criterion);
         } else if (option.compare("pre") == 0) {
             if (!value.empty()) this->merge_prior = value;
-            else DEBUG_PRINTLN("Specify value simple/srncp for option pre- ...");
+            else PRINTLN("Specify value simple/srncp for option pre- ...");
         } else if (option.compare("steps") == 0) {
             this->check_steps = (!value.empty() ? boost::lexical_cast<float>(value) : 0.f);
         } else if (option.compare("saveinfo") == 0) {
             this->name_extended = true;
         } else if (option.compare("series") == 0) {
-            DEBUG_PRINTLN("Series-option was selected. DEFAULT printout is to C:\\ImageSeries\\SimAnn\\ . Please make sure this directory exists...")
+            PRINTLN("Series-option was selected. DEFAULT printout is to C:\\ImageSeries\\SimAnn\\ . Please make sure this directory exists...")
             if (!value.empty()) {
                 //value should look like: x or x-y-z
-                //                DEBUG_PRINTLN("value: " << value);
+                //                PRINTLN("value: " << value);
                 if (value.find_first_of('-') != value.find_last_of('-') && value.find_last_of('-') != std::string::npos) { //there are (technically more than) 2 '-' and the last one doesnt return npos
                     try {
                         this->series_start = boost::lexical_cast<int>(value.substr(0, value.find_first_of('-'))); // = x;
                         value = value.substr(value.find_first_of('-') + 1);
-                        //                    DEBUG_PRINTLN("value: " << value);
+                        //                    PRINTLN("value: " << value);
                         this->series_stop = boost::lexical_cast<int>(value.substr(0, value.find_first_of('-'))); // = y;
                         value = value.substr(value.find_first_of('-') + 1);
-                        //                    DEBUG_PRINTLN("value: " << value);
+                        //                    PRINTLN("value: " << value);
                         this->series_steps = boost::lexical_cast<int>(value); // = z;
-                        DEBUG_PRINTLN(series_start << " " << series_stop << " " << series_steps << " ");
+                        PRINTLN(series_start << " " << series_stop << " " << series_steps << " ");
                     } catch (boost::bad_lexical_cast const& e) {
-                        DEBUG_PRINTLN("Error: " << e.what());
-                        DEBUG_PRINTLN("Please make sure your syntax is series-x OR series-x-y-z (x,y,z arbitrary positive integer values)");
+                        PRINTLN("Error: " << e.what());
+                        PRINTLN("Please make sure your syntax is series-x OR series-x-y-z (x,y,z arbitrary positive integer values)");
                     }
                 } else {
                     this->series_steps = boost::lexical_cast<int>(value); // = x;
                 }
             } else {
                 this->series_steps = -1;
-                DEBUG_PRINTLN("Option series-x with no integer x commited. Setting steps to " << this->series_steps << "and preventing output...");
+                PRINTLN("Option series-x with no integer x commited. Setting steps to " << this->series_steps << "and preventing output...");
             }
         } else if (option.compare("seed") == 0) {
             if(!value.empty())  {
                 this->seed  = boost::lexical_cast<long>(value.substr(0, value.find_first_of('-')));
             } else  {
                 this->seed = -1; 
-                DEBUG_PRINTLN("Seed-x option was selected, but no x was given. Taking random seed instead.")
+                PRINTLN("Seed-x option was selected, but no x was given. Taking random seed instead.")
             }
         } else if (option.compare("help") == 0) {
             this->usage_help();
         } else {
-            DEBUG_PRINTLN("option \"" << option << "\" not supported. Please use temp-0.01 ,conv-100000 and pre-t (values arbitrary).");
+            PRINTLN("option \"" << option << "\" not supported. Please use temp-0.01 ,conv-100000 and pre-t (values arbitrary).");
         }
     }
     if (this->temperature == -1) {
         this->temperature = 0.1;
-        DEBUG_PRINTLN("No temperature specified: Setting it to: " << this->temperature);
+        PRINTLN("No temperature specified: Setting it to: " << this->temperature);
     }
     if (this->convergence_criterion == -1) {
         this->convergence_criterion = 0.01;
-        DEBUG_PRINTLN("No convergence_criterion specified: Setting it to: " << this->convergence_criterion);
+        PRINTLN("No convergence_criterion specified: Setting it to: " << this->convergence_criterion);
     }
     if (this->check_steps == -1) {
         this->check_steps = 5000;
-        DEBUG_PRINTLN("step-value not specified: Setting check_steps to: " << this->check_steps);
+        PRINTLN("step-value not specified: Setting check_steps to: " << this->check_steps);
     } else if (this->check_steps == 0) {
         this->check_steps = INT_MAX;
     }
@@ -120,14 +120,14 @@ void simulated_annealing_merger::merge_tiles(sharedptr<tiled_image> ti) {
     /* Prerun with Merger */
     if (!this->merge_prior.empty()) {
         if (this->merge_prior.compare("simple") == 0) {
-            DEBUG_PRINTLN("Preprocessing image with simple merger");
+            PRINTLN("Preprocessing image with simple merger");
             sharedptr<simple1d_tile_merger> my_merger(new simple1d_tile_merger());
             my_merger->merge_tiles(ti);
         } else if (this->merge_prior.compare("srncp") == 0) {
             sharedptr<abstract_reliability_calculator> rc(new reliability_calculator_variance());
             sharedptr<srncp_tile_merger> my_merger(new srncp_tile_merger(rc));
             my_merger->merge_tiles(ti);
-        } else DEBUG_PRINTLN("Merger " << this->merge_prior << " supported. Please use simple or srncp");
+        } else PRINTLN("Merger " << this->merge_prior << " supported. Please use simple or srncp");
 
     }
 
@@ -151,7 +151,7 @@ void simulated_annealing_merger::merge_tiles(sharedptr<tiled_image> ti) {
     for (int i = 0; i < junc_arr_size; i++) {
         total_energy += ti->get_junction_at(i)->calc_junction_squared_difference();
     }
-    DEBUG_PRINTLN("Start total energy: " << total_energy);
+    PRINTLN("Start total energy: " << total_energy);
     this->name_energy_prior_merging = total_energy;
     while (steps < (250 * junc_arr_size) && abort_parameter < FLT_MAX) { //TODO: Find a perfect convergence criterion...
         file->append_to_file(boost::lexical_cast<std::string>(steps) + " " + boost::lexical_cast<std::string>(total_energy) + "\n");
@@ -191,8 +191,8 @@ void simulated_annealing_merger::merge_tiles(sharedptr<tiled_image> ti) {
             else cur_tile->add_value(-2 * M_PI);
         }
         if (steps % this->check_steps == 0) { //Check every 10.000 step if the total energy is the same as 10.000 steps before. True: End!
-            DEBUG_PRINTLN("steps: " << steps << " at total energy: " << total_energy);
-            DEBUG_PRINTLN("temperature according to accept-choice: " << (this->temperature - (this->temperature / (250 * junc_arr_size)) * steps));
+            PRINTLN("steps: " << steps << " at total energy: " << total_energy);
+            PRINTLN("temperature according to accept-choice: " << (this->temperature - (this->temperature / (250 * junc_arr_size)) * steps));
             //Ternary operator:
             abort_parameter = (((abort_parameter - total_energy) < -this->convergence_criterion || (abort_parameter - total_energy) > 0) ? total_energy : FLT_MAX);
             //         if (abort_parameter != total_energy) {
@@ -202,7 +202,7 @@ void simulated_annealing_merger::merge_tiles(sharedptr<tiled_image> ti) {
             //         }
         }
     }
-    DEBUG_PRINTLN("End total energy:  " << total_energy << " & number of steps to \"convergence\": " << steps);
+    PRINTLN("End total energy:  " << total_energy << " & number of steps to \"convergence\": " << steps);
     this->name_energy_after_merging = total_energy;
     this->name_steps_to_convergence = steps;
 
@@ -226,9 +226,9 @@ float simulated_annealing_merger::calc_energy(sharedptr<std::vector<sharedptr<ti
 void simulated_annealing_merger::write_intermediate(sharedptr<tiled_image> ti, std::string name) {
     sharedptr<row_major_float_image> unwrapped_img = ti->convert_to_float_image();
     std::string output_filename = "C:\\ImageSeries\\SimAnn\\" + name + ".raw";
-    if (!write_image(&output_filename[0], unwrapped_img)) {
-        DEBUG_PRINTLN("Error: Could not save file. \n Note: This programm has no cross-platform creation of folders (yet) supported.");
-        DEBUG_PRINTLN("If you see this error message, please check if the specified output (or .\\Unwrapped\\ when no -o option called) is an EXISTING FOLDER.");
+    if (!write_image(output_filename, unwrapped_img)) {
+        PRINTLN("Error: Could not save file. \n Note: This programm has no cross-platform creation of folders (yet) supported.");
+        PRINTLN("If you see this error message, please check if the specified output (or .\\Unwrapped\\ when no -o option called) is an EXISTING FOLDER.");
         return;
     }
 }
@@ -252,28 +252,28 @@ std::string simulated_annealing_merger::get_name() {
 }
 
 void simulated_annealing_merger::usage_help() {
-    DEBUG_PRINTLN("*---------------------------------------------------------------------------*");
-    DEBUG_PRINTLN("Usage of the simulated annealing merger...");
-    DEBUG_PRINTLN("Options");
-    DEBUG_PRINTLN("temp-x :  Temperature x mostly between 1 and 0. Default at 0.1");
-    DEBUG_PRINTLN("conv-x :  The method will stop (~convergence) when following is met:");
-    DEBUG_PRINTLN("          0 > E1-E2 > -|x|");
-    DEBUG_PRINTLN("          (E1 = Energy before flipping one tile. E2 = Energy after flipping)");
-    DEBUG_PRINTLN("          DO NOT SUBMIT A SIGN! --- input x should be a small positive value!");
-    DEBUG_PRINTLN("          Default is 0.1");
-    DEBUG_PRINTLN("steps-x:  Convergence will be checked every x iterations. ");
-    DEBUG_PRINTLN("          Values >> 1000 will be faster. ")
-    DEBUG_PRINTLN("          Values around 1 to 10 may be error-prone due to local minima... ");
-    DEBUG_PRINTLN("          A value of 0 will turn this criterion off!");
-    DEBUG_PRINTLN("          Default is 5000");
-    DEBUG_PRINTLN("pre-x  :  Prerun the x=simple or x=srncp merger (faster)");
-    DEBUG_PRINTLN("saveinfo: Write temp-x, conv-x and steps for convergence into filename");
-    DEBUG_PRINTLN("          Default turned off");
-    DEBUG_PRINTLN("series-z:      Every z-th step the image will be saved to harddrive");
-    DEBUG_PRINTLN("  OR  ");
-    DEBUG_PRINTLN("series-x-y-z : Like above, but for a range:");
-    DEBUG_PRINTLN("             : Start saving at image x. Stop saving before image y. Save every z-th step!");
-    DEBUG_PRINTLN("seed-x  : Seed used for the random generator. Same seeds on the same picture will grant same output.");
-    DEBUG_PRINTLN("          Default is random");
-    DEBUG_PRINTLN("*---------------------------------------------------------------------------*");
+    PRINTLN("*---------------------------------------------------------------------------*");
+    PRINTLN("Usage of the simulated annealing merger...");
+    PRINTLN("Options");
+    PRINTLN("temp-x :  Temperature x mostly between 1 and 0. Default at 0.1");
+    PRINTLN("conv-x :  The method will stop (~convergence) when following is met:");
+    PRINTLN("          0 > E1-E2 > -|x|");
+    PRINTLN("          (E1 = Energy before flipping one tile. E2 = Energy after flipping)");
+    PRINTLN("          DO NOT SUBMIT A SIGN! --- input x should be a small positive value!");
+    PRINTLN("          Default is 0.1");
+    PRINTLN("steps-x:  Convergence will be checked every x iterations. ");
+    PRINTLN("          Values >> 1000 will be faster. ")
+    PRINTLN("          Values around 1 to 10 may be error-prone due to local minima... ");
+    PRINTLN("          A value of 0 will turn this criterion off!");
+    PRINTLN("          Default is 5000");
+    PRINTLN("pre-x  :  Prerun the x=simple or x=srncp merger (faster)");
+    PRINTLN("saveinfo: Write temp-x, conv-x and steps for convergence into filename");
+    PRINTLN("          Default turned off");
+    PRINTLN("series-z:      Every z-th step the image will be saved to harddrive");
+    PRINTLN("  OR  ");
+    PRINTLN("series-x-y-z : Like above, but for a range:");
+    PRINTLN("             : Start saving at image x. Stop saving before image y. Save every z-th step!");
+    PRINTLN("seed-x  : Seed used for the random generator. Same seeds on the same picture will grant same output.");
+    PRINTLN("          Default is random");
+    PRINTLN("*---------------------------------------------------------------------------*");
 }

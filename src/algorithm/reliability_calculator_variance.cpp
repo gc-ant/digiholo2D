@@ -12,7 +12,7 @@ const float SQRT_FLT_MAX = std::sqrt(FLT_MAX);
 
 reliability_calculator_variance::reliability_calculator_variance() {
     //empty
-    DEBUG_PRINTLN("sqrt of flt max: " <<SQRT_FLT_MAX);
+    PRINTLN("sqrt of flt max: " << SQRT_FLT_MAX);
 }
 
 reliability_calculator_variance::~reliability_calculator_variance() {
