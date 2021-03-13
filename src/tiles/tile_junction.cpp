@@ -68,7 +68,7 @@ float tile_junction::calc_junction_mean_difference() {
          break;
       }
       default:
-         DEBUG_PRINTLN("Error in tile_junction::calc_junction_mean_difference: Switch-Case hit default: No legal position committed");
+         PRINTLN("Error in tile_junction::calc_junction_mean_difference: Switch-Case hit default: No legal position committed");
          break;
    }
    diff += t1->get_offset() - t2->get_offset();
@@ -125,7 +125,7 @@ float tile_junction::calc_junction_variance() {
          break;
       }
       default:
-         DEBUG_PRINTLN("Error in tile_junction::calc_junction_variance: Switch-Case hit default: No legal position committed");
+         PRINTLN("Error in tile_junction::calc_junction_variance: Switch-Case hit default: No legal position committed");
          return -1.0f;
    }
    /* Calculate the median START */
@@ -205,7 +205,7 @@ float tile_junction::calc_junction_squared_difference() {
          break;
       }
       default:
-         DEBUG_PRINTLN("Error in tile_junction::calc_junction_squared_difference: Switch-Case hit default: No legal position committed");
+         PRINTLN("Error in tile_junction::calc_junction_squared_difference: Switch-Case hit default: No legal position committed");
          break;
    }
    return diff;
@@ -228,7 +228,7 @@ bool tile_junction::is_junction_between(boost::shared_ptr<tile> t, tile::rel_pos
 }
 
 void tile_junction::toString() {
-   DEBUG_PRINTLN("First tile is at: w: " << this->first.lock()->get_posW() << "h: " << this->first.lock()->get_posH());
-   DEBUG_PRINTLN("Second tile is at: w: " << this->second.lock()->get_posW() << "h: " << this->second.lock()->get_posH());
-   DEBUG_PRINTLN("Relative Position: " << this->second_to_first);
+   PRINTLN("First tile is at: w: " << this->first.lock()->get_posW() << "h: " << this->first.lock()->get_posH());
+   PRINTLN("Second tile is at: w: " << this->second.lock()->get_posW() << "h: " << this->second.lock()->get_posH());
+   PRINTLN("Relative Position: " << this->second_to_first);
 }

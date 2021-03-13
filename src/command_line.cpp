@@ -37,6 +37,8 @@
 #include "debug/debug_file_io.h"
 #include "debug/debug_time.h"
 
+#include "boost/filesystem.hpp"
+
 command_line::command_line() {
 }
 
@@ -74,7 +76,7 @@ void command_line::execute(std::string method, std::string unwrapper, std::vecto
     } else if (method.compare("grad_y") == 0) { // calculate y gradient
         this->calculate_gradient(1, input_path, input, output, dimx, dimy, tilecount);
     } else {
-        DEBUG_PRINTLN("Error: method is empty. I dont know what to do with: " << method);
+        PRINTLN("Error: method is empty. I dont know what to do with: " << method);
     }
 }
 
@@ -82,15 +84,15 @@ bool command_line::legit_arguments(std::string method, std::string unwrapper, st
     bool legit_arguments = true;
     if (dimx <= 0) {
         legit_arguments = false;
-        DEBUG_PRINTLN("Error: dimx has unusual value: " << dimx);
+        PRINTLN("Error: dimx has unusual value: " << dimx);
     }
     if (dimy <= 0) {
         legit_arguments = false;
-        DEBUG_PRINTLN("Error: dimy has unusual value: " << dimy);
+        PRINTLN("Error: dimy has unusual value: " << dimy);
     }
     if (tilecount.size() != 1 && tilecount.size() != 2) { //zero is allowed
         legit_arguments = false;
-        DEBUG_PRINTLN("Error: tilecount has unusual size: " << tilecount.size());
+        PRINTLN("Error: tilecount has unusual size: " << tilecount.size());
     }
     return legit_arguments;
 }
@@ -100,22 +102,23 @@ bool command_line::legit_arguments(std::string method, std::string unwrapper, st
  * @param unwrapper name of the unwrapper used
  * @param merger name of the merger used
  * @param input input location of the file (for getting the real filename)
- * @param output output location (directory, ending with \\ !). NOTE: May be passed empty!
+ * @param output output location (directory, ending with a directory separator !). NOTE: May be passed empty!
  * @param dimx width of the image
  * @param dimy height of the image
  * @param tilecount number of tiles
  * @return 
  */
-char* command_line::create_filename(std::string unwrapper, std::string merger, std::string input, std::string output, int dimx, int dimy, std::vector<int> tilecount) {
+std::string command_line::create_filename(std::string unwrapper, std::string merger, std::string input, std::string output, int dimx, int dimy, std::vector<int> tilecount) {
     std::string name;
-    unsigned last_slash = input.find_last_of("\\"); //TODO: Generalize for every OS -using boost::filesystem maybe?
+    std::string directory_separator (1,boost::filesystem::path::preferred_separator);
+    unsigned last_slash = input.find_last_of(directory_separator); //TODO: Generalize for every OS -using boost::filesystem maybe?
     if (output.empty()) {
         name += (input.substr(0, last_slash));
-        name += "\\Unwrapped\\";
+        name += directory_separator+"Unwrapped"+directory_separator;
     } else {
-        if (output.substr(output.length() - 1, output.length() - 0).compare("\\") == 0) {
+        if (output.substr(output.length() - 1, output.length() - 0).compare(directory_separator.c_str()) == 0) {
             name += output;
-        } else name += output + "\\";
+        } else name += output + directory_separator;
     }
     name += unwrapper;
     name += "_";
@@ -131,9 +134,9 @@ char* command_line::create_filename(std::string unwrapper, std::string merger, s
     //   unsigned last_slash = input.find_last_of("\\");
     name += input.substr(last_slash + 1, input.length() - last_slash - 5); //Extract the filename of the given file minus path minus ending
     name += ".raw";
-    //   DEBUG_PRINTLN("Save file to: " << name);
+    PRINTLN("Save file to: " << name);
 
-    return &name[0];
+    return name;
 }
 
 sharedptr<abstract_tile_unwrapper> command_line::get_unwrapper(std::string unwrapper, std::vector<std::string> usettings) {
@@ -149,7 +152,7 @@ sharedptr<abstract_tile_unwrapper> command_line::get_unwrapper(std::string unwra
         sharedptr<least_squares_grad_unwrapper> my_unwrapper(new least_squares_grad_unwrapper(usettings));
         return my_unwrapper;
     } else {
-        DEBUG_PRINTLN("Error: Only strand & mlsqu - Unwrapper supported: " << unwrapper);
+        PRINTLN("Error: Only strand & mlsqu - Unwrapper supported: " << unwrapper);
         exit(0);
     }
     sharedptr<abstract_tile_unwrapper> my_unwrapper;
@@ -176,7 +179,7 @@ sharedptr<abstract_tile_merger> command_line::get_merger(std::string merger, std
         sharedptr<simulated_annealing_floodfill_merger> my_merger(new simulated_annealing_floodfill_merger(msettings));
         return my_merger;
     } else {
-        DEBUG_PRINTLN("Error: Only srncp, strand, simple & simann - Merger supported: " << merger);
+        PRINTLN("Error: Only srncp, strand, simple & simann - Merger supported: " << merger);
         exit(0);
     }
     sharedptr<abstract_tile_merger> my_merger;
@@ -218,7 +221,7 @@ void command_line::unwrap_and_merge(std::string unwrapper, std::vector<std::stri
 
     for (file_it = input_file.begin(); file_it != input_file.end(); ++file_it) {
         //Assemble input file path (and try to correct errors with ending backslashes)
-        if (input_path.back() != '\\') input_path += "\\";
+        if (input_path.back() != boost::filesystem::path::preferred_separator) input_path += boost::filesystem::path::preferred_separator;
         input = input_path + (*file_it);
 
         /* Grab the image */
@@ -236,7 +239,7 @@ void command_line::unwrap_and_merge(std::string unwrapper, std::vector<std::stri
                 unwrapper = unwrapper.substr(0, unwrapper.find("_ti"));
                 unwrapper += "_tiu_" + boost::lexical_cast<std::string>(time_u).substr(0, 5);
             }
-            DEBUG_PRINTLN("Runtime Unwrapper: ");
+            PRINTLN("Runtime Unwrapper: ");
             delete time;
         }
         if (!merger.empty() && merger.compare("none") != 0) {
@@ -248,16 +251,16 @@ void command_line::unwrap_and_merge(std::string unwrapper, std::vector<std::stri
                 merger = merger.substr(0, merger.find("_ti"));
                 merger += "_tim_" + boost::lexical_cast<std::string>(time_m).substr(0, 5);
             }
-            DEBUG_PRINTLN("Runtime Merger: ");
+            PRINTLN("Runtime Merger: ");
             delete time;
         }
-        DEBUG_PRINTLN("");
+        PRINTLN("");
         sharedptr<row_major_float_image> unwrapped_img = sti->convert_to_float_image();
         if (!write_image(create_filename(unwrapper, merger, input, output, dimx, dimy, tilecount), unwrapped_img.get())) {
-            DEBUG_PRINTLN("Error: Could not save file. \n Note: This programm has no cross-platform creation of folders (yet) supported.");
-            DEBUG_PRINTLN("If you see this error message, please check if the specified output (or .\\Unwrapped\\ when no -o option called) is an EXISTING FOLDER.");
+            PRINTLN("Error: Could not save file. \n Note: This programm has no cross-platform creation of folders (yet) supported.");
+            PRINTLN("If you see this error message, please check if the specified output (or .\\Unwrapped\\ when no -o option called) is an EXISTING FOLDER.");
             return;
-        } else DEBUG_PRINTLN("----- Finished merging -----");
+        } else PRINTLN("----- Finished merging -----");
         //save data to file here
         if (timing) {
             debug_file_io file_io("timings.txt"); //should append to file
@@ -269,7 +272,7 @@ void command_line::unwrap_and_merge(std::string unwrapper, std::vector<std::stri
 
 void command_line::cl_read_image(std::string input, sharedptr<row_major_float_image> wrapped_img) {
     if (!read_image<float>(&input[0], wrapped_img)) {
-        DEBUG_PRINTLN("Error: Could not read 32-bit float file.");
+        PRINTLN("Error: Could not read 32-bit float file.");
         exit(0);
     }
 }
@@ -279,8 +282,8 @@ void command_line::calculate_gradient(int dim, std::string input_path, std::vect
     std::vector<std::string>::iterator file_it;
     for (file_it = input_file.begin(); file_it != input_file.end(); ++file_it) {
         //Assemble input file path (and try to correct errors with ending backslashes)
-        if (input_path.back() != '\\') {
-            input_path += "\\";
+        if (input_path.back() != boost::filesystem::path::preferred_separator) {
+            input_path += boost::filesystem::path::preferred_separator;
         }
         input = input_path + (*file_it);
 
@@ -288,7 +291,7 @@ void command_line::calculate_gradient(int dim, std::string input_path, std::vect
         sharedptr<row_major_float_image> wrapped_img = create_row_major_float_image(dimx, dimy);
         wrapped_img->zero_fill();
         if (!read_image<float>(&input[0], wrapped_img)) {
-            DEBUG_PRINTLN("Error: Could not read file.");
+            PRINTLN("Error: Could not read file.");
             return;
         }
         /* */
@@ -307,11 +310,11 @@ void command_line::calculate_gradient(int dim, std::string input_path, std::vect
         }
         sharedptr<row_major_float_image> grad_img = sti->convert_to_float_image();
         if (!write_image(create_filename("grad", dim_str, input, output, dimx, dimy, tilecount), grad_img.get())) {
-            DEBUG_PRINTLN("Error: Could not save file.");
+            PRINTLN("Error: Could not save file.");
             return;
         } else {
 
-            DEBUG_PRINTLN("Finished merging");
+            PRINTLN("Finished merging");
         }
     }
 }
@@ -345,16 +348,16 @@ void command_line::calculate_gradient(int dim, std::string input_path, std::vect
 //        srncp_unwrapper my_unwrapper;
 //        debug_time *time = new debug_time();
 //        my_unwrapper.unwrap(wrapped_img.get(), unwrapped_img.get());
-//        DEBUG_PRINTLN("Pixel-based SRNCP took:");
+//        PRINTLN("Pixel-based SRNCP took:");
 //        time->get_time();
 //        delete time;
 //        //   my_unwrapper->unwrap(wrappi.get(), unwrappi.get());
 //        std::string empty = "";
 //
 //        if (!write_image(create_filename(empty + "srncp", empty, input, output, dimx, dimy, std::vector<int>()), unwrapped_img.get())) {
-//            DEBUG_PRINTLN("Error: Could not save file.");
+//            PRINTLN("Error: Could not save file.");
 //            return;
-//        } else DEBUG_PRINTLN("Finished merging");
+//        } else PRINTLN("Finished merging");
 //    }
 //}
 
@@ -363,7 +366,7 @@ void command_line::analyse(std::string method, std::string input_path, std::vect
 
     if (method.compare("pixel") == 0) {
         for (std::string file_name : input_file) { //measure every file
-            if (input_path.back() != '\\') input_path += "\\";
+            if (input_path.back() != boost::filesystem::path::preferred_separator) input_path += boost::filesystem::path::preferred_separator;
             input = input_path + file_name;
 
             sharedptr<row_major_float_image> wrapped_img = create_row_major_float_image(dimx, dimy);
@@ -372,15 +375,15 @@ void command_line::analyse(std::string method, std::string input_path, std::vect
 
             sharedptr<measure_pixel_energy> measure(new measure_pixel_energy());
 
-            DEBUG_PRINTLN("*--------------------------------------------------------------------------*");
-            DEBUG_PRINTLN("PSNR of image: ");
-            DEBUG_PRINTLN(file_name);
-            DEBUG_PRINTLN("Pixel_Energy: " << measure->calc(wrapped_img));
-            DEBUG_PRINTLN("*--------------------------------------------------------------------------*");
+            PRINTLN("*--------------------------------------------------------------------------*");
+            PRINTLN("PSNR of image: ");
+            PRINTLN(file_name);
+            PRINTLN("Pixel_Energy: " << measure->calc(wrapped_img));
+            PRINTLN("*--------------------------------------------------------------------------*");
         }
     } else if (method.compare("psnr") == 0) {
         if (input_file.size() == 2) {
-            if (input_path.back() != '\\') input_path += "\\";
+            if (input_path.back() != boost::filesystem::path::preferred_separator) input_path += boost::filesystem::path::preferred_separator;
             input = input_path + input_file.front();
             input_noisy = input_path + input_file.back();
 
@@ -390,15 +393,15 @@ void command_line::analyse(std::string method, std::string input_path, std::vect
             this->cl_read_image(input_noisy, noisy);
 
             sharedptr<measure_psnr> measure(new measure_psnr(noisy, original, 32));
-            DEBUG_PRINTLN("*--------------------------------------------------------------------------*");
-            DEBUG_PRINTLN("PSNR of images: ");
-            DEBUG_PRINTLN("#1: " << input_file.front());
-            DEBUG_PRINTLN("#2: " << input_file.back());
-            DEBUG_PRINTLN("PSNR: " << measure->calculate_psnr() << " dB");
-            DEBUG_PRINTLN("*--------------------------------------------------------------------------*");
+            PRINTLN("*--------------------------------------------------------------------------*");
+            PRINTLN("PSNR of images: ");
+            PRINTLN("#1: " << input_file.front());
+            PRINTLN("#2: " << input_file.back());
+            PRINTLN("PSNR: " << measure->calculate_psnr() << " dB");
+            PRINTLN("*--------------------------------------------------------------------------*");
 
         } else {
-            DEBUG_PRINTLN("Number of input file(s) is unequal 2. Please provide \"original\" image first, \"noisy\" image second.");
+            PRINTLN("Number of input file(s) is unequal 2. Please provide \"original\" image first, \"noisy\" image second.");
         }
     }
 }

@@ -40,7 +40,7 @@
  * @param img The float_image
  * @return true if successful, false otherwise.
  */
-bool read_float_image(char *inputfile, float_image * img);
+bool read_float_image(std::string inputfile, float_image * img);
 
 
 /**
@@ -51,15 +51,15 @@ bool read_float_image(char *inputfile, float_image * img);
  * @param img The float_image
  * @return true if successful, false otherwise.
  */
-template<class T> bool read_image(char *inputfile, float_image * img) //Implementation muss im Header passieren wg template.
+template<class T> bool read_image(std::string inputfile, float_image * img) //Implementation muss im Header passieren wg template.
 {
     int imsize = img->get_width()*img->get_height();
     T * bild = new T[imsize];
     
-    DEBUG_PRINTLN("Size of image primitive = "<< sizeof(T)*8 << "bit");
+    PRINTLN("Size of image primitive = " << sizeof(T) * 8 << "bit");
     
     FILE *pFile;
-    pFile = fopen(inputfile,"rb");
+    pFile = fopen(inputfile.c_str(),"rb");
     if(pFile == NULL)
     {
         return false;
@@ -93,18 +93,18 @@ template<class T> bool read_image(char *inputfile, float_image * img) //Implemen
  * @param img The float_image
  * @return true if successful, false otherwise.
  */
-template<class T> bool read_image(char *inputfile, sharedptr<row_major_float_image> img) //Implementation muss im Header passieren wg template.
+template<class T> bool read_image(std::string inputfile, sharedptr<row_major_float_image> img) //Implementation muss im Header passieren wg template.
 {
     int imsize = img->get_width()*img->get_height();
     T * bild = new T[imsize];
     
-    DEBUG_PRINTLN("Size of image primitive = "<< sizeof(T)*8 << "bit");
+    PRINTLN("Size of image primitive = " << sizeof(T) * 8 << "bit");
     
     FILE *pFile;
-    pFile = fopen(inputfile,"rb");
+    pFile = fopen(inputfile.c_str(),"rb");
     if(pFile == NULL)
     {
-        DEBUG_PRINTLN("Error in in_out::read_image: Failed to open image (a)");
+        PRINTLN("Error in in_out::read_image: Failed to open image (a)");
         return false;
     }
     else
@@ -114,7 +114,7 @@ template<class T> bool read_image(char *inputfile, sharedptr<row_major_float_ima
         
         if( len == 0 || ferror(pFile) || feof(pFile))
         {
-            DEBUG_PRINTLN("Error in in_out::read_image: Input length: "<<len);
+            PRINTLN("Error in in_out::read_image: Input length: " << len);
             return false;
         }
     }
@@ -135,7 +135,7 @@ template<class T> bool read_image(char *inputfile, sharedptr<row_major_float_ima
  * @param img The float image.
  * @return True if successful, false otherwise.
  */
-bool write_image(char *outputfile, float_image * img);
+bool write_image(std::string, float_image * img);
 
 
 /**
@@ -144,7 +144,7 @@ bool write_image(char *outputfile, float_image * img);
  * @param img The float image.
  * @return True if successful, false otherwise.
  */
-bool write_image(char *outputfile, sharedptr<float_image> img);
+bool write_image(std::string, sharedptr<float_image> img);
 
 /**
  * Write contents of a float_image to binary file.
@@ -152,7 +152,7 @@ bool write_image(char *outputfile, sharedptr<float_image> img);
  * @param img The float image.
  * @return True if successful, false otherwise.
  */
-bool write_image(char *outputfile, sharedptr<row_major_float_image> img);
+bool write_image(std::string outputfile, sharedptr<row_major_float_image> img);
 
 
 

@@ -74,7 +74,7 @@ private:
      * @param tilecount number of tiles
      * @return 
      */
-    char* create_filename(std::string unwrapper, std::string merger, std::string input, std::string output, int dimx, int dimy, std::vector<int> tilecount);
+    std::string create_filename(std::string unwrapper, std::string merger, std::string input, std::string output, int dimx, int dimy, std::vector<int> tilecount);
 
     /**
      * Method returning the named unwrapper, empty sharedptr if no unwrapper with this name is implemented/supported

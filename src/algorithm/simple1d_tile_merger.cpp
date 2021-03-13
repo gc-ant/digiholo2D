@@ -25,7 +25,7 @@ simple1d_tile_merger::~simple1d_tile_merger() {
 }
 
 void simple1d_tile_merger::merge_tiles(boost::shared_ptr<tiled_image> ti) {
-   DEBUG_PRINTLN("Starting Simple1D Merger with settings: " << this->left2right << " " << this->top2bottom << " " << this->start_horizontal)
+   PRINTLN("Starting Simple1D Merger with settings: " << this->left2right << " " << this->top2bottom << " " << this->start_horizontal)
    ti->create_all_junctions();
    if (this->start_horizontal) {
       tile_unwrap1d_horizontal(ti, this->left2right);
@@ -129,8 +129,8 @@ std::string simple1d_tile_merger::get_name() {
 
 
 void simple1d_tile_merger::usage_help() {
-   DEBUG_PRINTLN("*------------------------------------------------------------*");
-   DEBUG_PRINTLN("Usage of the simple merger...");
-   DEBUG_PRINTLN("No Options");
-   DEBUG_PRINTLN("*------------------------------------------------------------*");
+   PRINTLN("*------------------------------------------------------------*");
+   PRINTLN("Usage of the simple merger...");
+   PRINTLN("No Options");
+   PRINTLN("*------------------------------------------------------------*");
 }

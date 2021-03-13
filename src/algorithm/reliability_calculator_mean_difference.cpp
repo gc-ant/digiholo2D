@@ -48,7 +48,7 @@ float reliability_calculator_mean_difference::calculate_reliability(boost::share
 //JUNCTION
 
 float reliability_calculator_mean_difference::calculate_reliability(boost::shared_ptr<tiled_image> ti, boost::shared_ptr<tile_junction> junc) {
-    //   DEBUG_PRINTLN("rc_sec_dif::calc_rel(junction)");
+    //   PRINTLN("rc_sec_dif::calc_rel(junction)");
     float rel_1 = this->calculate_reliability(ti, junc->get_first().lock());
     float rel_2 = this->calculate_reliability(ti, junc->get_second().lock());
     return (rel_1 * rel_2);

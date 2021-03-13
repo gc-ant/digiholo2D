@@ -38,7 +38,7 @@ public:
     virtual ~debug_time() {
         this->end = std::chrono::system_clock::now();
         diff = this->end-this->start;
-        DEBUG_PRINTLN("Measured time (ms): " << std::chrono::duration_cast<std::chrono::milliseconds>(diff).count() );
+        PRINTLN("Measured time (ms): " << std::chrono::duration_cast<std::chrono::milliseconds>(diff).count() );
     }
 
     double get_time() {

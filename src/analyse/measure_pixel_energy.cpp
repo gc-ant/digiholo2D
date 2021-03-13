@@ -43,7 +43,7 @@ float measure_pixel_energy::calc(sharedptr<row_major_float_image> image) {
         total += std::pow(image->get_pixel(W - 1, ih) - image->get_pixel(W - 2, ih + 1), 2.f); //down left 
     }
     total /= (float) (W * H);
-    DEBUG_PRINTLN("Runtime: ");
+    PRINTLN("Runtime: ");
     delete time;
     return total;
 }

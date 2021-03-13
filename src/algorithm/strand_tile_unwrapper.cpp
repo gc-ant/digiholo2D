@@ -27,7 +27,7 @@ strand_tile_unwrapper::strand_tile_unwrapper(std::vector<std::string> usettings)
             } else if (option.compare("help") == 0) {
                 this->usage_help();
             } else {
-                DEBUG_PRINTLN("Option \"" << option << "\" not supported. Please use steps-5 (value arbitrary).");
+                PRINTLN("Option \"" << option << "\" not supported. Please use steps-5 (value arbitrary).");
             }
         }
     }
@@ -68,8 +68,8 @@ void strand_tile_unwrapper::unwrap(boost::shared_ptr<tile> t) {
         t->rewrap(-float(i) * delta_rho);
     }
     t->rewrap(min_rho_pos);
-    //    DEBUG_PRINTLN(min_rho_pos/delta_rho); 
-    //    DEBUG_PRINTLN("");
+    //    PRINTLN(min_rho_pos/delta_rho);
+    //    PRINTLN("");
 }
 
 float strand_tile_unwrapper::abs_diff_norm(boost::shared_ptr<tile> t, float cur_min_val) {
@@ -111,9 +111,9 @@ std::string strand_tile_unwrapper::get_name() {
 }
 
 void strand_tile_unwrapper::usage_help() {
-    DEBUG_PRINTLN("*------------------------------------------------------------*");
-    DEBUG_PRINTLN("Usage of the strand  uwnrapper...");
-    DEBUG_PRINTLN("Option(s)");
-    DEBUG_PRINTLN("steps-x :  Method will test x values for getting the best offset");
-    DEBUG_PRINTLN("*------------------------------------------------------------*");
+    PRINTLN("*------------------------------------------------------------*");
+    PRINTLN("Usage of the strand  uwnrapper...");
+    PRINTLN("Option(s)");
+    PRINTLN("steps-x :  Method will test x values for getting the best offset");
+    PRINTLN("*------------------------------------------------------------*");
 }

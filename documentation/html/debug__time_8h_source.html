@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('debug__time_8h_source.html','');});
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classdebug__time.html">debug_time</a>() {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        this-&gt;end = std::chrono::system_clock::now();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        diff = this-&gt;end-this-&gt;start;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        DEBUG_PRINTLN(<span class="stringliteral">&quot;Measured time (ms): &quot;</span> &lt;&lt; std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(diff).count() );</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        PRINTLN(<span class="stringliteral">&quot;Measured time (ms): &quot;</span> &lt;&lt; std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(diff).count() );</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">double</span> get_time() {</div>

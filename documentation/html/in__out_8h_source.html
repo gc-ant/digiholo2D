@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('in__out_8h_source.html','');});
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> imsize = img-&gt;<a class="code" href="classfloat__image.html#a08ba5e995f656dfebc5aaad0a9be390c">get_width</a>()*img-&gt;<a class="code" href="classfloat__image.html#aeab41642909a0ee8d6e0ffcc2e7287b1">get_height</a>();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    T * bild = <span class="keyword">new</span> T[imsize];</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    DEBUG_PRINTLN(<span class="stringliteral">&quot;Size of image primitive = &quot;</span>&lt;&lt; <span class="keyword">sizeof</span>(T)*8 &lt;&lt; <span class="stringliteral">&quot;bit&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    PRINTLN(<span class="stringliteral">&quot;Size of image primitive = &quot;</span>&lt;&lt; <span class="keyword">sizeof</span>(T)*8 &lt;&lt; <span class="stringliteral">&quot;bit&quot;</span>);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    FILE *pFile;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    pFile = fopen(inputfile,<span class="stringliteral">&quot;rb&quot;</span>);</div>
@@ -177,13 +177,13 @@ $(document).ready(function(){initNavTree('in__out_8h_source.html','');});
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> imsize = img-&gt;get_width()*img-&gt;get_height();</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    T * bild = <span class="keyword">new</span> T[imsize];</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    DEBUG_PRINTLN(<span class="stringliteral">&quot;Size of image primitive = &quot;</span>&lt;&lt; <span class="keyword">sizeof</span>(T)*8 &lt;&lt; <span class="stringliteral">&quot;bit&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    PRINTLN(<span class="stringliteral">&quot;Size of image primitive = &quot;</span>&lt;&lt; <span class="keyword">sizeof</span>(T)*8 &lt;&lt; <span class="stringliteral">&quot;bit&quot;</span>);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    FILE *pFile;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    pFile = fopen(inputfile,<span class="stringliteral">&quot;rb&quot;</span>);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span>(pFile == NULL)</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        DEBUG_PRINTLN(<span class="stringliteral">&quot;Error in in_out::read_image: Failed to open image (a)&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        PRINTLN(<span class="stringliteral">&quot;Error in in_out::read_image: Failed to open image (a)&quot;</span>);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">else</span></div>
@@ -193,7 +193,7 @@ $(document).ready(function(){initNavTree('in__out_8h_source.html','');});
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span>( len == 0 || ferror(pFile) || feof(pFile))</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            DEBUG_PRINTLN(<span class="stringliteral">&quot;Error in in_out::read_image: Input length: &quot;</span>&lt;&lt;len);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            PRINTLN(<span class="stringliteral">&quot;Error in in_out::read_image: Input length: &quot;</span>&lt;&lt;len);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>

@@ -30,7 +30,7 @@ void debug_file_io::append_to_file(std::string text)  {
     if(myfile.is_open()) {
       this->myfile << text; 
    } else   {
-       DEBUG_PRINTLN("Cannot save to file..");
+       PRINTLN("Cannot save to file..");
    }
 }
 

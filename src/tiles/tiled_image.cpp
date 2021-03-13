@@ -65,7 +65,7 @@ boost::optional<boost::shared_ptr<tile_junction> > tiled_image::create_junction(
                 return junction;
             } else {
                 /* These error messages are not displayed, because the call for this method may be without further check if a junction should be created here */
-                //            DEBUG_PRINTLN("Error in createJunction: UP"); 
+                //            PRINTLN("Error in createJunction: UP");
             }
             break;
         }
@@ -76,7 +76,7 @@ boost::optional<boost::shared_ptr<tile_junction> > tiled_image::create_junction(
                 boost::shared_ptr<tile_junction> junction = tile_junction::create_new(t1, t2, tile::DOWN);
                 return junction;
             } else {
-                //            DEBUG_PRINTLN("Error in createJunction: DOWN");
+                //            PRINTLN("Error in createJunction: DOWN");
             }
             break;
         }
@@ -87,7 +87,7 @@ boost::optional<boost::shared_ptr<tile_junction> > tiled_image::create_junction(
                 boost::shared_ptr<tile_junction> junction = tile_junction::create_new(t1, t2, tile::LEFT);
                 return junction;
             } else {
-                //            DEBUG_PRINTLN("Error in createJunction: LEFT");
+                //            PRINTLN("Error in createJunction: LEFT");
             }
             break;
         }
@@ -98,25 +98,25 @@ boost::optional<boost::shared_ptr<tile_junction> > tiled_image::create_junction(
                 boost::shared_ptr<tile_junction> junction = tile_junction::create_new(t1, t2, tile::RIGHT);
                 return junction;
             } else {
-                //            DEBUG_PRINTLN("Error in createJunction: RIGHT");
+                //            PRINTLN("Error in createJunction: RIGHT");
             }
             break;
         }
         default:
         {
-            DEBUG_PRINTLN("Error in createJunction: No legal position comitted");
+            PRINTLN("Error in createJunction: No legal position comitted");
         }
     }
     return boost::none;
 }
 
 bool tiled_image::create_all_junctions() {
-    //   DEBUG_PRINTLN("Creating all junctions via method image::create_all_junctions");
+    //   PRINTLN("Creating all junctions via method image::create_all_junctions");
     if (this->vc_junction_array.size() != 0) { //vector is initialized
         return false; //do nothing and return false: nothing was done here
     } else { //initialize every junction
         //iterate over every smart tile in vc_tile_array
-        //        DEBUG_PRINTLN("Size of tile array: " << vc_tile_array.size());
+        //        PRINTLN("Size of tile array: " << vc_tile_array.size());
         boost::optional<boost::shared_ptr<tile_junction> > junction;
 
         for (std::vector<boost::shared_ptr<tile> >::size_type i = 0; i < this->vc_tile_array.size(); i++) {
@@ -139,7 +139,7 @@ bool tiled_image::create_all_junctions() {
          * Note: create_junction(i,pos) checks if there is a tile in the direction...
          */
     }
-    //    DEBUG_PRINTLN("Size of junction array: " << vc_junction_array.size());
+    //    PRINTLN("Size of junction array: " << vc_junction_array.size());
 
     //   this->test_all_junctions_test();
 
@@ -151,7 +151,7 @@ boost::shared_ptr<tile_junction> tiled_image::get_junction(boost::shared_ptr<til
     if (this->vc_junction_array.size() == 0) {
         this->create_all_junctions();
         return this->get_junction(t, pos);
-        DEBUG_PRINTLN("Error in tiled_image::get_junction (1 tile, 1 position): Vector vc_junction empty! No Junction initialized");
+        PRINTLN("Error in tiled_image::get_junction (1 tile, 1 position): Vector vc_junction empty! No Junction initialized");
     } else {
         int i = t->get_posH() * this->tilecount_width + t->get_posW(); //get the index of the tile in the vc_tile_array
         switch (pos) {
@@ -161,7 +161,7 @@ boost::shared_ptr<tile_junction> tiled_image::get_junction(boost::shared_ptr<til
                     boost::shared_ptr<tile_junction> junction = vc_junction_array.at(i - this->tilecount_width);
                     return junction;
                 } else {
-                    //               DEBUG_PRINTLN("Error in tiled_image::get_junction(tile, position): No junction up at index: "<<i)
+                    //               PRINTLN("Error in tiled_image::get_junction(tile, position): No junction up at index: "<<i)
                 }
                 break;
             }
@@ -171,7 +171,7 @@ boost::shared_ptr<tile_junction> tiled_image::get_junction(boost::shared_ptr<til
                     boost::shared_ptr<tile_junction> junction = vc_junction_array.at(i);
                     return junction;
                 } else {
-                    //               DEBUG_PRINTLN("Error in tiled_image::get_junction(tile, position): No junction down at index: "<<i)
+                    //               PRINTLN("Error in tiled_image::get_junction(tile, position): No junction down at index: "<<i)
                 }
                 break;
             }
@@ -185,7 +185,7 @@ boost::shared_ptr<tile_junction> tiled_image::get_junction(boost::shared_ptr<til
                     boost::shared_ptr<tile_junction> junction = vc_junction_array.at(index);
                     return junction;
                 } else {
-                    //               DEBUG_PRINTLN("Error in tiled_image::get_junction(tile, position): No junction right at index: "<< this->tilecount_width * (this->tilecount_height - 1) + i - t->get_posH())
+                    //               PRINTLN("Error in tiled_image::get_junction(tile, position): No junction right at index: "<< this->tilecount_width * (this->tilecount_height - 1) + i - t->get_posH())
                 }
                 break;
             }
@@ -197,13 +197,13 @@ boost::shared_ptr<tile_junction> tiled_image::get_junction(boost::shared_ptr<til
                     boost::shared_ptr<tile_junction> junction = vc_junction_array.at(index);
                     return junction;
                 } else {
-                    //               DEBUG_PRINTLN("Error in tiled_image::get_junction(tile, position): No junction left"<< this->tilecount_width * (this->tilecount_height - 1) + i - t->get_posH())
+                    //               PRINTLN("Error in tiled_image::get_junction(tile, position): No junction left"<< this->tilecount_width * (this->tilecount_height - 1) + i - t->get_posH())
                 }
                 break;
             }
         }
     }
-    //   DEBUG_PRINTLN("Error in tiled_image::get_junction (1 tile, 1 position): Returning non-initizalied Junction.");
+    //   PRINTLN("Error in tiled_image::get_junction (1 tile, 1 position): Returning non-initizalied Junction.");
     boost::shared_ptr<tile_junction> junctionNULL;
     return junctionNULL;
 }
@@ -221,7 +221,7 @@ boost::shared_ptr<tile_junction> tiled_image::get_junction(boost::shared_ptr<til
     if (this->vc_junction_array.size() == 0) {
         this->create_all_junctions();
         return this->get_junction(t1, t2);
-        DEBUG_PRINTLN("Error in tiled_image::get_junction (2 tiles): Vector vc_junction empty! No Junction initialized");
+        PRINTLN("Error in tiled_image::get_junction (2 tiles): Vector vc_junction empty! No Junction initialized");
     } else {
         boost::shared_ptr<tile_junction> compare = this->get_junction(t1, tile::UP);
         //test if junction is initialized and if t2 is (the other) part of the junction
@@ -240,7 +240,7 @@ boost::shared_ptr<tile_junction> tiled_image::get_junction(boost::shared_ptr<til
         if (help_is_junction(compare, t2, tile::RIGHT)) {
             return compare;
         }
-        DEBUG_PRINTLN("Error in tiled_image::get_junction: No junction found for tile at iw:" << t1->get_posW() << " ih:" << t1->get_posH() << " and tile at iw:" << t2->get_posW() << " ih:" << t2->get_posH());
+        PRINTLN("Error in tiled_image::get_junction: No junction found for tile at iw:" << t1->get_posW() << " ih:" << t1->get_posH() << " and tile at iw:" << t2->get_posW() << " ih:" << t2->get_posH());
     }
     boost::shared_ptr<tile_junction> junctionNULL;
     return junctionNULL;
@@ -251,7 +251,7 @@ boost::shared_ptr<std::vector<boost::shared_ptr<tile_junction> > > tiled_image::
     if (this->vc_junction_array.size() == 0) {
         this->create_all_junctions();
         return this->get_neighbouring_junctions(t);
-        DEBUG_PRINTLN("Error in tiled_image::get_neighbouring_junction (1 tile): Vector vc_junction empty! No Junction initialized");
+        PRINTLN("Error in tiled_image::get_neighbouring_junction (1 tile): Vector vc_junction empty! No Junction initialized");
     } else {
         boost::shared_ptr<tile_junction> junction;
         //Note: For optimisation check if t has a legit junction in the direction up/down/left/right
@@ -297,7 +297,7 @@ boost::shared_ptr<std::vector<boost::shared_ptr<tile_junction> > > tiled_image::
     if (this->vc_junction_array.size() == 0) {
         this->create_all_junctions();
         return this->get_neighbouring_junctions(t, g);
-        DEBUG_PRINTLN("Error in tiled_image::get_neighbouring_junction (1 tile, 1 tilegroup): Vector vc_junction empty! No Junction initialized");
+        PRINTLN("Error in tiled_image::get_neighbouring_junction (1 tile, 1 tilegroup): Vector vc_junction empty! No Junction initialized");
     } else {
         boost::shared_ptr<tile_junction> junction;
         junction = this->get_junction(t, tile::UP);
@@ -319,7 +319,7 @@ boost::shared_ptr<std::vector<boost::shared_ptr<tile_junction> > > tiled_image::
         }
     }
     if (ruckgabe->size() == 0) {
-        DEBUG_PRINTLN("Error in image::get_neighbouring_junctions(tile,group): Return has no elements");
+        PRINTLN("Error in image::get_neighbouring_junctions(tile,group): Return has no elements");
     }
     return ruckgabe;
 }
@@ -452,7 +452,7 @@ void tiled_image::init_tiles(sharedptr<row_major_float_image> img, long tilecoun
         this->tilecount_height++;
     }
 
-    DEBUG_PRINTLN("tc_width = " << tilecount_width << " tc_height=" << tilecount_height);
+    PRINTLN("tc_width = " << tilecount_width << " tc_height=" << tilecount_height);
 
     //Jetzt hat man die benötigten informationen und man muss nur noch die tiles initialisieren
     for (long ih = 0; ih < tilecount_height; ih++)
@@ -479,7 +479,7 @@ void tiled_image::unwrap_tiles(boost::shared_ptr<abstract_tile_unwrapper> uw) {
         for (iw = 0; iw < W - 1; iw++) {
             cur_tile = this->get_tile_at(iw, ih);
             uw->unwrap(cur_tile);
-            //            DEBUG_PRINTLN("Unwrapping tile at index (" << iw << "," << ih << ")" );
+            //            PRINTLN("Unwrapping tile at index (" << iw << "," << ih << ")" );
         }
     }
 
@@ -488,7 +488,7 @@ void tiled_image::unwrap_tiles(boost::shared_ptr<abstract_tile_unwrapper> uw) {
     for (int ih = 0; ih < H - 1; ih++) {
         cur_tile = this->get_tile_at(iw, ih);
         uw->unwrap(cur_tile);
-        //       DEBUG_PRINTLN("Unwrapping tile at index (" << iw << "," << ih << ")" );
+        //       PRINTLN("Unwrapping tile at index (" << iw << "," << ih << ")" );
     }
 
     //3) Lastly unwrap bottom row INCLUDING the bottom right tile (iw=W-1, and ih=H-1)
@@ -496,7 +496,7 @@ void tiled_image::unwrap_tiles(boost::shared_ptr<abstract_tile_unwrapper> uw) {
     for (int iw = 0; iw < W; iw++) {
         cur_tile = this->get_tile_at(iw, ih);
         uw->unwrap(cur_tile);
-        //        DEBUG_PRINTLN("Unwrapping tile at index (" << iw << "," << ih << ")" );
+        //        PRINTLN("Unwrapping tile at index (" << iw << "," << ih << ")" );
     }
 
 }
@@ -528,32 +528,32 @@ void tiled_image::test_all_junctions_test() {
             //         juncLeft = this->get_junction(tile::LEFT);
             //         juncRight = this->get_junction(tile::RIGHT);
             if (this->get_junction(t, tile::UP)->calc_junction_mean_difference() != this->get_junction(tUp, tile::DOWN)->calc_junction_mean_difference()) {
-                DEBUG_PRINTLN("Difference in junction up... Failure in (w,h): " << w << " " << h);
+                PRINTLN("Difference in junction up... Failure in (w,h): " << w << " " << h);
             }
             if (this->get_junction(t, tile::DOWN)->calc_junction_mean_difference() != this->get_junction(tDown, tile::UP)->calc_junction_mean_difference()) {
-                DEBUG_PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
+                PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
             }
             if (this->get_junction(t, tile::LEFT)->calc_junction_mean_difference() != this->get_junction(tLeft, tile::RIGHT)->calc_junction_mean_difference()) {
-                DEBUG_PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
+                PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
             }
             if (this->get_junction(t, tile::RIGHT)->calc_junction_mean_difference() != this->get_junction(tRight, tile::LEFT)->calc_junction_mean_difference()) {
-                DEBUG_PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
+                PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
             }
             if (this->get_junction(t, tUp)->calc_junction_mean_difference() != this->get_junction(tUp, t)->calc_junction_mean_difference()) {
-                DEBUG_PRINTLN("Difference in junction up... Failure in (w,h): " << w << " " << h);
+                PRINTLN("Difference in junction up... Failure in (w,h): " << w << " " << h);
             }
             if (this->get_junction(t, tDown)->calc_junction_mean_difference() != this->get_junction(tDown, t)->calc_junction_mean_difference()) {
-                DEBUG_PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
+                PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
             }
             if (this->get_junction(t, tLeft)->calc_junction_mean_difference() != this->get_junction(tLeft, t)->calc_junction_mean_difference()) {
-                DEBUG_PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
+                PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
             }
             if (this->get_junction(t, tRight)->calc_junction_mean_difference() != this->get_junction(tRight, t)->calc_junction_mean_difference()) {
-                DEBUG_PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
+                PRINTLN("Difference in junction down... Failure in (w,h): " << w << " " << h);
             }
         }
     }
-    DEBUG_PRINTLN("No errors in junctions detected...");
+    PRINTLN("No errors in junctions detected...");
 }
 
 void tiled_image::gradient(int dim, sharedptr<abstract_gradient_calculator> gcalc) //!todo exception

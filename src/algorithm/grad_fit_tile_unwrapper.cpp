@@ -59,8 +59,8 @@ std::string grad_fit_tile_unwrapper::get_name() {
 }
 
 void grad_fit_tile_unwrapper::usage_help() {
-   DEBUG_PRINTLN("*------------------------------------------------------------*");
-   DEBUG_PRINTLN("Usage of the grad fit tile uwnrapper...");
-   DEBUG_PRINTLN("No Options. DO NOT USE this unwrapper: DEPRECATED");
-   DEBUG_PRINTLN("*------------------------------------------------------------*");
+   PRINTLN("*------------------------------------------------------------*");
+   PRINTLN("Usage of the grad fit tile uwnrapper...");
+   PRINTLN("No Options. DO NOT USE this unwrapper: DEPRECATED");
+   PRINTLN("*------------------------------------------------------------*");
 }

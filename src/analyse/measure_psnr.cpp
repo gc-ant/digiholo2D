@@ -32,15 +32,15 @@ float measure_psnr::calculate_psnr() {
     }
 
     mse /= ((float) (W * H));
-    DEBUG_PRINTLN("mse - sum: " << mse);
+    PRINTLN("mse - sum: " << mse);
 
     if (mse * mse > FLT_EPSILON * FLT_EPSILON * 1000) {
         long long max_pixel_value = std::pow(2, this->max) - 1;
         float psnr = 10 * std::log10(max_pixel_value / mse);
-        //        DEBUG_PRINTLN("psnr: " << psnr);
+        //        PRINTLN("psnr: " << psnr);
         return psnr;
     } else {
-        DEBUG_PRINTLN("psnr: max");
+        PRINTLN("psnr: max");
         return FLT_MAX;
     }
 
@@ -51,10 +51,10 @@ float measure_psnr::offset() {
     float noisy_offset = mean_of_block(100, 100, this->noisy_img);
 
     float offset = orig_offset - noisy_offset;
-    DEBUG_PRINTLN("offset: " << offset);
+    PRINTLN("offset: " << offset);
 
     offset = roundf(offset / (2.f * M_PI));
-    DEBUG_PRINTLN("offset: " << offset);
+    PRINTLN("offset: " << offset);
 
     return offset * 2 * M_PI;
 

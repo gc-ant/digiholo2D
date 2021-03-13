@@ -51,7 +51,7 @@ model_function::~model_function() {
  */
 float model_function::eval(float x, float y, sharedptr<std::vector<float> >vc_coeff) {
    if (this->vc_base_functions->size() != vc_coeff->size()) {
-      DEBUG_PRINTLN("Error in model_function::eval(x, y, vc_coeff): Amount of base functions unequal to size of coefficents!");
+      PRINTLN("Error in model_function::eval(x, y, vc_coeff): Amount of base functions unequal to size of coefficents!");
       return -1.f; 
    }
    float value = 0.0f;

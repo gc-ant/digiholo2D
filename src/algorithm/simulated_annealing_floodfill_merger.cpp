@@ -112,9 +112,9 @@ simulated_annealing_floodfill_merger::simulated_annealing_floodfill_merger(std::
         /* Call help */
         if (map_string.count("help") != 0) this->usage_help();
     } catch (const boost::bad_lexical_cast &) {
-        DEBUG_PRINTLN("*---------------------------ERROR-------------------------------------------*");
-        DEBUG_PRINTLN("Error: Bad lexical cast from Simulated Annealing Floodfill Merger Constructor...");
-        DEBUG_PRINTLN("Trying to merge with these options:")
+        PRINTLN("*---------------------------ERROR-------------------------------------------*");
+        PRINTLN("Error: Bad lexical cast from Simulated Annealing Floodfill Merger Constructor...");
+        PRINTLN("Trying to merge with these options:")
     }
 
     this->show_options();
@@ -129,19 +129,19 @@ void simulated_annealing_floodfill_merger::merge_tiles(sharedptr<tiled_image> ti
     boost::random::uniform_int_distribution<> iw(0, W - 1);
     boost::random::uniform_int_distribution<> ih(0, H - 1);
     boost::random::uniform_01<> dist;
-    DEBUG_PRINTLN("Seed: " << this->seed);
+    PRINTLN("Seed: " << this->seed);
 
     /* Prerun with Merger */
     if (!this->merge_prior.empty()) {
         if (this->merge_prior.compare("simple") == 0) {
-            DEBUG_PRINTLN("Preprocessing image with simple merger");
+            PRINTLN("Preprocessing image with simple merger");
             sharedptr<simple1d_tile_merger> my_merger(new simple1d_tile_merger());
             my_merger->merge_tiles(ti);
         } else if (this->merge_prior.compare("srncp") == 0) {
             sharedptr<abstract_reliability_calculator> rc(new reliability_calculator_variance());
             sharedptr<srncp_tile_merger> my_merger(new srncp_tile_merger(rc));
             my_merger->merge_tiles(ti);
-        } else DEBUG_PRINTLN("Merger " << this->merge_prior << " supported. Please use simple or srncp");
+        } else PRINTLN("Merger " << this->merge_prior << " supported. Please use simple or srncp");
 
     }
     long steps = 0;
@@ -153,7 +153,7 @@ void simulated_annealing_floodfill_merger::merge_tiles(sharedptr<tiled_image> ti
 
     long junc_arr_size = ti->get_size_of_junction_array();
 
-    if (junc_arr_size == 0) DEBUG_PRINTLN("No junction initiliazed. Error, should be done via rc_variance");
+    if (junc_arr_size == 0) PRINTLN("No junction initiliazed. Error, should be done via rc_variance");
 
     for (int i = 0; i < junc_arr_size; i++) {
         this->name_energy_prior_merging += ti->get_junction_at(i)->calc_junction_squared_difference(); //TODO: Substitute through energy from tilegroup_junctions...
@@ -161,7 +161,7 @@ void simulated_annealing_floodfill_merger::merge_tiles(sharedptr<tiled_image> ti
 
     if (this->check_steps == -1) {
         this->check_steps = junc_arr_size / 6;
-        DEBUG_PRINTLN("step-value not specified: Setting check_steps to: " << this->check_steps);
+        PRINTLN("step-value not specified: Setting check_steps to: " << this->check_steps);
     } else if (this->check_steps == 0) {
         this->check_steps = INT_MAX;
     }
@@ -207,7 +207,7 @@ void simulated_annealing_floodfill_merger::merge_tiles(sharedptr<tiled_image> ti
 
 void simulated_annealing_floodfill_merger::add_value_and_check(sharedptr<tiled_image> ti, sharedptr<tile> cur_tile, float prop_add, float prop_accept, sharedptr<tilegroup> tg_open, sharedptr<tilegroup> tg_closed, sharedptr<abstract_reliability_calculator> rc, long junc_arr_size, long step) {
     this->floodfill(ti, cur_tile, tg_open, tg_closed, rc);
-    //    DEBUG_PRINTLN("step: " << step << " #tg_open: " << tg_open->size() << " #tg_closed: " << tg_closed->size() << " prop_add: " << prop_add << " prop_accept: " << prop_accept << " junc_arr_size: " << junc_arr_size);
+    //    PRINTLN("step: " << step << " #tg_open: " << tg_open->size() << " #tg_closed: " << tg_closed->size() << " prop_add: " << prop_add << " prop_accept: " << prop_accept << " junc_arr_size: " << junc_arr_size);
     float pre_energy = 0.0f;
     float post_energy = 0.0f;
 
@@ -253,7 +253,7 @@ void simulated_annealing_floodfill_merger::add_value_and_check(sharedptr<tiled_i
 
 void simulated_annealing_floodfill_merger::floodfill(sharedptr<tiled_image> ti, sharedptr<tile> t, sharedptr<tilegroup> tg_open, sharedptr<tilegroup> tg_closed, sharedptr<abstract_reliability_calculator> rc) {
     //if (t->has_tilegroup()) return; //if tile is in either closed or open, it has been computed before
-    //    DEBUG_PRINTLN("var: " << std::pow(1 / rc->calculate_reliability(ti, t), 2.0f));
+    //    PRINTLN("var: " << std::pow(1 / rc->calculate_reliability(ti, t), 2.0f));
     //with value 0.11 the tile is measured as "good" if the sum of all junction variances are below 3 //Todo value seems to be too low, maybe more like 0.9??
     sharedptr<std::vector<sharedptr<tile_junction> > > vc_junc = ti->get_neighbouring_junctions(t);
     for (sharedptr<tile_junction> junc : *vc_junc) {
@@ -312,9 +312,9 @@ float simulated_annealing_floodfill_merger::calc_energy(sharedptr<std::vector<sh
 void simulated_annealing_floodfill_merger::write_intermediate(sharedptr<tiled_image> ti, std::string name) {
     sharedptr<row_major_float_image> unwrapped_img = ti->convert_to_float_image();
     std::string output_filename = "C:\\ImageSeries\\SimAnnFlood\\" + name + ".raw";
-    if (!write_image(&output_filename[0], unwrapped_img)) {
-        DEBUG_PRINTLN("Error: Could not save file. \n Note: This programm has no cross-platform creation of folders (yet) supported.");
-        DEBUG_PRINTLN("If you see this error message, please check if the specified output (or .\\Unwrapped\\ when no -o option called) is an EXISTING FOLDER.");
+    if (!write_image(output_filename, unwrapped_img)) {
+        PRINTLN("Error: Could not save file. \n Note: This programm has no cross-platform creation of folders (yet) supported.");
+        PRINTLN("If you see this error message, please check if the specified output (or .\\Unwrapped\\ when no -o option called) is an EXISTING FOLDER.");
         return;
     }
 }
@@ -338,49 +338,49 @@ std::string simulated_annealing_floodfill_merger::get_name() {
 }
 
 void simulated_annealing_floodfill_merger::show_options() {
-    DEBUG_PRINTLN("*-----------------------Merger options--------------------------------------*");
-    DEBUG_PRINTLN("(Values of -1 (or 0) are (mostly) default and will be set in the programm later)")
-    DEBUG_PRINTLN("steps: " << this->check_steps);
-    DEBUG_PRINTLN("conv: " << this->convergence_criterion);
-    DEBUG_PRINTLN("temp: " << this->temperature);
-    DEBUG_PRINTLN("pre: " << this->merge_prior);
-    DEBUG_PRINTLN("saveinfo: " << this->name_extended);
-    DEBUG_PRINTLN("series_start: " << this->series_start);
-    DEBUG_PRINTLN("series_stop: " << this->series_stop);
-    DEBUG_PRINTLN("series_steps: " << this->series_steps);
-    DEBUG_PRINTLN("seed: " << this->seed);
-    DEBUG_PRINTLN("mean: " << this->good_mean);
-    DEBUG_PRINTLN("variance: " << this->good_variance);
-    DEBUG_PRINTLN("*---------------------------------------------------------------------------*");
+    PRINTLN("*-----------------------Merger options--------------------------------------*");
+    PRINTLN("(Values of -1 (or 0) are (mostly) default and will be set in the programm later)")
+    PRINTLN("steps: " << this->check_steps);
+    PRINTLN("conv: " << this->convergence_criterion);
+    PRINTLN("temp: " << this->temperature);
+    PRINTLN("pre: " << this->merge_prior);
+    PRINTLN("saveinfo: " << this->name_extended);
+    PRINTLN("series_start: " << this->series_start);
+    PRINTLN("series_stop: " << this->series_stop);
+    PRINTLN("series_steps: " << this->series_steps);
+    PRINTLN("seed: " << this->seed);
+    PRINTLN("mean: " << this->good_mean);
+    PRINTLN("variance: " << this->good_variance);
+    PRINTLN("*---------------------------------------------------------------------------*");
 }
 
 void simulated_annealing_floodfill_merger::usage_help() {
-    DEBUG_PRINTLN("*---------------------------------------------------------------------------*");
-    DEBUG_PRINTLN("Usage of the simulated annealing merger with floodfill...");
-    DEBUG_PRINTLN("Options");
-    DEBUG_PRINTLN("temp-x :  Temperature x mostly between 1 and 0. Default at 0.1");
-    DEBUG_PRINTLN("conv-x :  Algorithm will start ending-procedure when 100*x% of the image are connected.");
-    DEBUG_PRINTLN("          x must be between 0 and 1. Default is 0.9");
-    //    DEBUG_PRINTLN("          (E1 = Energy before flipping one tile. E2 = Energy after flipping)");
-    //    DEBUG_PRINTLN("          DO NOT SUBMIT A SIGN! --- input x should be a small positive value!");
-    //    DEBUG_PRINTLN("          Default is 0.1");
-    DEBUG_PRINTLN("variance-x:  Define maximum value of the tile:reliability to be trustworthy");
-    DEBUG_PRINTLN("          Default is 0.2");
-    DEBUG_PRINTLN("mean-x:   Define maximum value of the junction:mean to be NO border between two tiles");
-    DEBUG_PRINTLN("          Default is 0.1");
-    DEBUG_PRINTLN("steps-x:  Convergence will be checked every x iterations. ");
-    DEBUG_PRINTLN("          Values >> 1000 will be faster. ")
-    DEBUG_PRINTLN("          Values around 1 to 10 may be error-prone due to local minima... ");
-    DEBUG_PRINTLN("          A value of 0 will turn this criterion off!");
-    DEBUG_PRINTLN("          Default is 5000");
-    DEBUG_PRINTLN("pre-x  :  Prerun the x=simple or x=srncp merger (faster)");
-    DEBUG_PRINTLN("saveinfo: Write temp-x, conv-x and steps for convergence into filename");
-    DEBUG_PRINTLN("          Default turned off");
-    DEBUG_PRINTLN("series-z:      Every z-th step the image will be saved to harddrive");
-    DEBUG_PRINTLN("  OR  ");
-    DEBUG_PRINTLN("series-x-y-z : Like above, but for a range:");
-    DEBUG_PRINTLN("             : Start saving at image x. Stop saving before image y. Save every z-th step!");
-    DEBUG_PRINTLN("seed-x  : Seed used for the random generator. Same seeds on the same picture will grant same output.");
-    DEBUG_PRINTLN("          Default is random");
-    DEBUG_PRINTLN("*---------------------------------------------------------------------------*");
+    PRINTLN("*---------------------------------------------------------------------------*");
+    PRINTLN("Usage of the simulated annealing merger with floodfill...");
+    PRINTLN("Options");
+    PRINTLN("temp-x :  Temperature x mostly between 1 and 0. Default at 0.1");
+    PRINTLN("conv-x :  Algorithm will start ending-procedure when 100*x% of the image are connected.");
+    PRINTLN("          x must be between 0 and 1. Default is 0.9");
+    //    PRINTLN("          (E1 = Energy before flipping one tile. E2 = Energy after flipping)");
+    //    PRINTLN("          DO NOT SUBMIT A SIGN! --- input x should be a small positive value!");
+    //    PRINTLN("          Default is 0.1");
+    PRINTLN("variance-x:  Define maximum value of the tile:reliability to be trustworthy");
+    PRINTLN("          Default is 0.2");
+    PRINTLN("mean-x:   Define maximum value of the junction:mean to be NO border between two tiles");
+    PRINTLN("          Default is 0.1");
+    PRINTLN("steps-x:  Convergence will be checked every x iterations. ");
+    PRINTLN("          Values >> 1000 will be faster. ")
+    PRINTLN("          Values around 1 to 10 may be error-prone due to local minima... ");
+    PRINTLN("          A value of 0 will turn this criterion off!");
+    PRINTLN("          Default is 5000");
+    PRINTLN("pre-x  :  Prerun the x=simple or x=srncp merger (faster)");
+    PRINTLN("saveinfo: Write temp-x, conv-x and steps for convergence into filename");
+    PRINTLN("          Default turned off");
+    PRINTLN("series-z:      Every z-th step the image will be saved to harddrive");
+    PRINTLN("  OR  ");
+    PRINTLN("series-x-y-z : Like above, but for a range:");
+    PRINTLN("             : Start saving at image x. Stop saving before image y. Save every z-th step!");
+    PRINTLN("seed-x  : Seed used for the random generator. Same seeds on the same picture will grant same output.");
+    PRINTLN("          Default is random");
+    PRINTLN("*---------------------------------------------------------------------------*");
 }

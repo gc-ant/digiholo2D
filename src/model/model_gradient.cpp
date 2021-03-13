@@ -33,7 +33,7 @@ sharedarray<float> model_gradient::eval(float x, float y) {
     sharedarray<float> value(new float[2]);
     //   sharedarray<float> value (new float[2]);
     if (this->vc_base_gradients->size() != this->vc_coeff->size()) {
-        DEBUG_PRINTLN("Error in model_gradient::eval(x, y, vc_coeff): Amount of base gradients unequal to size of coefficents!");
+        PRINTLN("Error in model_gradient::eval(x, y, vc_coeff): Amount of base gradients unequal to size of coefficents!");
         return value;
     }
     std::vector<sharedptr<abstract_gradient> >::iterator it_base = this->vc_base_gradients->begin();

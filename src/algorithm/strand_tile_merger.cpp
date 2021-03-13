@@ -63,8 +63,8 @@ std::string strand_tile_merger::get_name() {
 }
 
 void strand_tile_merger::usage_help() {
-   DEBUG_PRINTLN("*------------------------------------------------------------*");
-   DEBUG_PRINTLN("Usage of the strand  merger...");
-   DEBUG_PRINTLN("No Options");
-   DEBUG_PRINTLN("*------------------------------------------------------------*");
+   PRINTLN("*------------------------------------------------------------*");
+   PRINTLN("Usage of the strand  merger...");
+   PRINTLN("No Options");
+   PRINTLN("*------------------------------------------------------------*");
 }

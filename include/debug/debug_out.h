@@ -24,21 +24,9 @@
 #ifndef DEBUG_OUT_HEADER_H
 #define	DEBUG_OUT_HEADER_H
 
-#ifdef DEBUG
-    #ifndef QT_VERSION //Wenn kein QT verwendet wird, dann normale cout verwenden
-        #include <iostream>
-        #define DEBUG_PRINT(x)   std::cout<< x <<std::flush;
-        #define DEBUG_PRINTLN(x) std::cout<< x << std::endl <<std::flush;
-    #else
-        #include <QDebug>
-        #define DEBUG_PRINT(x)   qDebug() << x;
-        #define DEBUG_PRINTLN(x) qDebug() << x << "\n";
-    #endif
-#else
-    #define DEBUG_PRINT(x)
-    #define DEBUG_PRINTLN(x)
-#endif
-
+#include <iostream>
+#define PRINT(x)   std::cout<< x <<std::flush;
+#define PRINTLN(x) std::cout<< x << std::endl <<std::flush;
 
 #endif	/* DEBUG_OUT_HEADER_H */
 

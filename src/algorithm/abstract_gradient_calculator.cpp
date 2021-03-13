@@ -15,7 +15,7 @@ sharedptr<std::vector<tile> > abstract_gradient_calculator::get_gradient_tile(sh
     long H = t->get_height();
 
     sharedptr<std::vector<float> > gradient = this->get_gradient_floats(t);
-    if (gradient->size() != (unsigned) 2 * W * H) DEBUG_PRINTLN("Vector size is: " << gradient->size() << " and should be: " << 2 * W * H);
+    if (gradient->size() != (unsigned) 2 * W * H) PRINTLN("Vector size is: " << gradient->size() << " and should be: " << 2 * W * H);
 
     //   std::vector<float> gradient_x(gradient->begin(), gradient->begin() + W * H);
     //   //Iterators behave "like" pointers. Iterator + 10 => Iterator on position n+10 or n+9 (???))

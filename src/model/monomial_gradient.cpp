@@ -44,7 +44,7 @@ sharedarray<float> monomial_gradient::eval(float x, float y) {
    else
    {
        //there is no other case :)
-       DEBUG_PRINTLN("The impossible has happened in " << __FILE__ << " in " << __LINE__);
+       PRINTLN("The impossible has happened in " << __FILE__ << " in " << __LINE__);
    }
    
    sharedarray<float> gradient(grad_val);
